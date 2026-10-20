@@ -1,0 +1,32 @@
+{
+  "files": {
+    ".gitignore": "78ffcce7ede15277710ab28c5bb83008ce95e4789d52a94dc4af2d3a02e2793a",
+    "LICENSE_STATUS.md": "057d65c34b695d35f593e1b14bc8f8129032cae9180b135e0aebbf552adf2d4c",
+    "PROVENANCE.md": "dcfec2354900b1a1eb627b172661bd422fb76c04250442035bfe0e8956ba660c",
+    "README.md": "d562abd47e847b6e6bcdc87f1b55bf75f5d6b3703d764b2b1628b0e20e7bca63",
+    "THIRD_PARTY_NOTICES.md": "8125a05da2bdf91940204292824c5171873bbeac4fada6d2b87af6b73ce34332",
+    "data/responses.csv": "1ca50996cedcdb7d5bcdbc89d650f429761bdbf33dbec7b361dcd8b61aa99cd2",
+    "data/systems.csv": "7fa732f78740abab181e39b74648f0f68034f5c1829a3474fd5616f05a989407",
+    "docs/DATA_CARD.md": "9434c2c4da4e664eab9beaaed1432a3f4b0bae5096300597a81264ab210e93fb",
+    "docs/LIMITATIONS.md": "c94d10e342e8470c659cd863926dc580f0079e48812b9099a3118d51b638de67",
+    "docs/REPRODUCTION.md": "d9736252544d47a94d0303ddc53b6f1314f11311fd806514a659252214587129",
+    "docs/RESULTS.md": "8b7a4a8f511f85f5155f544f2ead4667bcab8d94359f988c2b8c3dc7dac451f1",
+    "reference_code/README.md": "76c064dcee19630d37c0f0d062ced8403c13a680088650b7ef0608a4bb5cb0f7",
+    "reference_code/reproducibility/final/run_calibration.sh": "1e6aeb5b2f3c33a9de38f46e8351b7851dad6a65dee85dba52ee1d8cd1650c62",
+    "reference_code/reproducibility/final/run_holdout.sh": "2d398cb216890dd71f18889d713444dcd337867805ea78ef8a428f4fb0aff4b2",
+    "reference_code/reproducibility/final/run_sampling.sh": "532d377279743b79609abee56ebf215187dde66f19d42b28f6363c8393ae256c",
+    "reference_code/reproducibility/pyproject.toml": "ca92828c4df306c259e43f650bc55fff93260177292c780a530120fcc8f513a9",
+    "reference_code/reproducibility/reproduce_rasch_lofo.py": "10aa312178decbbbb4fc45c124b92a47af450f94d134a1f2c7b8dd44c8f16cc1",
+    "reference_code/reproducibility/uv.lock": "19a5fb39ce06deff1791bb4e2ea267b6a5d761258cc1f9a47f6b4e1906619347",
+    "results/archived/calibration_comparison.csv": "a692c807b4b674177470ca7000d648bed3d7e8ead59925c622017f92a9f8047d",
+    "results/archived/holdout_by_system.csv": "87486ec1849327f3fcb801f2b2b0d87d217f2cdccf3c8dd6daf2c728510f9eb4",
+    "results/archived/holdout_comparison.csv": "11ffaf54f99192009ac5134304a36c1e973e8fe3b6a9aae536b3c30a7ffada62",
+    "results/reference/full_bank_scores.csv": "b6c5b0c65b13bd83abf066ac10833115fba53b0c793aee91deaba86b9243f005",
+    "scripts/check_public.py": "c204d269b22dddd84f416f7ef158e6e5e8f875ff805dac4485791b592c746021",
+    "scripts/public_data.py": "daf7b4b1deaa68b3daf2b98f99570656fe4cf8e74120a34efa6417e792571aae",
+    "scripts/reproduce_public.py": "c8eb322959cdf2830b19c36960743c149eb349e41bc6757705ecb66e901395d1",
+    "tests/test_public.py": "796d445ea3013d5b1157060acb0a9f1102c4fc243f12f0ec7a240ff692094ae4"
+  },
+  "release_kind": "restricted_first_public_edition",
+  "schema_version": 1
+}

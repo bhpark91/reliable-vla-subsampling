@@ -1,0 +1,15 @@
+system,family,split,n_items,successes,success_rate
+db_cogact,cogact,calibration,500,351,0.702000
+openvla,openvla,calibration,500,118,0.236000
+openvla_oft,openvla,calibration,500,350,0.700000
+x_vla,x_vla,calibration,500,369,0.738000
+molmoact2,molmoact2,calibration,500,420,0.840000
+vla_jepa,vla_jepa,calibration,500,410,0.820000
+groot_n16,groot,calibration,500,364,0.728000
+groot_n17,groot,calibration,500,376,0.752000
+xiaomi_robotics_0,xiaomi_robotics_0,calibration,500,369,0.738000
+vla_adapter,vla_adapter,calibration,500,310,0.620000
+univla_opendrivelab,univla_opendrivelab,calibration,500,297,0.594000
+pi05,pi_openpi,holdout,500,438,0.876000
+pi0_fast,pi_openpi,holdout,500,39,0.078000
+vlanext,vlanext,holdout,500,394,0.788000

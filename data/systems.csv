@@ -1,0 +1,15 @@
+system,family,split
+db_cogact,cogact,calibration
+openvla,openvla,calibration
+openvla_oft,openvla,calibration
+x_vla,x_vla,calibration
+molmoact2,molmoact2,calibration
+vla_jepa,vla_jepa,calibration
+groot_n16,groot,calibration
+groot_n17,groot,calibration
+xiaomi_robotics_0,xiaomi_robotics_0,calibration
+vla_adapter,vla_adapter,calibration
+univla_opendrivelab,univla_opendrivelab,calibration
+pi05,pi_openpi,holdout
+pi0_fast,pi_openpi,holdout
+vlanext,vlanext,holdout
