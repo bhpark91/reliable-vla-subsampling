@@ -15,3 +15,11 @@ Until an explicit license is adopted, describe this as public source/data
 availability, not as an MIT-, Apache-, or CC-licensed release. Adding a license
 later requires an owner decision about its scope and applicable third-party
 terms. Attribution is not a replacement for permission.
+
+
+## Engineering archive addition
+
+Original recorded engineering files are also published under `engineering/backup/`.
+See `engineering/README.md` and `engineering/SOURCE_INVENTORY.json`.
+This addition does not rerun experiments, change historical evidence or grant
+a new blanket license. Original metadata-dependent analysis limitations remain.

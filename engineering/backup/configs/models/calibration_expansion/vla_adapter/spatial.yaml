@@ -1,0 +1,16 @@
+script: "src/vla_eval/model_servers/vla_adapter.py"
+port: 8000
+
+args:
+  source_checkout: "__REPO_ROOT__/external/VLA-Adapter"
+  source_commit: "23fa0c9c159e2aa04341cdd3e924f44061311060"
+  checkpoint_dir: "__MODEL_ROOT__/calibration_expansion/vla_adapter/spatial/cb023c6771fc62ea729d218f09ac0583c14f59d4"
+  checkpoint_revision: "cb023c6771fc62ea729d218f09ac0583c14f59d4"
+  unnorm_key: "libero_spatial"
+  chunk_size: 8
+
+metadata:
+  upstream_checkpoint: "VLA-Adapter/LIBERO-Spatial-Pro"
+  upstream_revision: "cb023c6771fc62ea729d218f09ac0583c14f59d4"
+  checkpoint_materialized: false
+  gpu_smoke_submitted: false

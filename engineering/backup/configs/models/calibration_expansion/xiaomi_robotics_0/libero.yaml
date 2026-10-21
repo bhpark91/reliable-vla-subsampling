@@ -1,0 +1,27 @@
+# Xiaomi-Robotics-0 LIBERO adapter.
+#
+# Public checkpoint:
+# XiaomiRobotics/Xiaomi-Robotics-0-LIBERO
+#
+# Frozen HF revision:
+# fc04bbdcc53e498695cfad95d1199091396ef55b
+#
+# Runtime contract from upstream:
+# Python 3.12
+# PyTorch 2.8.0 / CUDA 12.8
+# transformers 4.57.1
+# flash-attn 2.8.3
+#
+# Official LIBERO execution contract:
+# 30 predicted steps, first 10 executed per replan, first 7 dims used.
+
+script: "src/vla_eval/model_servers/xiaomi_robotics_0.py"
+port: 8000
+
+args:
+  model_path: "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO"
+  revision: "fc04bbdcc53e498695cfad95d1199091396ef55b"
+  robot_type: "libero_all"
+  device: "cuda"
+  attn_implementation: "flash_attention_2"
+  chunk_size: 10

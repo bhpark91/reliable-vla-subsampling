@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "FINAL_PRIMARY_FROZEN",
+  "benchmark": "LIBERO-Plus",
+  "item_manifest": {
+    "path": "data/bank/discovery_500_primary.json",
+    "sha256": "87410957f255d73a6595365ca72cf380254b4d2bc0b98923deebe7bfcc8682b1"
+  },
+  "wrapper": {
+    "path": "src/benchmark/libero_plus_selected_v3.py",
+    "sha256": "0a9e558582b769b81d859f619850d9438de5a35004fe8c11b093560eb4674dae"
+  },
+  "primary": {
+    "seed": 7,
+    "env_seed": 7,
+    "num_steps_wait": 10,
+    "episodes_per_item": 1,
+    "suite_specific_max_steps": "UNCHANGED_FROM_CANONICAL_BENCHMARK"
+  },
+  "reference_sensitivity": {
+    "openvla_oft": {
+      "env_seed": 0,
+      "classification": "reference/qualification convention, not primary item condition"
+    },
+    "molmoact2": {
+      "num_steps_wait": 50,
+      "classification": "published/reference sensitivity condition"
+    }
+  },
+  "execution_rules": [
+    "Model-specific observation/action interfaces are allowed.",
+    "Model-specific checkpoint and normalization are allowed.",
+    "Primary item environment condition must remain common.",
+    "Each shard writes SQLite only to node-local /tmp.",
+    "Shared CephFS SQLite multiwriter is prohibited.",
+    "Only pipeline errors are eligible for item retry.",
+    "Normal task fail is a valid binary zero response."
+  ]
+}

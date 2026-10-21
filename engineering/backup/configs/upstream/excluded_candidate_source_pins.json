@@ -1,0 +1,46 @@
+{
+  "schema_version": "excluded_calibration_candidates_v1",
+  "status": "NOT_IN_FINAL_14_SYSTEM_STUDY",
+  "note": "These candidates were investigated during expansion but produced no response vector used by the final paper. They are deliberately excluded from scripts/bootstrap_sources.sh.",
+  "families": [
+    {
+      "family_id": "lingbot_va",
+      "source": {
+        "url": "https://github.com/Robbyant/lingbot-va.git",
+        "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "robbyant/lingbot-va-posttrain-libero-long",
+          "revision": "0e89d1e753019988aba484e8da2dc0810e264d9f"
+        }
+      ]
+    },
+    {
+      "family_id": "nora",
+      "source": {
+        "url": "https://github.com/declare-lab/nora-1.5.git",
+        "commit": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "declare-lab/nora-1.5-libero",
+          "revision": "422ccdc776af66f51ca43b7ee8fb6729c7b6f636"
+        }
+      ]
+    },
+    {
+      "family_id": "univla_baai",
+      "source": {
+        "url": "https://github.com/baaivision/UniVLA.git",
+        "commit": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "Yuqi1997/UniVLA",
+          "revision": "df6c94ff872f4fc056693e507c033ca390694118"
+        }
+      ]
+    }
+  ]
+}

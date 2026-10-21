@@ -1,0 +1,150 @@
+{
+  "schema_version": "calibration_expansion_source_pins_v1",
+  "generated_at_utc": "2026-08-27T09:22:25.502009+00:00",
+  "derived_from_static_qualification": true,
+  "performance_outcomes_used": false,
+  "families": [
+    {
+      "family_id": "vla_adapter",
+      "source": {
+        "url": "https://github.com/OpenHelix-Team/VLA-Adapter.git",
+        "commit": "23fa0c9c159e2aa04341cdd3e924f44061311060"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Spatial-Pro",
+          "revision": "cb023c6771fc62ea729d218f09ac0583c14f59d4",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Object-Pro",
+          "revision": "afd5c551e4851fb434deaba272c7688e87586cc4",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Goal-Pro",
+          "revision": "2ae84b8275a0c35c1b6751573a71468e1c080825",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Long-Pro",
+          "revision": "9e21d603e53c8602919b9a1d90201b329e673f6b",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        }
+      ]
+    },
+    {
+      "family_id": "xiaomi_robotics_0",
+      "source": {
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0.git",
+        "commit": "7c316604d43357d10b06d11fae4c39290c447da5"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO",
+          "revision": "fc04bbdcc53e498695cfad95d1199091396ef55b",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ]
+    },
+    {
+      "family_id": "univla_opendrivelab",
+      "source": {
+        "url": "https://github.com/OpenDriveLab/UniVLA.git",
+        "commit": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "qwbu/univla-7b-224-sft-libero",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ]
+    },
+    {
+      "family_id": "lingbot_va",
+      "source": {
+        "url": "https://github.com/Robbyant/lingbot-va.git",
+        "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "robbyant/lingbot-va-posttrain-libero-long",
+          "revision": "0e89d1e753019988aba484e8da2dc0810e264d9f",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ]
+    },
+    {
+      "family_id": "nora",
+      "source": {
+        "url": "https://github.com/declare-lab/nora-1.5.git",
+        "commit": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "declare-lab/nora-1.5-libero",
+          "revision": "422ccdc776af66f51ca43b7ee8fb6729c7b6f636",
+          "gated": false,
+          "private": false,
+          "card_license": null,
+          "license_tags": []
+        }
+      ]
+    },
+    {
+      "family_id": "univla_baai",
+      "source": {
+        "url": "https://github.com/baaivision/UniVLA.git",
+        "commit": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9"
+      },
+      "checkpoints": [
+        {
+          "repo_id": "Yuqi1997/UniVLA",
+          "revision": "df6c94ff872f4fc056693e507c033ca390694118",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ]
+    }
+  ]
+}

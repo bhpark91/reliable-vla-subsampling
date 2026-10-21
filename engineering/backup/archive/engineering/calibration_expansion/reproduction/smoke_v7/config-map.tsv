@@ -1,0 +1,4 @@
+vla_adapter	/scratch/calexp/repo/integrations/vla_eval_overlay/configs/model_servers/vla_adapter/long.yaml
+xiaomi	/scratch/calexp/repo/integrations/vla_eval_overlay/configs/model_servers/xiaomi_robotics_0/libero.yaml
+univla	/scratch/calexp/repo/integrations/vla_eval_overlay/configs/model_servers/univla_opendrivelab/long.yaml
+lingbot	/scratch/calexp/external/vla-evaluation-harness/configs/model_servers/lerobot/lingbot_va_libero.yaml

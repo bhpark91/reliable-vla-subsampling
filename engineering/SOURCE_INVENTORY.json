@@ -1,0 +1,1159 @@
+{
+  "byte_identical_files": 62,
+  "export_policy": "original_files_with_documented_infrastructure_only_substitutions",
+  "files": [
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/GETTING_STARTED.md",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "f62b31310df4e94c40a5603588d00563072cf412407e868e933cf179ef286eca",
+      "source_blob_sha": "e1ab1e03c04d7cd74c5c447d9eb1441640afe500",
+      "source_path": "GETTING_STARTED.md",
+      "source_sha256": "f62b31310df4e94c40a5603588d00563072cf412407e868e933cf179ef286eca",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/audits/calibration_expansion_adapter_contract_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "a0bcfad80b9104a3826d6fa9f7b7be164ddff94a9ca312e83cabc0a520917354",
+      "source_blob_sha": "e808acd58c7dbe005a89de40c03b2559216698a0",
+      "source_path": "archive/engineering/calibration_expansion/audits/calibration_expansion_adapter_contract_v1.json",
+      "source_sha256": "a0bcfad80b9104a3826d6fa9f7b7be164ddff94a9ca312e83cabc0a520917354",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/audits/calibration_expansion_final_status_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "d1e47e9925ecd66a445e9d8b14d0f368bf95bd1dc1aef7bd98bebcb4c9696d7e",
+      "source_blob_sha": "5b22aa492472eadc811b542581d7765ff7640589",
+      "source_path": "archive/engineering/calibration_expansion/audits/calibration_expansion_final_status_v1.json",
+      "source_sha256": "d1e47e9925ecd66a445e9d8b14d0f368bf95bd1dc1aef7bd98bebcb4c9696d7e",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/audits/calibration_expansion_smoke_attempt1_diagnosis_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "b572bc8734dc8fbddc94bbbd809985323757291971b81afa3d287843d96ccafc",
+      "source_blob_sha": "f975e0f7ed67ceb274f166f5a9da503fa63272b6",
+      "source_path": "archive/engineering/calibration_expansion/audits/calibration_expansion_smoke_attempt1_diagnosis_v1.json",
+      "source_sha256": "b572bc8734dc8fbddc94bbbd809985323757291971b81afa3d287843d96ccafc",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/audits/calibration_expansion_static_qualification_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "a58c312470665d7525ce9c3bf3cfee1f19ac9a5f73637f1646dc64f1102e5c7b",
+      "source_blob_sha": "4e9395202ac6c3aa0e59ecbf454acc5016bd038b",
+      "source_path": "archive/engineering/calibration_expansion/audits/calibration_expansion_static_qualification_v1.json",
+      "source_sha256": "a58c312470665d7525ce9c3bf3cfee1f19ac9a5f73637f1646dc64f1102e5c7b",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        22,
+        35,
+        48
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/audits/calibration_expansion_v1_final_20260828.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "77d52d4a88cd8d717ee1eaceb600ee425cc91f68df5a313434e9b500bab87974",
+      "source_blob_sha": "e2b6a8fd140e393bcb06a8f26c8322091a735ba9",
+      "source_path": "archive/engineering/calibration_expansion/audits/calibration_expansion_v1_final_20260828.json",
+      "source_sha256": "bce5b3dfbdb1e3b2740a7c54bc685d071fbe7fdc1f1bd20cf2b32d39db1d8406",
+      "substitutions": {
+        "deployment_identifier": 3
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/handoffs/calibration_expansion_handoff_20260827.md",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "bf069fb5e0fcdab319b3bc96c45da381a9d6607e7c9519be7774d862f2c34de6",
+      "source_blob_sha": "c5c9a17f110fb4879c8d934c4b6316a52882117f",
+      "source_path": "archive/engineering/calibration_expansion/handoffs/calibration_expansion_handoff_20260827.md",
+      "source_sha256": "bf069fb5e0fcdab319b3bc96c45da381a9d6607e7c9519be7774d862f2c34de6",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        10,
+        15,
+        20
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/handoffs/calibration_expansion_v1_d500_handoff_20260828.md",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "444f6095409ecef2fdd20a97f5bf1a75c1df0d400afa4d8963eae3779667518d",
+      "source_blob_sha": "06ce383ddb706be86f26a38b22c3a51b562d99d5",
+      "source_path": "archive/engineering/calibration_expansion/handoffs/calibration_expansion_v1_d500_handoff_20260828.md",
+      "source_sha256": "8aefc3fd516b06b60d64736b4b1bcfef289f828221f9f833018e39743418d553",
+      "substitutions": {
+        "deployment_identifier": 3
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        15,
+        28,
+        41
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/manifests/calibration_expansion_d500_readiness_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "d754d5c019780197cbbdaab779af9deb5b6bb3391d04f337850245fd90e8e277",
+      "source_blob_sha": "1c54739ce6b7121c1208e2ea084824bef9106ac2",
+      "source_path": "archive/engineering/calibration_expansion/manifests/calibration_expansion_d500_readiness_v1.json",
+      "source_sha256": "67c5f1b9f1ea7212d94cdb6f9dbc1cb6e2a3cb8eef592e8d873ffb60e472b7d3",
+      "substitutions": {
+        "deployment_identifier": 3
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/manifests/calibration_expansion_gpu_smoke_plan_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "117a2aed98ceba1abe7b847907b31ec37b0998068719ce8263e1220072bf74c9",
+      "source_blob_sha": "eddd98707d95d80467220a7477817b9b0fdeadeb",
+      "source_path": "archive/engineering/calibration_expansion/manifests/calibration_expansion_gpu_smoke_plan_v1.json",
+      "source_sha256": "117a2aed98ceba1abe7b847907b31ec37b0998068719ce8263e1220072bf74c9",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/manifests/calibration_expansion_source_pins_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "4f9ed566f9f4c29e793e78d10cee1b3035700096d0bbf7abcf9f15f0e2093929",
+      "source_blob_sha": "ea1a6d5c8c2a3437ed6cc6a3f63bc68550446a40",
+      "source_path": "archive/engineering/calibration_expansion/manifests/calibration_expansion_source_pins_v1.json",
+      "source_sha256": "4f9ed566f9f4c29e793e78d10cee1b3035700096d0bbf7abcf9f15f0e2093929",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/manifests/calibration_expansion_v1.json",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "6514d679d1ce0128a98a67e2c0e8fa4e7e0042712717a8c28e863d57e7664f59",
+      "source_blob_sha": "7ef9811b7be0aca1b5ac2b95606892201b47a8ad",
+      "source_path": "archive/engineering/calibration_expansion/manifests/calibration_expansion_v1.json",
+      "source_sha256": "6514d679d1ce0128a98a67e2c0e8fa4e7e0042712717a8c28e863d57e7664f59",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/README.md",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "0cf3bb607c5385e0cd5c90869615d2513d38e77e026c397e5fdca3e8e0ade730",
+      "source_blob_sha": "46c82ad07fe59fdaa857c263eb6746ad8fc4fdfc",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/README.md",
+      "source_sha256": "0cf3bb607c5385e0cd5c90869615d2513d38e77e026c397e5fdca3e8e0ade730",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/config-map.tsv",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "0c89ee3745d5614e48e9098201309e9e40e3c917f50de564c33d63f2cc4b5fb7",
+      "source_blob_sha": "f065c3d058536b8e643e017659053ca8df78f28b",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/config-map.tsv",
+      "source_sha256": "0c89ee3745d5614e48e9098201309e9e40e3c917f50de564c33d63f2cc4b5fb7",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/jobs.tsv",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "76b05e17d4c990480af09c8ed93b8c22a8d7dbcc2ac25763341d9f5f93a47783",
+      "source_blob_sha": "3a064ae99db0c5132c920545c0be62fdb1bd7bd5",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/jobs.tsv",
+      "source_sha256": "9e206e874cb810286f67812e1b2e42f382eeb0e5bef80e172093dafb0c6a6a1e",
+      "substitutions": {
+        "deployment_identifier": 4
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/run_family.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "eec8183a6b4c981588adfca6b1269467f16dee18bec89cd860c50884c7cd403a",
+      "source_blob_sha": "03109707249ab39dbdc38aa60f7f84ce6eafb586",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/run_family.sh",
+      "source_sha256": "eec8183a6b4c981588adfca6b1269467f16dee18bec89cd860c50884c7cd403a",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/serve_prebuilt.py",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "c309c81701213fb830754510870817ef0d92fc033f7aea8ce414cf7411faaf3d",
+      "source_blob_sha": "f2c07c1393b4a3ab329d0d4b6977d236402b2540",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/serve_prebuilt.py",
+      "source_sha256": "c309c81701213fb830754510870817ef0d92fc033f7aea8ce414cf7411faaf3d",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/lingbot_summary.env",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "c9468fc40d6d503504ecc90676c2cf2a1f5a8fec64c377a3979bf445e26dc876",
+      "source_blob_sha": "838ac466fab841523dda5862a94ea570a36abd2a",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/lingbot_summary.env",
+      "source_sha256": "c9468fc40d6d503504ecc90676c2cf2a1f5a8fec64c377a3979bf445e26dc876",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/univla_summary.env",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "9e2e1ef35f4987b6fcbe9c185940b0fa7c5f375594096c8d2d820e303185f709",
+      "source_blob_sha": "b2949d545bee15c7a41f05ef522b62286713168f",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/univla_summary.env",
+      "source_sha256": "9e2e1ef35f4987b6fcbe9c185940b0fa7c5f375594096c8d2d820e303185f709",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        10
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/vla_adapter_summary.env",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "8eca4d108383f1be91e9da3bea0ceee8ada53e7dd8c4354d06e51ee357b3fa07",
+      "source_blob_sha": "8ad857956e4dbd134dec260f6dfd539670f98fce",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/vla_adapter_summary.env",
+      "source_sha256": "7f160a13dfb63ec49fbaafdf3e3f80bd97798ff1ea68d2d37339981c90b7ce01",
+      "substitutions": {
+        "deployment_identifier": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        10
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/xiaomi_summary.env",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "2108efa53e84ca6c9ef8a8f72a66c714b04174a7decd0dc48fcd180ae237b21f",
+      "source_blob_sha": "566a3a70a24da60c6256762760fd960fe33bfe04",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/summaries/xiaomi_summary.env",
+      "source_sha256": "6d6b82b6ba2651bca0066f4eeca500b356012fc606343be7028882e0b5f20826",
+      "substitutions": {
+        "deployment_identifier": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v5/watch.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "5ae93897411383ce52c00649d8c6abac1c319af508c5a8591e1ca4891a627f60",
+      "source_blob_sha": "d837b65a51090da75fd42294d2f58603c02895e1",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v5/watch.sh",
+      "source_sha256": "5ae93897411383ce52c00649d8c6abac1c319af508c5a8591e1ca4891a627f60",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v7/config-map.tsv",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "0c89ee3745d5614e48e9098201309e9e40e3c917f50de564c33d63f2cc4b5fb7",
+      "source_blob_sha": "f065c3d058536b8e643e017659053ca8df78f28b",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v7/config-map.tsv",
+      "source_sha256": "0c89ee3745d5614e48e9098201309e9e40e3c917f50de564c33d63f2cc4b5fb7",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        1
+      ],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v7/jobs.tsv",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "1024e04d0fe01b449197c1cb79bdcf945b691d946d1012a85b88430cdbb67d91",
+      "source_blob_sha": "77bcb45956652eafec6c432ef284767b73e3d3f1",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v7/jobs.tsv",
+      "source_sha256": "8322f94c50aa632d7dfb472f8028f84663bb1fdc111a719e3987055e9bc34c75",
+      "substitutions": {
+        "deployment_identifier": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v7/run_family.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "d819436c1123ccc1dc4326bb1de94113b02206315a51bd52880e36bb56d1977d",
+      "source_blob_sha": "d03b90759779fa89aefaa43cc4ba627b01e456a1",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v7/run_family.sh",
+      "source_sha256": "d819436c1123ccc1dc4326bb1de94113b02206315a51bd52880e36bb56d1977d",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v7/serve_prebuilt.py",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "c309c81701213fb830754510870817ef0d92fc033f7aea8ce414cf7411faaf3d",
+      "source_blob_sha": "f2c07c1393b4a3ab329d0d4b6977d236402b2540",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v7/serve_prebuilt.py",
+      "source_sha256": "c309c81701213fb830754510870817ef0d92fc033f7aea8ce414cf7411faaf3d",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v7/summaries/univla_summary.env",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "cb099202b8e16c683181e6820d3ec7300496b71a2b203748659b2b466014c35b",
+      "source_blob_sha": "d8d30d4e8da1ea7252bc14c568fc1aa2ef4f5f4b",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v7/summaries/univla_summary.env",
+      "source_sha256": "cb099202b8e16c683181e6820d3ec7300496b71a2b203748659b2b466014c35b",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/engineering/calibration_expansion/reproduction/smoke_v7/watch.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "5ae93897411383ce52c00649d8c6abac1c319af508c5a8591e1ca4891a627f60",
+      "source_blob_sha": "d837b65a51090da75fd42294d2f58603c02895e1",
+      "source_path": "archive/engineering/calibration_expansion/reproduction/smoke_v7/watch.sh",
+      "source_sha256": "5ae93897411383ce52c00649d8c6abac1c319af508c5a8591e1ca4891a627f60",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/legacy/reproducibility_final_reviewer/run_pi0fast_and_remaining_diagnostics_20260829.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "4bd96a5d81efe9917c7192ee9c08ea28d0a09fc4088e6cbfee73522000b827ab",
+      "source_blob_sha": "98ef4b3c54a5daabc992974ab433ddb542c5d0fa",
+      "source_path": "archive/legacy/reproducibility_final_reviewer/run_pi0fast_and_remaining_diagnostics_20260829.sh",
+      "source_sha256": "4bd96a5d81efe9917c7192ee9c08ea28d0a09fc4088e6cbfee73522000b827ab",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/legacy/v2_tools/__init__.py",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "42d853c1b5ca4a72108cb2631a964418c533358d048c6117388115d1acafe0de",
+      "source_blob_sha": "8b6f3931ada20ddcab4a9219e776546980dcf538",
+      "source_path": "archive/legacy/v2_tools/__init__.py",
+      "source_sha256": "42d853c1b5ca4a72108cb2631a964418c533358d048c6117388115d1acafe0de",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/legacy/v2_tools/build_discovery_500.py",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "847ac457d102990ea60052a5f710f5da16cac32d666d8b2bb607e1274e25bbb5",
+      "source_blob_sha": "1d3a43cdde6119a4c25195313fe97738e172cd59",
+      "source_path": "archive/legacy/v2_tools/build_discovery_500.py",
+      "source_sha256": "847ac457d102990ea60052a5f710f5da16cac32d666d8b2bb607e1274e25bbb5",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/legacy/v2_tools/libero_plus_selected.py",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "120b75745abf2dc632de46b5c8efdded314aa9382dbf93051b426a9fbac52ab7",
+      "source_blob_sha": "afef4affc95f53079f27defcb7ecebdb37c51066",
+      "source_path": "archive/legacy/v2_tools/libero_plus_selected.py",
+      "source_sha256": "120b75745abf2dc632de46b5c8efdded314aa9382dbf93051b426a9fbac52ab7",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/legacy/v2_tools/libero_plus_selected_v2.py",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "bcaadc82acc0b82f4684f80795910f70a056810ffe1e065f777ac378c3cbb9b4",
+      "source_blob_sha": "c8bd61f20acff9fdac55d4da88f674d89243c60e",
+      "source_path": "archive/legacy/v2_tools/libero_plus_selected_v2.py",
+      "source_sha256": "bcaadc82acc0b82f4684f80795910f70a056810ffe1e065f777ac378c3cbb9b4",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/README.md",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "b06d3730d157f69cd00c5e73c7e498c9436bc2897b7956b2e9b50c58629cfdaa",
+      "source_blob_sha": "e9eac237f3ee299e28c61432814f737f9a796bbd",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/README.md",
+      "source_sha256": "b06d3730d157f69cd00c5e73c7e498c9436bc2897b7956b2e9b50c58629cfdaa",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/SHA256SUMS.txt",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "d4662035d1e879b367419ca1240d53e3fd64e50fae854bc78a903ca6a63c8c21",
+      "source_blob_sha": "55c3a75073dd3d18c092561cc1e466e0924589a4",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/SHA256SUMS.txt",
+      "source_sha256": "d4662035d1e879b367419ca1240d53e3fd64e50fae854bc78a903ca6a63c8c21",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        7,
+        8,
+        9,
+        11,
+        13
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/execution_scripts/01_launch_pi0fast_corrected_d500_60a100.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "fe828e072c1b356660626b59778f8c8722fa2b2e6d5fef897d75055c2214bd81",
+      "source_blob_sha": "c7aca91feabb7be794c742ca35a47d9f163a4995",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/execution_scripts/01_launch_pi0fast_corrected_d500_60a100.sh",
+      "source_sha256": "56517982f97f66f5f74dd2ab8a385b13c3ef29c5d30c96d71d3103d45808fdd8",
+      "substitutions": {
+        "deployment_identifier": 2,
+        "historical_ssh_host": 1,
+        "historical_ssh_port": 1,
+        "ssh_key_filename": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/execution_scripts/02_collect_rebuild_analyze_corrected_holdout.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "000d0ae9c4d2d846906ebd77ff03938121e15748793c4b4b4ce0ed49ef5eb434",
+      "source_blob_sha": "fe0c61221a6b106fd07eeb699c3303106b505735",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/execution_scripts/02_collect_rebuild_analyze_corrected_holdout.sh",
+      "source_sha256": "7b2c7f0800c1d4c39a7102bd11750ed0675d940d5b171d24a2369e2ca3a5737b",
+      "substitutions": {
+        "deployment_identifier": 1,
+        "historical_ssh_host": 1,
+        "historical_ssh_port": 1,
+        "ssh_key_filename": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        6,
+        7,
+        8
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/execution_scripts/03_exact981_official_libero10_canary.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "9e5e5d4e9594bfa1d9366ccf028e7f6a5cdcc00811ef2646b386340cde59e575",
+      "source_blob_sha": "80cc6fa89e72cf419c8b905e464de44a79fb006d",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/execution_scripts/03_exact981_official_libero10_canary.sh",
+      "source_sha256": "209ee79f043e49e218df856a349d9530e59bb8797afa2f4100c26c3c860f70ee",
+      "substitutions": {
+        "historical_ssh_host": 1,
+        "historical_ssh_port": 1,
+        "ssh_key_filename": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/execution_scripts/04_posthoc_adapt100_sensitivity.sh",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "99c37ba86ac71e035614679d8fe1fa99acf35ab0d9ee218dd03be4e962108e9c",
+      "source_blob_sha": "4d581fac14380373fc7da522236f2dc4db5d9e77",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/execution_scripts/04_posthoc_adapt100_sensitivity.sh",
+      "source_sha256": "99c37ba86ac71e035614679d8fe1fa99acf35ab0d9ee218dd03be4e962108e9c",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/libero_fast_exact981_sanitized.yaml",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "6a8d4ca874d6b08fe340de135ae4b83a1334141362cbfc4aa5a4e7dbb9d8fbd6",
+      "source_blob_sha": "4f79165f47b203a7b87f6d95efa1e73cbc7741a1",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/libero_fast_exact981_sanitized.yaml",
+      "source_sha256": "6a8d4ca874d6b08fe340de135ae4b83a1334141362cbfc4aa5a4e7dbb9d8fbd6",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/official_libero10_canary_client.log",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "09342b22ce4d909eae2f437a8d63751f0dea023010d94e647fb769146f536683",
+      "source_blob_sha": "cc6d124ba3fa267a3adb0178a2c81f991fc9977b",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/official_libero10_canary_client.log",
+      "source_sha256": "09342b22ce4d909eae2f437a8d63751f0dea023010d94e647fb769146f536683",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/official_libero10_canary_result.json",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "b1371650c2c10c4d6ba8a6a714bd3be06e3a992e346780807903d8453c59b7e5",
+      "source_blob_sha": "8f46cfdc96bdc250d2651aaf33f4dfc85a0764ce",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/official_libero10_canary_result.json",
+      "source_sha256": "b1371650c2c10c4d6ba8a6a714bd3be06e3a992e346780807903d8453c59b7e5",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        17
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/official_libero10_canary_server.log",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "bceeaf13328976facdd824c412874392810f7c324947871326a1302350972aaf",
+      "source_blob_sha": "97f647d354fe36c8c6f068fc019946f5559252d6",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/official_libero10_canary_server.log",
+      "source_sha256": "728adf0d40ee0804c4b1886bc074fb8d1b711da3da616cb05972ca3b8cb88f11",
+      "substitutions": {
+        "deployment_identifier": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/openpi_981483_pr971_backport.diff",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "83e2eb576039112dd95c4c444b1a849263db4f8c9670495a9e8b84cc50c4b0b5",
+      "source_blob_sha": "760edacb6789d52c30132f0bcb84d0bbb169295a",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/openpi_981483_pr971_backport.diff",
+      "source_sha256": "83e2eb576039112dd95c4c444b1a849263db4f8c9670495a9e8b84cc50c4b0b5",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/openpi_exact981_environment_freeze.txt",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "ef645c9f02745cddec30f358d61e053047db29bb2314e1f1973c12e6b35c2bfc",
+      "source_blob_sha": "1f768a5b1f157b8feeb7d2a83ef3359b44184cd3",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/openpi_exact981_environment_freeze.txt",
+      "source_sha256": "ef645c9f02745cddec30f358d61e053047db29bb2314e1f1973c12e6b35c2bfc",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/runtime_provenance.env",
+      "kind": "historical",
+      "mode": "100755",
+      "published_sha256": "5567d3ce2108c020a1f36ffb108090ae0ec65b06ec503976debda4230f1fa940",
+      "source_blob_sha": "63951c87816f920d953c868f525fa82b83c89f82",
+      "source_path": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/runtime_provenance.env",
+      "source_sha256": "5567d3ce2108c020a1f36ffb108090ae0ec65b06ec503976debda4230f1fa940",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/01_run_clean_3way_holdout_1item.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "163646ecc5ec03231cbadad1a0b458d2590cacc3e8c9f3e1acc153d775ae7c0e",
+      "source_blob_sha": "7ebfc77bcbd99c4fe0da235c5f218fbfff0058da",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/01_run_clean_3way_holdout_1item.sh",
+      "source_sha256": "163646ecc5ec03231cbadad1a0b458d2590cacc3e8c9f3e1acc153d775ae7c0e",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        153,
+        158,
+        163
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/02_production_worker_v2_shared_uv_incident.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "c4c6799277a0c72e41b532202b2520779ed8111829f4c1c6e03cc021a56b3e21",
+      "source_blob_sha": "c1bc67bd5d08f0d154edc65ffad026a30407cdec",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/02_production_worker_v2_shared_uv_incident.sh",
+      "source_sha256": "b21da8c3f2afa3a0488360eb058367083732b2b038beed5cad459b301303dc66",
+      "substitutions": {
+        "deployment_identifier": 3
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        5,
+        8,
+        10
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/03_launch_original_60_jobs.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "c9073ae9520c61d1cf9f19d56e3e7fdcf561e7ea6d06f1a70b63b5999a3609c7",
+      "source_blob_sha": "1a698928477a4733d8a2fb0a1ced05af1a41b697",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/03_launch_original_60_jobs.sh",
+      "source_sha256": "cd1ca2bc7c26c42ce63283dabcec98a43eade407dbb29475b125ff768dd5e9ab",
+      "substitutions": {
+        "deployment_identifier": 2,
+        "personal_path_prefix": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        157,
+        162,
+        167
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/04_repair_worker_v3_isolated_uv.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "b496591308dbc1e4c1ec728ba9725c6d7a8d015d5ee9a59261399b3c1e21cc59",
+      "source_blob_sha": "acac58db1258537160967637e5430067fa17c2c4",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/04_repair_worker_v3_isolated_uv.sh",
+      "source_sha256": "25350c5fb995e2efd30fff921e4ef9714507018526f998bd9859526f2eacf37e",
+      "substitutions": {
+        "deployment_identifier": 3
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        5,
+        10
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/05_launch_repair1_26_jobs.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "1fe9aa91d7601a2973be80167f509b10ee64891da84ecd25c46961d102748460",
+      "source_blob_sha": "80f665eed4d6a38f858b91d72e5777afb209947c",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/05_launch_repair1_26_jobs.sh",
+      "source_sha256": "3634e71c83bbd50922c0bbebbd1f0abff72f2f933a89a81b1bf6594961515568",
+      "substitutions": {
+        "deployment_identifier": 1,
+        "personal_path_prefix": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        5
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/06_watch_canonical_coverage.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "e84719cc09dd6ac10b5d687d33adb180b3fd4ec2d60a5d21fca80f1b0631668b",
+      "source_blob_sha": "0531aebfec1a5f1e1c70bc3ca11f85ea3abcb179",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/06_watch_canonical_coverage.sh",
+      "source_sha256": "875949606dcafa722fcd120bedb5026180a4c52656c5035a39f6a285a3cd037d",
+      "substitutions": {
+        "personal_path_prefix": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        5
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/07_collect_git_results_v2.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "111f036d81cb76c81f990c6d4a33fa1b3b95a913b68bdd1a676d607847121c15",
+      "source_blob_sha": "00e28ab2a3f339b0f2b64e1de4f28d32714f9a79",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/07_collect_git_results_v2.sh",
+      "source_sha256": "30f944c14c0299faf96254d3aee89deaaf8540dc1dda550bb31437b63c8464ea",
+      "substitutions": {
+        "personal_path_prefix": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": false,
+      "changed_lines": [
+        5
+      ],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/08_recover_missing_and_audit.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "224de0e9ae9b9d6d7bfaa44195bb0ad5be1b54f028ef8bc16f52005f78dbf57e",
+      "source_blob_sha": "e083493d8de759deb16c32afd8e7a84607114066",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/08_recover_missing_and_audit.sh",
+      "source_sha256": "a36bbe660774d1deaff5abd3a4b9af025cf8ea7ea54949a0e45bb0e98cf9e4c1",
+      "substitutions": {
+        "personal_path_prefix": 1
+      },
+      "verification": "EXACT_PRIVACY_SPANS_REVERSED"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/rollout_execution/prospective_holdout_v1/restore_libero_runtime.sh",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "cf9e6d96f11efcf63905467e7f7fa3f06137bcc3f66300830bc0e1d499807942",
+      "source_blob_sha": "1ee41b805cee4d6dccfeb10e83eed958e1146fc6",
+      "source_path": "archive/rollout_execution/prospective_holdout_v1/restore_libero_runtime.sh",
+      "source_sha256": "cf9e6d96f11efcf63905467e7f7fa3f06137bcc3f66300830bc0e1d499807942",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/runtime/source_environment_freezes/univla_opendrivelab.txt",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "1e0716d81ea7d3d09dca4b31d5ccecb076a446969d6d6e1c5da2efc9a187d0b7",
+      "source_blob_sha": "5bf4d77b3b1e8462faa4ae4db60d7b4c3af226c3",
+      "source_path": "archive/runtime/source_environment_freezes/univla_opendrivelab.txt",
+      "source_sha256": "1e0716d81ea7d3d09dca4b31d5ccecb076a446969d6d6e1c5da2efc9a187d0b7",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/runtime/source_environment_freezes/vla_adapter.txt",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "76184d154e48dba917b4b7820eb2174a1a0b85d055d79fe67ccf1bed756c53b0",
+      "source_blob_sha": "9e38c549a38312d777de62e0ecbbc23c979e48cb",
+      "source_path": "archive/runtime/source_environment_freezes/vla_adapter.txt",
+      "source_sha256": "76184d154e48dba917b4b7820eb2174a1a0b85d055d79fe67ccf1bed756c53b0",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/archive/runtime/source_environment_freezes/xiaomi_robotics_0.txt",
+      "kind": "historical",
+      "mode": "100644",
+      "published_sha256": "ab6f3b8361c9afbdffc1a4af1923180f93fc7b4da3c4c454333114860be67317",
+      "source_blob_sha": "2b05c1a28a9d4aba3f8a011e46511c2b5e953d5a",
+      "source_path": "archive/runtime/source_environment_freezes/xiaomi_robotics_0.txt",
+      "source_sha256": "ab6f3b8361c9afbdffc1a4af1923180f93fc7b4da3c4c454333114860be67317",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/README.md",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "40a1272226a62937bef8dc403298a7362f28e81ebdd3e1cc727a75db6f470b7a",
+      "source_blob_sha": "3a73c74e1a780214fc6a7137f91703149b00ba8d",
+      "source_path": "configs/README.md",
+      "source_sha256": "40a1272226a62937bef8dc403298a7362f28e81ebdd3e1cc727a75db6f470b7a",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/univla_opendrivelab/goal.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "cc2df2d17ceebf00d8aa8a717865c87446c0e85b37249fdebb755e49a670ef58",
+      "source_blob_sha": "5af0820dbbafa3a11aae6375af1a8d09f1e3ae14",
+      "source_path": "configs/models/calibration_expansion/univla_opendrivelab/goal.yaml",
+      "source_sha256": "cc2df2d17ceebf00d8aa8a717865c87446c0e85b37249fdebb755e49a670ef58",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/univla_opendrivelab/long.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "1ef4e220697fc643d1a6571f1269e9a1d1b35d0fb753dd6b8932999398f963cd",
+      "source_blob_sha": "661a1c3a43fcdf420c1fb1beda6bc08bb2599638",
+      "source_path": "configs/models/calibration_expansion/univla_opendrivelab/long.yaml",
+      "source_sha256": "1ef4e220697fc643d1a6571f1269e9a1d1b35d0fb753dd6b8932999398f963cd",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/univla_opendrivelab/object.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "a441ef2f902f7b9eb25a6a26166fdb28951f77f33b87f5e9963f8fa917b63630",
+      "source_blob_sha": "ddefce3363812018adc19f547b98b3031d0f334b",
+      "source_path": "configs/models/calibration_expansion/univla_opendrivelab/object.yaml",
+      "source_sha256": "a441ef2f902f7b9eb25a6a26166fdb28951f77f33b87f5e9963f8fa917b63630",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/univla_opendrivelab/spatial.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "ac63956c55b2cd695c1c23fb3cd591acccfe14601d41027d8a4f70269fa061be",
+      "source_blob_sha": "91c071569bb9aa9bd7fed7b2ba8b8723fef4cb0f",
+      "source_path": "configs/models/calibration_expansion/univla_opendrivelab/spatial.yaml",
+      "source_sha256": "ac63956c55b2cd695c1c23fb3cd591acccfe14601d41027d8a4f70269fa061be",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/vla_adapter/goal.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "c4f0f37354c13bdd70282d9c8bf7f880d46b912c7e7a0b4f57f051a815e044ec",
+      "source_blob_sha": "b9907cb9922e5e822adc037281aa58e767edd7e7",
+      "source_path": "configs/models/calibration_expansion/vla_adapter/goal.yaml",
+      "source_sha256": "c4f0f37354c13bdd70282d9c8bf7f880d46b912c7e7a0b4f57f051a815e044ec",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/vla_adapter/long.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "da68882835f01e3e74c03d1c1c3e5559e08d0d0d76504cd917ac2c5518dd6fd9",
+      "source_blob_sha": "b929b15e421927e2d0a82919e6a38a367ebd96ca",
+      "source_path": "configs/models/calibration_expansion/vla_adapter/long.yaml",
+      "source_sha256": "da68882835f01e3e74c03d1c1c3e5559e08d0d0d76504cd917ac2c5518dd6fd9",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/vla_adapter/object.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "4972c7b7f9af89aa03d2418b192d34c4400cec06cea632162dcd63469ddf0f25",
+      "source_blob_sha": "d7bb8ef60967e4b09c6c0bfdb11cc7bf43141436",
+      "source_path": "configs/models/calibration_expansion/vla_adapter/object.yaml",
+      "source_sha256": "4972c7b7f9af89aa03d2418b192d34c4400cec06cea632162dcd63469ddf0f25",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/vla_adapter/spatial.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "71d33c801e3fa628343b68ee0f1da558cb027acc0b13d7c6370f66b6386d822d",
+      "source_blob_sha": "17daa65b625c83453cd90d017548feb029281505",
+      "source_path": "configs/models/calibration_expansion/vla_adapter/spatial.yaml",
+      "source_sha256": "71d33c801e3fa628343b68ee0f1da558cb027acc0b13d7c6370f66b6386d822d",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/models/calibration_expansion/xiaomi_robotics_0/libero.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "594879f0c0e4e38c26014c029734fe92081ca056b35f521e7d734afd5af46a07",
+      "source_blob_sha": "21766221ffbe078d4e9ae7146cea5dff1326b496",
+      "source_path": "configs/models/calibration_expansion/xiaomi_robotics_0/libero.yaml",
+      "source_sha256": "594879f0c0e4e38c26014c029734fe92081ca056b35f521e7d734afd5af46a07",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/study/README.md",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "1a8929cb5f5fb63a9e40fe17a956b301a987c777ee70ca0d6491d2079e06391d",
+      "source_blob_sha": "a3343edff805ff6a8fe3b2087949795bc5217a51",
+      "source_path": "configs/study/README.md",
+      "source_sha256": "1a8929cb5f5fb63a9e40fe17a956b301a987c777ee70ca0d6491d2079e06391d",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/study/final_registry.json",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "0d409099a692d1e526cb93daff0d572bcf5dd27c92c40ff9a373ffd7232bd5c6",
+      "source_blob_sha": "29b4d44298aac69e80cf99be10e485b1f1c31ee1",
+      "source_path": "configs/study/final_registry.json",
+      "source_sha256": "0d409099a692d1e526cb93daff0d572bcf5dd27c92c40ff9a373ffd7232bd5c6",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/study/protocol_primary.yaml",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "1cffdeedd6043c1a581fdf5f46f12a8874bc628261be53f3dad633472c32a340",
+      "source_blob_sha": "0a65880c061a985eb5bc3c5b4f7ee67d402d0bcc",
+      "source_path": "configs/study/protocol_primary.yaml",
+      "source_sha256": "1cffdeedd6043c1a581fdf5f46f12a8874bc628261be53f3dad633472c32a340",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/upstream/excluded_candidate_source_pins.json",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "8d30b06bbc7e4e8ed20bdfc14cd956f6ec5f7cfe2569a190eb22056a080417ac",
+      "source_blob_sha": "617a2f2722b96ce150802a1e0ede1ffad39352e5",
+      "source_path": "configs/upstream/excluded_candidate_source_pins.json",
+      "source_sha256": "8d30b06bbc7e4e8ed20bdfc14cd956f6ec5f7cfe2569a190eb22056a080417ac",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/configs/upstream/source_pins.json",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "ad51727dfd96779639230439d860d14d32a0af64fb5105d05b4295d023b99c33",
+      "source_blob_sha": "eeb72c02bf66425a071fce99eea1360e6cf76011",
+      "source_path": "configs/upstream/source_pins.json",
+      "source_sha256": "ad51727dfd96779639230439d860d14d32a0af64fb5105d05b4295d023b99c33",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/scripts/bootstrap_sources.sh",
+      "kind": "canonical",
+      "mode": "100755",
+      "published_sha256": "4b603bb4fe43abab1aecfba5351f1409d9b26f8a4c7b6eb0cd5d1435e83fab97",
+      "source_blob_sha": "5d07c63b160bea962589218644cd8ecf8132939e",
+      "source_path": "scripts/bootstrap_sources.sh",
+      "source_sha256": "4b603bb4fe43abab1aecfba5351f1409d9b26f8a4c7b6eb0cd5d1435e83fab97",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/scripts/install_harness_overlay.sh",
+      "kind": "canonical",
+      "mode": "100755",
+      "published_sha256": "a9b01073c012127ab3b6e93993f6b93885ce63681ee251d55efcacf025254aa7",
+      "source_blob_sha": "474f35d1e54138f069d1ee76c8be8cd0ce2ea93a",
+      "source_path": "scripts/install_harness_overlay.sh",
+      "source_sha256": "a9b01073c012127ab3b6e93993f6b93885ce63681ee251d55efcacf025254aa7",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/src/README.md",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "da9e66caf90509359fd59b02029a88f2ef55c8869036e59108a763cf1e5d6c52",
+      "source_blob_sha": "6766c1abe59eac7111eb0d7e8e18f2549c93efe9",
+      "source_path": "src/README.md",
+      "source_sha256": "da9e66caf90509359fd59b02029a88f2ef55c8869036e59108a763cf1e5d6c52",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/src/adapters/calibration_expansion/univla_opendrivelab.py",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "a2e054275e74e3fd47fa25f30295cfe502b1b23eb7719b3bead4afe45d910978",
+      "source_blob_sha": "b9f20e1a4a3072f767570fa20021e321820a6926",
+      "source_path": "src/adapters/calibration_expansion/univla_opendrivelab.py",
+      "source_sha256": "a2e054275e74e3fd47fa25f30295cfe502b1b23eb7719b3bead4afe45d910978",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/src/adapters/calibration_expansion/vla_adapter.py",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "f3945e42d71bb0a2facd61827e55b3b05022fce72c2c71ff68881fe92a8e849c",
+      "source_blob_sha": "668450f1f6589cb22bbe93f2af466222628f7630",
+      "source_path": "src/adapters/calibration_expansion/vla_adapter.py",
+      "source_sha256": "f3945e42d71bb0a2facd61827e55b3b05022fce72c2c71ff68881fe92a8e849c",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/src/adapters/calibration_expansion/xiaomi_robotics_0.py",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "006e614ddad0b6fa33631d662fd411c5da2fc1cc3a31d7ae7a250b87a0339c02",
+      "source_blob_sha": "a8e4306e4e9b2cab572a5fe0a44822a017f8b838",
+      "source_path": "src/adapters/calibration_expansion/xiaomi_robotics_0.py",
+      "source_sha256": "006e614ddad0b6fa33631d662fd411c5da2fc1cc3a31d7ae7a250b87a0339c02",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    },
+    {
+      "byte_identical": true,
+      "changed_lines": [],
+      "destination": "engineering/backup/src/benchmark/libero_plus_selected_v3.py",
+      "kind": "canonical",
+      "mode": "100644",
+      "published_sha256": "0a9e558582b769b81d859f619850d9438de5a35004fe8c11b093560eb4674dae",
+      "source_blob_sha": "7b0aabd068a2f13e60b5b0924ae4ffefef42b3d6",
+      "source_path": "src/benchmark/libero_plus_selected_v3.py",
+      "source_sha256": "0a9e558582b769b81d859f619850d9438de5a35004fe8c11b093560eb4674dae",
+      "substitutions": {},
+      "verification": "ORIGINAL_BYTES"
+    }
+  ],
+  "held_back_count": 0,
+  "new_cpu_analysis": false,
+  "new_gpu_experiments": false,
+  "privacy_substituted_files": 18,
+  "source_commit": "64507d82e4c5f8efaf96f74f244d37de6516341b",
+  "source_files": 80
+}

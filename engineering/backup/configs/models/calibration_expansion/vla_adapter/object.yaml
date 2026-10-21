@@ -1,0 +1,16 @@
+script: "src/vla_eval/model_servers/vla_adapter.py"
+port: 8000
+
+args:
+  source_checkout: "__REPO_ROOT__/external/VLA-Adapter"
+  source_commit: "23fa0c9c159e2aa04341cdd3e924f44061311060"
+  checkpoint_dir: "__MODEL_ROOT__/calibration_expansion/vla_adapter/object/afd5c551e4851fb434deaba272c7688e87586cc4"
+  checkpoint_revision: "afd5c551e4851fb434deaba272c7688e87586cc4"
+  unnorm_key: "libero_object"
+  chunk_size: 8
+
+metadata:
+  upstream_checkpoint: "VLA-Adapter/LIBERO-Object-Pro"
+  upstream_revision: "afd5c551e4851fb434deaba272c7688e87586cc4"
+  checkpoint_materialized: false
+  gpu_smoke_submitted: false

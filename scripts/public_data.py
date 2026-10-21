@@ -81,7 +81,7 @@ def verify_inventory(root: Path) -> dict[str, str]:
         for name in list(dirs):
             candidate = parent / name
             require(not candidate.is_symlink(), f"Symlink directory: {candidate.relative_to(root)}")
-            if name == "__pycache__" or (parent == root and name in {".git", "outputs"}):
+            if name == "__pycache__" or (parent == root and name in {".git", "outputs"}) or candidate.relative_to(root).as_posix() in {"engineering/backup/external", "engineering/backup/reproducibility/reproduced"}:
                 dirs.remove(name)
         for name in names:
             candidate = parent / name
