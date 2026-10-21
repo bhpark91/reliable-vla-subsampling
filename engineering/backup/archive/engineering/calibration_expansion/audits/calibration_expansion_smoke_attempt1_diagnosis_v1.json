@@ -1,0 +1,31 @@
+{
+  "schema_version": "calibration_expansion_smoke_attempt1_diagnosis_v1",
+  "generated_at_utc": "2026-08-27T22:32:14.751902+00:00",
+  "run_id": "calexp-smoke-20260827-214940",
+  "classification": "ENGINEERING_RUNTIME_FAILURE_NOT_MODEL_PERFORMANCE",
+  "families": {
+    "vla_adapter": {
+      "failed_stage": "wait_server_health",
+      "root_cause": "port_was_nested_under_args",
+      "repair": "port_moved_to_top_level_server_config"
+    },
+    "xiaomi_robotics_0": {
+      "failed_stage": "wait_server_health",
+      "root_cause": "port_was_nested_under_args",
+      "repair": "port_moved_to_top_level_server_config"
+    },
+    "univla_opendrivelab": {
+      "failed_stage": "prepare_runtime",
+      "root_cause": "runtime_finite_action_patch_expected_plural_actions_return",
+      "repair": "finite_guard_added_to_committed_adapter_using_singular_action"
+    },
+    "lingbot_va": {
+      "failed_stage": "wait_server_health",
+      "root_cause": "runtime_generated_config_nested_port_under_args",
+      "repair_requirement_for_attempt2": "generate_LingBot_port_at_top_level"
+    }
+  },
+  "task_success_used": false,
+  "discovery500_outcome_used": false,
+  "qual24_outcome_used": false
+}

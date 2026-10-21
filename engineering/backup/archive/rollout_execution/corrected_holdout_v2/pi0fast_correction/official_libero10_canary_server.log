@@ -1,0 +1,22 @@
+/data/vla-irt-cat-v2/envs/openpi-pi0fast-zscore-exact981/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+INFO:root:Loading model...
+INFO:2026-08-29 13:23:04,699:jax._src.xla_bridge:925: Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+INFO:jax._src.xla_bridge:Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+INFO:2026-08-29 13:23:04,716:jax._src.xla_bridge:925: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+INFO:jax._src.xla_bridge:Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+INFO:absl:orbax-checkpoint version: 0.11.13
+INFO:absl:Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7ff44f195ed0>
+INFO:absl:Restoring checkpoint from /data/vla-irt-cat-v2/cache/openpi-pi0fast-zscore-data/openpi-assets/checkpoints/pi0_fast_libero/params.
+INFO:absl:[thread=MainThread] Failed to get flag value for EXPERIMENTAL_ORBAX_USE_DISTRIBUTED_PROCESS_ID.
+INFO:absl:[process=0][thread=MainThread] No metadata found for any process_index, checkpoint_dir=/data/vla-irt-cat-v2/cache/openpi-pi0fast-zscore-data/openpi-assets/checkpoints/pi0_fast_libero/params. time elapsed=0.0010955333709716797 seconds. If the checkpoint does not contain jax.Array then it is expected. If checkpoint contains jax.Array then it should lead to an error eventually; if no error is raised then it is a bug.
+INFO:absl:[process=0] /jax/checkpoint/read/bytes_per_sec: 605.7 MiB/s (total bytes: 5.4 GiB) (time elapsed: 9 seconds) (per-host)
+INFO:absl:Finished restoring checkpoint in 9.21 seconds from /data/vla-irt-cat-v2/cache/openpi-pi0fast-zscore-data/openpi-assets/checkpoints/pi0_fast_libero/params.
+INFO:root:Norm stats not found in /data/vla-irt-cat-v2/external/openpi-pi0fast-zscore-holdoutpin/assets/pi0_fast_libero/physical-intelligence/libero, skipping.
+INFO:root:Loaded norm stats from /data/vla-irt-cat-v2/cache/openpi-pi0fast-zscore-data/openpi-assets/checkpoints/pi0_fast_libero/assets/physical-intelligence/libero
+INFO:root:Creating server (host: main-wsp-REDACTED000001-0, ip: 10.134.21.149)
+INFO:websockets.server:server listening on 0.0.0.0:8000
+INFO:websockets.server:connection rejected (200 OK)
+INFO:websockets.server:connection open
+INFO:openpi.serving.websocket_policy_server:Connection from ('127.0.0.1', 38196) opened
+INFO:openpi.serving.websocket_policy_server:Connection from ('127.0.0.1', 38196) closed

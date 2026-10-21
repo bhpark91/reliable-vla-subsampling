@@ -1,0 +1,13 @@
+{
+  "openpi_pin": "981483dca0fd9acba698fea00aa6e52d56a66c58",
+  "correction": "PR971 z-score compatibility backport only",
+  "use_quantile_norm": false,
+  "server": "OpenPI scripts/serve_policy.py / WebsocketPolicyServer",
+  "client": "OpenPI examples/libero/main.py::eval_libero",
+  "suite": "libero_10",
+  "episodes": 10,
+  "success_rate": 0.6,
+  "engineering_gate": "PASS",
+  "performance_sanity": "HEALTHY",
+  "sanity_threshold": 0.4
+}

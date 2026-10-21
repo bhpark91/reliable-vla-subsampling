@@ -1,0 +1,869 @@
+{
+  "schema_version": "final_vla_registry_v1",
+  "status": "FROZEN_FINAL_14_SYSTEMS_WITH_EXPLICIT_UNKNOWNS",
+  "generated_from_repository_evidence_at_utc": "2026-08-29T18:15:00Z",
+  "unknown_policy": "The literal string UNKNOWN means that the exact value is not recoverable from the committed evidence. It must not be guessed or replaced by a current upstream HEAD.",
+  "scope": {
+    "benchmark": "LIBERO-Plus",
+    "systems": 14,
+    "calibration_systems": 11,
+    "calibration_families": 9,
+    "corrected_holdout_systems": 3,
+    "corrected_holdout_families": 2,
+    "items_per_system": 500,
+    "calibration_responses": 5500,
+    "corrected_holdout_responses": 1500
+  },
+  "shared_scientific_contract": {
+    "item_manifest": {
+      "path": "data/bank/discovery_500_primary.json",
+      "sha256": "87410957f255d73a6595365ca72cf380254b4d2bc0b98923deebe7bfcc8682b1"
+    },
+    "benchmark_source": {
+      "url": "https://github.com/sylvestf/LIBERO-plus.git",
+      "commit": "4976dc30028e805ff8094b55501d532c48fec182"
+    },
+    "evaluation_harness_source": {
+      "url": "https://github.com/allenai/vla-evaluation-harness.git",
+      "commit": "2680ab2fafe981c2dba63c6c1a4e7bb4415dbb56"
+    },
+    "wrapper": {
+      "path": "src/benchmark/libero_plus_selected_v3.py",
+      "sha256": "0a9e558582b769b81d859f619850d9438de5a35004fe8c11b093560eb4674dae"
+    },
+    "primary_condition": {
+      "seed": 7,
+      "env_seed": 7,
+      "num_steps_wait": 10,
+      "episodes_per_item": 1,
+      "suite_specific_max_steps": "UNCHANGED_FROM_CANONICAL_BENCHMARK"
+    },
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "execution_rules": [
+      "Model-specific observation/action interfaces, checkpoints, and normalization are allowed.",
+      "Each shard writes SQLite only to node-local storage.",
+      "Only engineering failures are retried; a normal task failure is a binary zero.",
+      "Model weights are downloaded from the named upstream locations and are not stored in this repository."
+    ]
+  },
+  "systems": [
+    {
+      "system_id": "db_cogact",
+      "display_name": "DB-CogACT",
+      "role": "calibration",
+      "family_id": "cogact",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 351,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "Dexmal/libero-db-cogact",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/dexbotic/cogact.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/db_cogact/libero.yaml at the shared harness commit"
+        ]
+      },
+      "runtime": {
+        "container_image": "UNKNOWN",
+        "container_digest": "UNKNOWN",
+        "python": "UNKNOWN",
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/evidence_registry.json",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "exact model source revision",
+        "checkpoint revision",
+        "container digest and Python environment"
+      ]
+    },
+    {
+      "system_id": "openvla",
+      "display_name": "OpenVLA",
+      "role": "calibration",
+      "family_id": "openvla",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 118,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN"
+      },
+      "checkpoints": {
+        "libero_spatial": {
+          "repository": "openvla/openvla-7b-finetuned-libero-spatial",
+          "revision": "UNKNOWN"
+        },
+        "libero_object": {
+          "repository": "openvla/openvla-7b-finetuned-libero-object",
+          "revision": "UNKNOWN"
+        },
+        "libero_goal": {
+          "repository": "openvla/openvla-7b-finetuned-libero-goal",
+          "revision": "UNKNOWN"
+        },
+        "libero_10": {
+          "repository": "openvla/openvla-7b-finetuned-libero-10",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/openvla.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/openvla/libero_spatial.yaml at the shared harness commit",
+          "configs/model_servers/openvla/libero_object.yaml at the shared harness commit",
+          "configs/model_servers/openvla/libero_goal.yaml at the shared harness commit",
+          "configs/model_servers/openvla/libero_10.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "suite_restart": true,
+          "chunk_size": 1,
+          "jpeg_roundtrip": true,
+          "center_crop": true
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "benchmark_python": "3.8",
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model source commit",
+        "all checkpoint revisions",
+        "mutable container image digest"
+      ]
+    },
+    {
+      "system_id": "openvla_oft",
+      "display_name": "OpenVLA-OFT",
+      "role": "calibration",
+      "family_id": "openvla",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 350,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/oft.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/oft/libero_joint_spatial.yaml at the shared harness commit",
+          "configs/model_servers/oft/libero_joint_object.yaml at the shared harness commit",
+          "configs/model_servers/oft/libero_joint_goal.yaml at the shared harness commit",
+          "configs/model_servers/oft/libero_joint_long.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "suite_restart": true,
+          "num_images_in_input": 2,
+          "action_chunk_size": 8,
+          "send_wrist_image": true,
+          "send_state": true,
+          "absolute_action": false,
+          "normalization_keys": {
+            "libero_spatial": "libero_spatial_no_noops",
+            "libero_object": "libero_object_no_noops",
+            "libero_goal": "libero_goal_no_noops",
+            "libero_10": "libero_10_no_noops"
+          }
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "benchmark_python": "3.8.20",
+        "model_server_packages": {
+          "torch": "2.2.0",
+          "transformers": "4.40.1",
+          "tensorflow": "2.15.0",
+          "tensorflow-metadata": "1.15.0",
+          "protobuf": "4.25.9",
+          "openvla-oft": "0.0.1"
+        },
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model source commit",
+        "checkpoint revision",
+        "mutable container image digest"
+      ]
+    },
+    {
+      "system_id": "x_vla",
+      "display_name": "X-VLA",
+      "role": "calibration",
+      "family_id": "x_vla",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 369,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "2toINF/X-VLA-Libero",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/xvla.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/xvla/libero.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "suite_restart": false,
+          "send_wrist_image": true,
+          "send_state": true,
+          "absolute_action": true
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "python": "UNKNOWN",
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model source commit",
+        "checkpoint revision",
+        "mutable container image digest and Python version"
+      ]
+    },
+    {
+      "system_id": "molmoact2",
+      "display_name": "MolmoAct2",
+      "role": "calibration",
+      "family_id": "molmoact2",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 420,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN",
+        "bridge": "LeRobot"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "allenai/MolmoAct2-LIBERO",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/lerobot.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/lerobot/molmoact2_libero.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "agentview": true,
+          "wrist": true,
+          "state_dim": 8,
+          "action_dim": 7,
+          "qualification_num_steps_wait": 10
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "python": "UNKNOWN",
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "archive/legacy/manifests/canonical/evidence_registry.json",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model/bridge source commit",
+        "checkpoint revision",
+        "mutable container image digest and Python version"
+      ]
+    },
+    {
+      "system_id": "vla_jepa",
+      "display_name": "VLA-JEPA",
+      "role": "calibration",
+      "family_id": "vla_jepa",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 410,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN",
+        "bridge": "LeRobot"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "lerobot/VLA-JEPA-LIBERO",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in LeRobot bridge",
+        "implementation_path": "src/vla_eval/model_servers/lerobot.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/lerobot/vla_jepa_libero.yaml at the shared harness commit"
+        ]
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "python": "UNKNOWN",
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "archive/legacy/manifests/canonical/evidence_registry.json",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model/bridge source commit",
+        "checkpoint revision",
+        "mutable container image digest and Python version"
+      ]
+    },
+    {
+      "system_id": "groot_n16",
+      "display_name": "GR00T N1.6",
+      "role": "calibration",
+      "family_id": "groot",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 364,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "0xAnkitSingh/GR00T-N1.6-LIBERO",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/groot.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/groot/libero.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "embodiment_tag": "LIBERO_PANDA",
+          "invert_gripper": true,
+          "send_wrist_image": true,
+          "send_state": true,
+          "absolute_action": false
+        }
+      },
+      "runtime": {
+        "container_image": "nvidia/cuda:12.6.3-devel-ubuntu22.04",
+        "container_digest": "UNKNOWN",
+        "required_components": [
+          "nvcc",
+          "flash-attn",
+          "EGL/OpenGL stack"
+        ],
+        "python": "UNKNOWN",
+        "hardware": "UNKNOWN"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model source commit",
+        "checkpoint revision",
+        "mutable container image digest and Python version"
+      ]
+    },
+    {
+      "system_id": "groot_n17",
+      "display_name": "GR00T N1.7",
+      "role": "calibration",
+      "family_id": "groot",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 376,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN",
+        "bridge": "LeRobot"
+      },
+      "checkpoints": {
+        "libero_spatial": {
+          "repository": "nvidia/gr00t17-lerobot-libero_spatial-640",
+          "revision": "UNKNOWN"
+        },
+        "libero_object": {
+          "repository": "nvidia/gr00t17-lerobot-libero_object-640",
+          "revision": "UNKNOWN"
+        },
+        "libero_goal": {
+          "repository": "nvidia/gr00t17-lerobot-libero_goal-640",
+          "revision": "UNKNOWN"
+        },
+        "libero_10": {
+          "repository": "nvidia/gr00t17-lerobot-libero_10-640",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in LeRobot bridge",
+        "implementation_path": "src/vla_eval/model_servers/lerobot.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/lerobot/groot_n17.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "suite_restart": true,
+          "base_models": [
+            "nvidia/GR00T-N1.7-3B",
+            "nvidia/Cosmos-Reason2-2B"
+          ]
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "python": "UNKNOWN",
+        "hardware": "UNKNOWN",
+        "authentication_requirement": "A Hugging Face credential with access to the gated Cosmos repository is required; no secret value is stored."
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "model/bridge source commit",
+        "all checkpoint revisions",
+        "mutable container image digest and Python version"
+      ]
+    },
+    {
+      "system_id": "xiaomi_robotics_0",
+      "display_name": "Xiaomi-Robotics-0",
+      "role": "calibration",
+      "family_id": "xiaomi_robotics_0",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 369,
+      "observed_items": 500,
+      "model_source": {
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0.git",
+        "commit": "7c316604d43357d10b06d11fae4c39290c447da5"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO",
+          "revision": "fc04bbdcc53e498695cfad95d1199091396ef55b"
+        }
+      },
+      "adapter": {
+        "implementation": "repository overlay",
+        "implementation_path": "src/adapters/calibration_expansion/xiaomi_robotics_0.py",
+        "config_paths": [
+          "configs/models/calibration_expansion/xiaomi_robotics_0/libero.yaml"
+        ],
+        "interface": {
+          "robot_type": "libero_all",
+          "predicted_action_steps": 30,
+          "executed_action_steps": 10,
+          "action_dimensions": 7,
+          "send_wrist_image": true,
+          "send_state": true
+        }
+      },
+      "runtime": {
+        "container_image": "UNKNOWN",
+        "container_digest": "UNKNOWN",
+        "python": "3.12",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.57.1",
+        "flash-attn": "2.8.3",
+        "hardware": "NVIDIA A100-SXM4-80GB"
+      },
+      "evidence": [
+        "configs/upstream/source_pins.json",
+        "archive/runtime/source_environment_freezes/xiaomi_robotics_0.txt",
+        "archive/internal_provenance/snapshots/d500_production_ready_20260829/production_runtime_contract.json",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "container image and digest",
+        "complete system-package/driver freeze"
+      ]
+    },
+    {
+      "system_id": "vla_adapter",
+      "display_name": "VLA-Adapter",
+      "role": "calibration",
+      "family_id": "vla_adapter",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 310,
+      "observed_items": 500,
+      "model_source": {
+        "url": "https://github.com/OpenHelix-Team/VLA-Adapter.git",
+        "commit": "23fa0c9c159e2aa04341cdd3e924f44061311060"
+      },
+      "checkpoints": {
+        "libero_spatial": {
+          "repository": "VLA-Adapter/LIBERO-Spatial-Pro",
+          "revision": "cb023c6771fc62ea729d218f09ac0583c14f59d4"
+        },
+        "libero_object": {
+          "repository": "VLA-Adapter/LIBERO-Object-Pro",
+          "revision": "afd5c551e4851fb434deaba272c7688e87586cc4"
+        },
+        "libero_goal": {
+          "repository": "VLA-Adapter/LIBERO-Goal-Pro",
+          "revision": "2ae84b8275a0c35c1b6751573a71468e1c080825"
+        },
+        "libero_10": {
+          "repository": "VLA-Adapter/LIBERO-Long-Pro",
+          "revision": "9e21d603e53c8602919b9a1d90201b329e673f6b"
+        }
+      },
+      "adapter": {
+        "implementation": "repository overlay",
+        "implementation_path": "src/adapters/calibration_expansion/vla_adapter.py",
+        "config_paths": [
+          "configs/models/calibration_expansion/vla_adapter/spatial.yaml",
+          "configs/models/calibration_expansion/vla_adapter/object.yaml",
+          "configs/models/calibration_expansion/vla_adapter/goal.yaml",
+          "configs/models/calibration_expansion/vla_adapter/long.yaml"
+        ],
+        "interface": {
+          "chunk_size": 8,
+          "send_wrist_image": true,
+          "send_state": true,
+          "proprio_dim": 8,
+          "seed": 7,
+          "suite_specific_unnorm_key": true
+        }
+      },
+      "runtime": {
+        "container_image": "UNKNOWN",
+        "container_digest": "UNKNOWN",
+        "python": "3.10.16",
+        "torch": "2.2.0+cu121",
+        "transformers": "4.40.1",
+        "tensorflow-metadata": "1.15.0 installed with --no-deps",
+        "hardware": "NVIDIA A100-SXM4-80GB"
+      },
+      "evidence": [
+        "configs/upstream/source_pins.json",
+        "archive/runtime/source_environment_freezes/vla_adapter.txt",
+        "archive/internal_provenance/snapshots/d500_production_ready_20260829/production_runtime_contract.json",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "container image and digest",
+        "complete system-package/driver freeze"
+      ]
+    },
+    {
+      "system_id": "univla_opendrivelab",
+      "display_name": "OpenDriveLab UniVLA",
+      "role": "calibration",
+      "family_id": "univla_opendrivelab",
+      "response_matrix": "data/calibration/calibration_long_5500.csv",
+      "observed_successes": 297,
+      "observed_items": 500,
+      "model_source": {
+        "url": "https://github.com/OpenDriveLab/UniVLA.git",
+        "commit": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352"
+      },
+      "checkpoints": {
+        "libero_spatial": {
+          "repository": "qwbu/univla-7b-224-sft-libero",
+          "subdirectory": "univla-libero-spatial",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1"
+        },
+        "libero_object": {
+          "repository": "qwbu/univla-7b-224-sft-libero",
+          "subdirectory": "univla-libero-object",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1"
+        },
+        "libero_goal": {
+          "repository": "qwbu/univla-7b-224-sft-libero",
+          "subdirectory": "univla-libero-goal",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1"
+        },
+        "libero_10": {
+          "repository": "qwbu/univla-7b-224-sft-libero",
+          "subdirectory": "univla-libero-10",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1"
+        }
+      },
+      "adapter": {
+        "implementation": "repository overlay",
+        "implementation_path": "src/adapters/calibration_expansion/univla_opendrivelab.py",
+        "config_paths": [
+          "configs/models/calibration_expansion/univla_opendrivelab/spatial.yaml",
+          "configs/models/calibration_expansion/univla_opendrivelab/object.yaml",
+          "configs/models/calibration_expansion/univla_opendrivelab/goal.yaml",
+          "configs/models/calibration_expansion/univla_opendrivelab/long.yaml"
+        ],
+        "interface": {
+          "agentview_only": true,
+          "send_wrist_image": false,
+          "send_state": false,
+          "window_size": 12,
+          "internal_temporal_aggregation": true,
+          "task_suite_name_shim": "libero",
+          "requires_action_decoder_pt": true
+        }
+      },
+      "runtime": {
+        "container_image": "UNKNOWN",
+        "container_digest": "UNKNOWN",
+        "python": "3.10.16",
+        "torch": "2.2.0+cu121",
+        "transformers": "4.40.1",
+        "flash-attn": "2.5.5",
+        "webdataset": "0.2.111",
+        "hardware": "NVIDIA A100-SXM4-80GB"
+      },
+      "evidence": [
+        "configs/upstream/source_pins.json",
+        "archive/runtime/source_environment_freezes/univla_opendrivelab.txt",
+        "archive/internal_provenance/snapshots/d500_production_ready_20260829/production_runtime_contract.json",
+        "data/calibration/calibration_long_5500.csv"
+      ],
+      "unresolved": [
+        "container image and digest",
+        "complete system-package/driver freeze"
+      ]
+    },
+    {
+      "system_id": "pi05",
+      "display_name": "pi0.5",
+      "role": "corrected_holdout",
+      "family_id": "pi_openpi",
+      "response_matrix": "data/holdout/holdout_long_1500.csv",
+      "observed_successes": 438,
+      "observed_items": 500,
+      "model_source": {
+        "url": "https://github.com/Physical-Intelligence/openpi.git",
+        "commit": "UNKNOWN",
+        "note": "The exact source commit used for the preserved pi0.5 rows is not recorded. The 981483d pin below applies only to the corrected pi0-FAST rerun."
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "gs://openpi-assets/checkpoints/pi05_libero",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/pi0.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/pi0/libero.yaml at the shared harness commit"
+        ]
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "benchmark_python": "3.8.20",
+        "model_server_python": "~=3.11",
+        "server_timeout_seconds": 300,
+        "hardware": "NVIDIA A100-SXM4-80GB"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/holdout/holdout_long_1500.csv",
+        "data/holdout/audit_report.json"
+      ],
+      "unresolved": [
+        "exact OpenPI source commit for preserved rows",
+        "checkpoint object generation/revision",
+        "mutable container image digest"
+      ]
+    },
+    {
+      "system_id": "pi0_fast",
+      "display_name": "pi0-FAST",
+      "role": "corrected_holdout",
+      "family_id": "pi_openpi",
+      "response_matrix": "data/holdout/holdout_long_1500.csv",
+      "observed_successes": 39,
+      "observed_items": 500,
+      "model_source": {
+        "url": "https://github.com/Physical-Intelligence/openpi.git",
+        "commit": "981483dca0fd9acba698fea00aa6e52d56a66c58",
+        "patch": "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/openpi_981483_pr971_backport.diff"
+      },
+      "checkpoints": {
+        "all_suites": {
+          "repository": "gs://openpi-assets/checkpoints/pi0_fast_libero",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "official OpenPI policy server plus compatibility backport",
+        "implementation_path": "OpenPI scripts/serve_policy.py at the pinned source commit",
+        "config_paths": [
+          "archive/rollout_execution/corrected_holdout_v2/pi0fast_correction/libero_fast_exact981_sanitized.yaml"
+        ],
+        "interface": {
+          "policy_config": "pi0_fast_libero",
+          "normalization": "z-score",
+          "use_quantile_norm": false,
+          "compatibility_fix": "PR971 z-score compatibility backport only"
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "benchmark_python": "3.8.20",
+        "model_server_python": "~=3.11",
+        "server_timeout_seconds": 300,
+        "hardware": "NVIDIA A100-SXM4-80GB"
+      },
+      "evidence": [
+        "archive/rollout_execution/corrected_holdout_v2/README.md",
+        "archive/rollout_execution/corrected_holdout_v2/execution_scripts/01_launch_pi0fast_corrected_d500_60a100.sh",
+        "data/holdout/audit_report.json",
+        "data/holdout/holdout_long_1500.csv"
+      ],
+      "unresolved": [
+        "checkpoint object generation/revision",
+        "mutable container image digest",
+        "complete model-server dependency lock"
+      ]
+    },
+    {
+      "system_id": "vlanext",
+      "display_name": "VLANeXt",
+      "role": "corrected_holdout",
+      "family_id": "vlanext",
+      "response_matrix": "data/holdout/holdout_long_1500.csv",
+      "observed_successes": 394,
+      "observed_items": 500,
+      "model_source": {
+        "url": "UNKNOWN",
+        "commit": "UNKNOWN"
+      },
+      "checkpoints": {
+        "libero_spatial": {
+          "repository": "DravenALG/VLANeXt",
+          "file": "VLANeXt_libero_spatial.pt",
+          "revision": "UNKNOWN"
+        },
+        "libero_object": {
+          "repository": "DravenALG/VLANeXt",
+          "file": "VLANeXt_libero_object.pt",
+          "revision": "UNKNOWN"
+        },
+        "libero_goal": {
+          "repository": "DravenALG/VLANeXt",
+          "file": "VLANeXt_libero_goal.pt",
+          "revision": "UNKNOWN"
+        },
+        "libero_10": {
+          "repository": "DravenALG/VLANeXt",
+          "file": "VLANeXt_libero_10.pt",
+          "revision": "UNKNOWN"
+        }
+      },
+      "adapter": {
+        "implementation": "evaluation-harness built-in",
+        "implementation_path": "src/vla_eval/model_servers/vlanext.py at the shared harness commit",
+        "config_paths": [
+          "configs/model_servers/vlanext/{suite}.yaml at the shared harness commit"
+        ],
+        "interface": {
+          "suite_restart": true,
+          "send_wrist_image": true,
+          "send_state": true,
+          "absolute_action": false,
+          "quat_no_antipodal": true
+        }
+      },
+      "runtime": {
+        "container_image": "ghcr.io/allenai/vla-evaluation-harness/base:latest",
+        "container_digest": "UNKNOWN",
+        "python": "UNKNOWN",
+        "hardware": "NVIDIA A100-SXM4-80GB"
+      },
+      "evidence": [
+        "archive/legacy/manifests/canonical/system_registry.yaml",
+        "archive/legacy/manifests/canonical/runtime_registry.yaml",
+        "data/holdout/holdout_long_1500.csv",
+        "data/holdout/audit_report.json"
+      ],
+      "unresolved": [
+        "model source commit",
+        "all checkpoint revisions",
+        "mutable container image digest and Python version"
+      ]
+    }
+  ],
+  "evidence_boundaries": {
+    "source_and_checkpoint_ids_pinned_but_runtime_incomplete": [
+      "xiaomi_robotics_0",
+      "vla_adapter",
+      "univla_opendrivelab",
+      "pi0_fast source plus compatibility patch"
+    ],
+    "additional_partially_recoverable_model_stacks": [
+      "db_cogact",
+      "openvla",
+      "openvla_oft",
+      "x_vla",
+      "molmoact2",
+      "vla_jepa",
+      "groot_n16",
+      "groot_n17",
+      "pi05",
+      "vlanext"
+    ],
+    "bit_for_bit_complete_model_stacks": [],
+    "interpretation": "The committed response matrices and IRT/CAT analyses are reproducible without model weights. No complete raw-rollout stack is bit-for-bit frozen because every system has at least one UNKNOWN checkpoint, container, driver, or environment field."
+  }
+}

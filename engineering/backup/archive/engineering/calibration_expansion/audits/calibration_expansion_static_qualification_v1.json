@@ -1,0 +1,2562 @@
+{
+  "schema_version": "calibration_expansion_static_qualification_v1",
+  "generated_at_utc": "2026-08-27T09:16:07.159240+00:00",
+  "preregistration": {
+    "selection_timestamp": "2026-08-27T08:34:55+09:00",
+    "no_use_of_current_discovery500_outcomes": true,
+    "no_use_of_qual24_outcomes": true,
+    "candidate_ids": [
+      "vla_adapter",
+      "xiaomi_robotics_0",
+      "univla_opendrivelab",
+      "lingbot_va",
+      "nora",
+      "univla_baai"
+    ]
+  },
+  "method": {
+    "gpu_used": false,
+    "checkpoint_weight_download": false,
+    "git_lfs_smudge_disabled": true,
+    "source_repository_check": "git ls-remote + shallow source clone",
+    "checkpoint_check": "Hugging Face model metadata API only",
+    "performance_outcomes_used": false
+  },
+  "candidates": [
+    {
+      "candidate_family": "VLA-Adapter",
+      "family_id": "vla_adapter",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "preregistered_readiness_class": "A",
+      "source": {
+        "reachable": true,
+        "url": "https://github.com/OpenHelix-Team/VLA-Adapter.git",
+        "remote_head": "23fa0c9c159e2aa04341cdd3e924f44061311060",
+        "clone_ok": true,
+        "checked_out_head": "23fa0c9c159e2aa04341cdd3e924f44061311060",
+        "tracked_file_count": 192,
+        "code_license": {
+          "summary": "MIT",
+          "files": [
+            {
+              "path": "LICENSE",
+              "detected": "MIT"
+            }
+          ]
+        },
+        "libero_files": [
+          "experiments/robot/libero/libero_requirements.txt",
+          "experiments/robot/libero/libero_utils.py",
+          "experiments/robot/libero/regenerate_libero_dataset.py",
+          "experiments/robot/libero/run_libero_eval.py",
+          "experiments/robot/libero/sample_libero_spatial_observation.pkl"
+        ],
+        "relevant_files": [
+          "eval_logs/Inference--CALVIN_Pro--4.50.log",
+          "eval_logs/Inference--Long_Pro--96.4.log",
+          "eval_logs/Inference--Object_Pro--99.6.log",
+          "eval_logs/Inference--Spatial_Pro--99.6.log",
+          "eval_logs/Inference-Goal--97.2.log",
+          "eval_logs/Inference-Goal_Pro--98.2.log",
+          "eval_logs/Inference-Long--95.0.log",
+          "eval_logs/Inference-Object--99.2.log",
+          "eval_logs/Inference-Spatial--97.8.log",
+          "experiments/robot/aloha/eval_files/deploy_server.sh",
+          "experiments/robot/aloha/eval_files/run_eval_client.sh",
+          "experiments/robot/aloha/eval_files/run_eval_client_fake.sh",
+          "experiments/robot/aloha/requirements_aloha.txt",
+          "experiments/robot/libero/libero_requirements.txt",
+          "experiments/robot/libero/libero_utils.py",
+          "experiments/robot/libero/regenerate_libero_dataset.py",
+          "experiments/robot/libero/run_libero_eval.py",
+          "experiments/robot/libero/sample_libero_spatial_observation.pkl",
+          "prismatic/models/action_heads.py",
+          "prismatic/vla/action_tokenizer.py",
+          "pyproject.toml",
+          "vla-scripts/evaluate_calvin.py",
+          "vla-scripts/vla_evaluation.py"
+        ],
+        "runtime_files": [
+          "experiments/robot/aloha/requirements_aloha.txt",
+          "experiments/robot/libero/libero_requirements.txt",
+          "pyproject.toml"
+        ],
+        "runtime_hints": [
+          "# Extra Python packages for `experiments/robot/aloha` after the base install in README:",
+          "#   pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0",
+          "#   pip install \"flash-attn==2.5.5\" --no-build-isolation",
+          "ipython",
+          "requires-python = \">=3.8\"",
+          "\"Programming Language :: Python :: 3\",",
+          "\"Programming Language :: Python :: 3.8\",",
+          "\"Programming Language :: Python :: 3.9\",",
+          "\"Programming Language :: Python :: 3.10\",",
+          "\"Programming Language :: Python :: 3 :: Only\",",
+          "# \"flash_attn==2.5.5\",      # Here for documentation -- install *AFTER* editable install (follow README)",
+          "\"torch==2.2.0\",",
+          "\"torchvision==0.17.0\",",
+          "\"torchaudio==2.2.0\",",
+          "\"transformers==4.40.1\",#\"transformers @ git+https://github.com/moojink/transformers-openvla-oft.git\",  # IMPORTANT: Use this fork for bidirectional attn (for parallel decoding)",
+          "\"tensorflow==2.15.0\",",
+          "\"tensorflow_datasets==4.9.3\",",
+          "\"tensorflow_graphics==2021.12.3\",",
+          "\"diffusers==0.30.3\",",
+          "\"ipython\","
+        ],
+        "interface_evidence": [
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 1,
+            "text": "\"\"\"Utils for evaluating policies in LIBERO simulation environments.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 9,
+            "text": "from libero.libero import get_libero_path"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 10,
+            "text": "from libero.libero.envs import OffScreenRenderEnv"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 18,
+            "text": "def get_libero_env(task, model_family, resolution=256):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 19,
+            "text": "\"\"\"Initializes and returns the LIBERO environment, along with the task description.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 21,
+            "text": "task_bddl_file = os.path.join(get_libero_path(\"bddl_files\"), task.problem_folder, task.bddl_file)"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 24,
+            "text": "env.seed(0)  # IMPORTANT: seed seems to affect object positions even when using fixed initial state"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 28,
+            "text": "def get_libero_dummy_action(model_family: str):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 33,
+            "text": "def get_libero_image(obs):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 40,
+            "text": "def get_libero_wrist_image(obs):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 41,
+            "text": "\"\"\"Extracts wrist camera image from observations and preprocesses it.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 2,
+            "text": "Regenerates a LIBERO dataset (HDF5 files) by replaying demonstrations in the environments."
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 6,
+            "text": "- We filter out transitions with \"no-op\" (zero) actions that do not change the robot's state."
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 8,
+            "text": "- In the LIBERO HDF5 data -> RLDS data conversion (not shown here), we rotate the images by"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 13,
+            "text": "python experiments/robot/libero/regenerate_libero_dataset.py \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 14,
+            "text": "--libero_task_suite [ libero_spatial | libero_object | libero_goal | libero_10 ] \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 15,
+            "text": "--libero_raw_data_dir <PATH TO RAW HDF5 DATASET DIR> \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 16,
+            "text": "--libero_target_dir <PATH TO TARGET DIR>"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 18,
+            "text": "Example (LIBERO-Spatial):"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 19,
+            "text": "python experiments/robot/libero/regenerate_libero_dataset.py \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 20,
+            "text": "--libero_task_suite libero_spatial \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 21,
+            "text": "--libero_raw_data_dir ./LIBERO/libero/datasets/libero_spatial \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 22,
+            "text": "--libero_target_dir ./LIBERO/libero/datasets/libero_spatial_no_noops"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 35,
+            "text": "from libero.libero import benchmark"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 37,
+            "text": "from experiments.robot.libero.libero_utils import ("
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 38,
+            "text": "get_libero_dummy_action,"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 39,
+            "text": "get_libero_env,"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 51,
+            "text": "(1) All action dimensions, except for the last one (gripper action), are near zero."
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 57,
+            "text": "So you also need to consider the current state (by checking the previous timestep's"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 72,
+            "text": "print(f\"Regenerating {args.libero_task_suite} dataset!\")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 75,
+            "text": "if os.path.isdir(args.libero_target_dir):"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 76,
+            "text": "user_input = input(f\"Target directory already exists at path: {args.libero_target_dir}\\nEnter 'y' to overwrite the directory, or anything else to exit: \")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 79,
+            "text": "os.makedirs(args.libero_target_dir, exist_ok=True)"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 81,
+            "text": "# Prepare JSON file to record success/false and initial states per episode"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 83,
+            "text": "metainfo_json_out_path = f\"./experiments/robot/libero/{args.libero_task_suite}_metainfo.json\""
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 90,
+            "text": "task_suite = benchmark_dict[args.libero_task_suite]()"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 101,
+            "text": "env, task_description = get_libero_env(task, \"llava\", resolution=IMAGE_RESOLUTION)"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 104,
+            "text": "orig_data_path = os.path.join(args.libero_raw_data_dir, f\"{task.name}_demo.hdf5\")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 110,
+            "text": "new_data_path = os.path.join(args.libero_target_dir, f\"{task.name}_demo.hdf5\")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 118,
+            "text": "orig_states = demo_data[\"states\"][()]"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 120,
+            "text": "# Reset environment, set initial state, and wait a few steps for environment to settle"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 122,
+            "text": "env.set_init_state(orig_states[0])"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 124,
+            "text": "obs, reward, done, info = env.step(get_libero_dummy_action(\"llava\"))"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 127,
+            "text": "states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 129,
+            "text": "ee_states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 130,
+            "text": "gripper_states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 131,
+            "text": "joint_states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 132,
+            "text": "robot_states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 145,
+            "text": "if states == []:"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 146,
+            "text": "# In the first timestep, since we're using the original initial state to initialize the environment,"
+          }
+        ]
+      },
+      "checkpoints": [
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Spatial-Pro",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "cb023c6771fc62ea729d218f09ac0583c14f59d4",
+          "last_modified": "2025-09-21T20:04:31.000Z",
+          "library_name": null,
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:mit"
+          ],
+          "card_license": "mit",
+          "sibling_count": 20,
+          "interesting_files": [
+            "action_head--checkpoint.pt",
+            "config.json",
+            "configuration_prismatic.py",
+            "generation_config.json",
+            "model.safetensors",
+            "modeling_prismatic.py",
+            "preprocessor_config.json",
+            "processor_config.json",
+            "tokenizer.json",
+            "tokenizer_config.json"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Object-Pro",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "afd5c551e4851fb434deaba272c7688e87586cc4",
+          "last_modified": "2025-09-21T20:04:59.000Z",
+          "library_name": null,
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:mit"
+          ],
+          "card_license": "mit",
+          "sibling_count": 20,
+          "interesting_files": [
+            "action_head--checkpoint.pt",
+            "config.json",
+            "configuration_prismatic.py",
+            "generation_config.json",
+            "model.safetensors",
+            "modeling_prismatic.py",
+            "preprocessor_config.json",
+            "processor_config.json",
+            "tokenizer.json",
+            "tokenizer_config.json"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Goal-Pro",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "2ae84b8275a0c35c1b6751573a71468e1c080825",
+          "last_modified": "2025-09-21T20:04:01.000Z",
+          "library_name": null,
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:mit"
+          ],
+          "card_license": "mit",
+          "sibling_count": 20,
+          "interesting_files": [
+            "action_head--checkpoint.pt",
+            "config.json",
+            "configuration_prismatic.py",
+            "generation_config.json",
+            "model.safetensors",
+            "modeling_prismatic.py",
+            "preprocessor_config.json",
+            "processor_config.json",
+            "tokenizer.json",
+            "tokenizer_config.json"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Long-Pro",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "9e21d603e53c8602919b9a1d90201b329e673f6b",
+          "last_modified": "2025-09-21T20:05:17.000Z",
+          "library_name": null,
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:mit"
+          ],
+          "card_license": "mit",
+          "sibling_count": 20,
+          "interesting_files": [
+            "action_head--checkpoint.pt",
+            "config.json",
+            "configuration_prismatic.py",
+            "generation_config.json",
+            "model.safetensors",
+            "modeling_prismatic.py",
+            "preprocessor_config.json",
+            "processor_config.json",
+            "tokenizer.json",
+            "tokenizer_config.json"
+          ]
+        }
+      ],
+      "suggested_static_gate": "STATIC_PASS",
+      "blockers": []
+    },
+    {
+      "candidate_family": "Xiaomi-Robotics-0",
+      "family_id": "xiaomi_robotics_0",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "preregistered_readiness_class": "A",
+      "source": {
+        "reachable": true,
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0.git",
+        "remote_head": "7c316604d43357d10b06d11fae4c39290c447da5",
+        "clone_ok": true,
+        "checked_out_head": "7c316604d43357d10b06d11fae4c39290c447da5",
+        "tracked_file_count": 133,
+        "code_license": {
+          "summary": "Apache-2.0",
+          "files": [
+            {
+              "path": "LICENSE",
+              "detected": "Apache-2.0"
+            }
+          ]
+        },
+        "libero_files": [
+          "eval_libero/README.md",
+          "eval_libero/eval_logs/libero_10/0_eval.log",
+          "eval_libero/eval_logs/libero_10/1_eval.log",
+          "eval_libero/eval_logs/libero_10/2_eval.log",
+          "eval_libero/eval_logs/libero_10/3_eval.log",
+          "eval_libero/eval_logs/libero_10/4_eval.log",
+          "eval_libero/eval_logs/libero_10/5_eval.log",
+          "eval_libero/eval_logs/libero_10/6_eval.log",
+          "eval_libero/eval_logs/libero_10/7_eval.log",
+          "eval_libero/eval_logs/libero_10/8_eval.log",
+          "eval_libero/eval_logs/libero_10/9_eval.log",
+          "eval_libero/eval_logs/libero_10/merged_results.json",
+          "eval_libero/eval_logs/libero_goal/0_eval.log",
+          "eval_libero/eval_logs/libero_goal/1_eval.log",
+          "eval_libero/eval_logs/libero_goal/2_eval.log",
+          "eval_libero/eval_logs/libero_goal/3_eval.log",
+          "eval_libero/eval_logs/libero_goal/4_eval.log",
+          "eval_libero/eval_logs/libero_goal/5_eval.log",
+          "eval_libero/eval_logs/libero_goal/6_eval.log",
+          "eval_libero/eval_logs/libero_goal/7_eval.log",
+          "eval_libero/eval_logs/libero_goal/8_eval.log",
+          "eval_libero/eval_logs/libero_goal/9_eval.log",
+          "eval_libero/eval_logs/libero_goal/merged_results.json",
+          "eval_libero/eval_logs/libero_object/0_eval.log",
+          "eval_libero/eval_logs/libero_object/1_eval.log",
+          "eval_libero/eval_logs/libero_object/2_eval.log",
+          "eval_libero/eval_logs/libero_object/3_eval.log",
+          "eval_libero/eval_logs/libero_object/4_eval.log",
+          "eval_libero/eval_logs/libero_object/5_eval.log",
+          "eval_libero/eval_logs/libero_object/6_eval.log",
+          "eval_libero/eval_logs/libero_object/7_eval.log",
+          "eval_libero/eval_logs/libero_object/8_eval.log",
+          "eval_libero/eval_logs/libero_object/9_eval.log",
+          "eval_libero/eval_logs/libero_object/merged_results.json",
+          "eval_libero/eval_logs/libero_spatial/0_eval.log",
+          "eval_libero/eval_logs/libero_spatial/1_eval.log",
+          "eval_libero/eval_logs/libero_spatial/2_eval.log",
+          "eval_libero/eval_logs/libero_spatial/3_eval.log",
+          "eval_libero/eval_logs/libero_spatial/4_eval.log",
+          "eval_libero/eval_logs/libero_spatial/5_eval.log",
+          "eval_libero/eval_logs/libero_spatial/6_eval.log",
+          "eval_libero/eval_logs/libero_spatial/7_eval.log",
+          "eval_libero/eval_logs/libero_spatial/8_eval.log",
+          "eval_libero/eval_logs/libero_spatial/9_eval.log",
+          "eval_libero/eval_logs/libero_spatial/merged_results.json",
+          "eval_libero/main.py",
+          "eval_libero/merge_results.py",
+          "eval_libero/requirements.txt",
+          "scripts/launch_libero.sh"
+        ],
+        "relevant_files": [
+          "eval_calvin/README.md",
+          "eval_calvin/config/eval_sequences.json",
+          "eval_calvin/config/new_playtable_tasks.yaml",
+          "eval_calvin/config/new_playtable_validation.yaml",
+          "eval_calvin/eval_logs/calvin_abc/rank_0_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_1_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_2_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_3_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_4_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_5_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_6_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/rank_7_eval.log",
+          "eval_calvin/eval_logs/calvin_abc/results.json",
+          "eval_calvin/eval_logs/calvin_abcd/rank_0_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_1_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_2_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_3_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_4_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_5_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_6_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/rank_7_eval.log",
+          "eval_calvin/eval_logs/calvin_abcd/results.json",
+          "eval_calvin/main.py",
+          "eval_calvin/merge_results.py",
+          "eval_libero/README.md",
+          "eval_libero/eval_logs/libero_10/0_eval.log",
+          "eval_libero/eval_logs/libero_10/1_eval.log",
+          "eval_libero/eval_logs/libero_10/2_eval.log",
+          "eval_libero/eval_logs/libero_10/3_eval.log",
+          "eval_libero/eval_logs/libero_10/4_eval.log",
+          "eval_libero/eval_logs/libero_10/5_eval.log",
+          "eval_libero/eval_logs/libero_10/6_eval.log",
+          "eval_libero/eval_logs/libero_10/7_eval.log",
+          "eval_libero/eval_logs/libero_10/8_eval.log",
+          "eval_libero/eval_logs/libero_10/9_eval.log",
+          "eval_libero/eval_logs/libero_10/merged_results.json",
+          "eval_libero/eval_logs/libero_goal/0_eval.log",
+          "eval_libero/eval_logs/libero_goal/1_eval.log",
+          "eval_libero/eval_logs/libero_goal/2_eval.log",
+          "eval_libero/eval_logs/libero_goal/3_eval.log",
+          "eval_libero/eval_logs/libero_goal/4_eval.log",
+          "eval_libero/eval_logs/libero_goal/5_eval.log",
+          "eval_libero/eval_logs/libero_goal/6_eval.log",
+          "eval_libero/eval_logs/libero_goal/7_eval.log",
+          "eval_libero/eval_logs/libero_goal/8_eval.log",
+          "eval_libero/eval_logs/libero_goal/9_eval.log",
+          "eval_libero/eval_logs/libero_goal/merged_results.json",
+          "eval_libero/eval_logs/libero_object/0_eval.log",
+          "eval_libero/eval_logs/libero_object/1_eval.log",
+          "eval_libero/eval_logs/libero_object/2_eval.log",
+          "eval_libero/eval_logs/libero_object/3_eval.log",
+          "eval_libero/eval_logs/libero_object/4_eval.log",
+          "eval_libero/eval_logs/libero_object/5_eval.log",
+          "eval_libero/eval_logs/libero_object/6_eval.log",
+          "eval_libero/eval_logs/libero_object/7_eval.log",
+          "eval_libero/eval_logs/libero_object/8_eval.log",
+          "eval_libero/eval_logs/libero_object/9_eval.log",
+          "eval_libero/eval_logs/libero_object/merged_results.json",
+          "eval_libero/eval_logs/libero_spatial/0_eval.log",
+          "eval_libero/eval_logs/libero_spatial/1_eval.log",
+          "eval_libero/eval_logs/libero_spatial/2_eval.log",
+          "eval_libero/eval_logs/libero_spatial/3_eval.log",
+          "eval_libero/eval_logs/libero_spatial/4_eval.log",
+          "eval_libero/eval_logs/libero_spatial/5_eval.log",
+          "eval_libero/eval_logs/libero_spatial/6_eval.log",
+          "eval_libero/eval_logs/libero_spatial/7_eval.log",
+          "eval_libero/eval_logs/libero_spatial/8_eval.log",
+          "eval_libero/eval_logs/libero_spatial/9_eval.log",
+          "eval_libero/eval_logs/libero_spatial/merged_results.json",
+          "eval_libero/main.py",
+          "eval_libero/merge_results.py",
+          "eval_libero/requirements.txt",
+          "eval_simplerenv/README.md",
+          "eval_simplerenv/env_options/bridge.json",
+          "eval_simplerenv/env_options/fractal.json",
+          "eval_simplerenv/eval_logs/bridge/0_eval.log",
+          "eval_simplerenv/eval_logs/bridge/1_eval.log",
+          "eval_simplerenv/eval_logs/bridge/2_eval.log",
+          "eval_simplerenv/eval_logs/bridge/3_eval.log",
+          "eval_simplerenv/eval_logs/bridge/4_eval.log",
+          "eval_simplerenv/eval_logs/bridge/5_eval.log",
+          "eval_simplerenv/eval_logs/bridge/6_eval.log",
+          "eval_simplerenv/eval_logs/bridge/7_eval.log",
+          "eval_simplerenv/eval_logs/bridge/all_results.csv",
+          "eval_simplerenv/eval_logs/fractal/0_eval.log",
+          "eval_simplerenv/eval_logs/fractal/1_eval.log",
+          "eval_simplerenv/eval_logs/fractal/2_eval.log",
+          "eval_simplerenv/eval_logs/fractal/3_eval.log",
+          "eval_simplerenv/eval_logs/fractal/4_eval.log",
+          "eval_simplerenv/eval_logs/fractal/5_eval.log",
+          "eval_simplerenv/eval_logs/fractal/6_eval.log",
+          "eval_simplerenv/eval_logs/fractal/7_eval.log",
+          "eval_simplerenv/eval_logs/fractal/all_results.csv",
+          "eval_simplerenv/main.py",
+          "scripts/launch_libero.sh",
+          "xr0/assets/requirements.txt",
+          "xr0/setup.py"
+        ],
+        "runtime_files": [
+          "eval_libero/requirements.txt",
+          "xr0/assets/requirements.txt",
+          "xr0/setup.py"
+        ],
+        "runtime_hints": [
+          "transformers==4.21.1",
+          "opencv-python==4.6.0.66",
+          "torch==2.8.0",
+          "torchvision==0.23.0",
+          "transformers==4.57.1",
+          "python_requires=\">=3.9\",",
+          "\"Programming Language :: Python :: 3\",",
+          "\"Environment :: GPU :: NVIDIA CUDA\","
+        ],
+        "interface_evidence": [
+          {
+            "file": "eval_calvin/main.py",
+            "line": 35,
+            "text": "get_env_state_for_initial_condition,"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 227,
+            "text": "Each sequence (initial_state + instruction list) is assigned to a worker"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 248,
+            "text": "original_random_state = random.getstate()"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 257,
+            "text": "random.setstate(original_random_state)"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 270,
+            "text": "for local_idx, (initial_state, eval_sequence) in enumerate(eval_sequences):"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 275,
+            "text": "initial_state,"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 312,
+            "text": "initial_state,"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 326,
+            "text": "A sequence consists of an initial environment state and an ordered list"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 328,
+            "text": "env instance, restores the initial state, and rolls out one subtask at"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 335,
+            "text": "initial_state: Serialized initial state for CALVIN env reset."
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 351,
+            "text": "robot_obs, scene_obs = get_env_state_for_initial_condition(initial_state)"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 446,
+            "text": "# process state"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 447,
+            "text": "start_state = obs[\"robot_obs\"][:7]"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 448,
+            "text": "start_state = np.concatenate([start_state, np.zeros([25])], axis=-1)"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 457,
+            "text": "\"state\": start_state,"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 459,
+            "text": "\"wrist_left\": rgb_gripper,"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 1,
+            "text": "## 🧪 LIBERO Benchmark Evaluation Guide"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 3,
+            "text": "This document outlines the complete evaluation workflow for our model on the LIBERO benchmark: [https://github.com/Lifelong-Robot-Learning/LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 5,
+            "text": "We utilize LIBERO to assess the model's lifelong learning and generalization capabilities across four distinct subtasks: **Spatial**, **Object**, **Goal**, and **Long**. The guide below covers environment setup, server deployment, client execution, and result aggregation."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 12,
+            "text": "First, set up the LIBERO simulation environment following the [official instructions](https://github.com/Lifelong-Robot-Learning/LIBERO). We use Python 3.10 and a specific PyTorch version for compatibility."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 17,
+            "text": "conda create -n libero python=3.10 -y"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 18,
+            "text": "conda activate libero"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 20,
+            "text": "# Clone the LIBERO repository"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 21,
+            "text": "cd eval_libero"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 22,
+            "text": "git clone https://github.com/Lifelong-Robot-Learning/LIBERO.git"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 26,
+            "text": "# Install the LIBERO package in editable mode"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 27,
+            "text": "pip install --config-settings editable_mode=compat -e ./LIBERO"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 40,
+            "text": "bash scripts/deploy.sh XiaomiRobotics/Xiaomi-Robotics-0-LIBERO 8 8"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 44,
+            "text": "*   **Model:** Path to your Xiaomi-Robotics-0-LIBERO model checkpoint."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 52,
+            "text": "Launch the LIBERO evaluation clients. These clients will connect to the distributed servers to perform tasks across the Spatial, Object, Goal, and Long suites."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 55,
+            "text": "bash scripts/launch_libero.sh 8 libero_10 ./logs"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 56,
+            "text": "bash scripts/launch_libero.sh 8 libero_goal ./logs"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 57,
+            "text": "bash scripts/launch_libero.sh 8 libero_object ./logs"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 58,
+            "text": "bash scripts/launch_libero.sh 8 libero_spatial ./logs"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 63,
+            "text": "*   **Task:** Evaluate the libero_10 task suite."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 64,
+            "text": "*   **Log dir:** Save the visualization into ./log/libero."
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 78,
+            "text": "| LIBERO-10 | LIBERO-Goal | LIBERO-Object | LIBERO-Spatial | **Average** |"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 22,
+            "text": "from libero.libero import benchmark, get_libero_path"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 23,
+            "text": "from libero.libero.envs import OffScreenRenderEnv"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 28,
+            "text": "LIBERO_DUMMY_ACTION = [0.0] * 6 + [-1.0]"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 29,
+            "text": "LIBERO_ENV_RESOLUTION = 256  # resolution used to render training数据"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 43,
+            "text": "# LIBERO environment-specific parameters"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 45,
+            "text": "task_suite_name: str = \"libero_10\"  # Task suite. Options: libero_spatial, libero_object, libero_goal, libero_10, libero_90"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 116,
+            "text": "task_id, episode_idx, initial_states, task_description, max_steps = trial_data"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 118,
+            "text": "env, _ = _get_libero_env(task_suite.get_task(task_id), LIBERO_ENV_RESOLUTION, args.seed)"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 120,
+            "text": "obs = env.set_init_state(initial_states[episode_idx])"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 129,
+            "text": "obs, _, done, _ = env.step(LIBERO_DUMMY_ACTION)"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 134,
+            "text": "wrist_img = np.ascontiguousarray(obs[\"robot0_eye_in_hand_image\"][::-1, ::-1])"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 136,
+            "text": "wrist_img = convert_to_uint8(wrist_img)"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 141,
+            "text": "left_wrist_obs = Image.fromarray(wrist_img)"
+          }
+        ]
+      },
+      "checkpoints": [
+        {
+          "repo_id": "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "fc04bbdcc53e498695cfad95d1199091396ef55b",
+          "last_modified": "2026-07-14T03:13:55.000Z",
+          "library_name": "transformers",
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:apache-2.0"
+          ],
+          "card_license": "apache-2.0",
+          "sibling_count": 19,
+          "interesting_files": [
+            "config.json",
+            "configuration_mibot.py",
+            "model-00001-of-00002.safetensors",
+            "model-00002-of-00002.safetensors",
+            "model.safetensors.index.json",
+            "modeling_mibot.py",
+            "preprocessor_config.json",
+            "processor_config.json",
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "video_preprocessor_config.json"
+          ]
+        }
+      ],
+      "suggested_static_gate": "STATIC_PASS",
+      "blockers": []
+    },
+    {
+      "candidate_family": "UniVLA-OpenDriveLab",
+      "family_id": "univla_opendrivelab",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "preregistered_readiness_class": "A",
+      "source": {
+        "reachable": true,
+        "url": "https://github.com/OpenDriveLab/UniVLA.git",
+        "remote_head": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352",
+        "clone_ok": true,
+        "checked_out_head": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352",
+        "tracked_file_count": 152,
+        "code_license": {
+          "summary": "MULTIPLE",
+          "files": [
+            {
+              "path": "LICENSE",
+              "detected": "Apache-2.0"
+            },
+            {
+              "path": "vla-scripts/extern/ego4d_rlds_dataset_builder/LICENSE",
+              "detected": "MIT"
+            }
+          ]
+        },
+        "libero_files": [
+          "assets/libero_action_loss.png",
+          "assets/libero_latent_action_acc.png",
+          "experiments/robot/libero/libero_requirements.txt",
+          "experiments/robot/libero/libero_utils.py",
+          "experiments/robot/libero/regenerate_libero_dataset.py",
+          "experiments/robot/libero/run_libero_eval.py",
+          "experiments/robot/libero/run_libero_eval_blocking.py",
+          "vla-scripts/finetune_libero.py"
+        ],
+        "relevant_files": [
+          "assets/latent-action-pretraining.png",
+          "assets/libero_action_loss.png",
+          "assets/libero_latent_action_acc.png",
+          "experiments/robot/calvin/run_calvin_eval_ddp.py",
+          "experiments/robot/libero/libero_requirements.txt",
+          "experiments/robot/libero/libero_utils.py",
+          "experiments/robot/libero/regenerate_libero_dataset.py",
+          "experiments/robot/libero/run_libero_eval.py",
+          "experiments/robot/libero/run_libero_eval_blocking.py",
+          "experiments/robot/r2r/config/eval_val_unseen.yaml",
+          "experiments/robot/r2r/run_r2r_eval.py",
+          "experiments/robot/simpler-bridge/eval_simpler_bridge_4task.sh",
+          "experiments/robot/simpler-bridge/real2sim_eval_maniskill3.py",
+          "latent_action_model/config/lam-stage-1.yaml",
+          "latent_action_model/config/lam-stage-2.yaml",
+          "latent_action_model/genie/dataset.py",
+          "latent_action_model/genie/model.py",
+          "latent_action_model/genie/modules/__init__.py",
+          "latent_action_model/genie/modules/blocks.py",
+          "latent_action_model/genie/modules/lam.py",
+          "latent_action_model/main.py",
+          "latent_action_model/train.sh",
+          "prismatic/models/policy/transformer_utils.py",
+          "prismatic/vla/action_tokenizer.py",
+          "pyproject.toml",
+          "requirements.txt",
+          "setup.py",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/environment_macos.yml",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/environment_ubuntu.yml",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/setup.py",
+          "vla-scripts/finetune_libero.py"
+        ],
+        "runtime_files": [
+          "experiments/robot/libero/libero_requirements.txt",
+          "pyproject.toml",
+          "requirements.txt",
+          "setup.py",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/environment_macos.yml",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/environment_ubuntu.yml",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/setup.py"
+        ],
+        "runtime_hints": [
+          "requires-python = \">=3.8\"",
+          "\"Programming Language :: Python :: 3\",",
+          "\"Programming Language :: Python :: 3.8\",",
+          "\"Programming Language :: Python :: 3.9\",",
+          "\"Programming Language :: Python :: 3.10\",",
+          "\"Programming Language :: Python :: 3 :: Only\",",
+          "\"ema_pytorch==0.5.1\",",
+          "\"opencv_python==4.10.0.84\",",
+          "\"pytorch_lightning==1.8.6\",",
+          "\"rotary_embedding_torch==0.8.4\",",
+          "\"tensorflow==2.15.0\",",
+          "\"tensorflow_datasets==4.9.3\",",
+          "\"tensorflow_graphics==2021.12.3\",",
+          "\"transformers==4.40.1\"",
+          "\"ipython\",",
+          "ema_pytorch==0.5.1",
+          "opencv_python==4.10.0.84",
+          "pytorch_lightning==1.8.6",
+          "rotary_embedding_torch==0.8.4",
+          "tensorflow==2.15.0",
+          "tensorflow_datasets==4.9.3",
+          "tensorflow_graphics==2021.12.3",
+          "torch==2.2.0",
+          "torchvision==0.17.0",
+          "transformers==4.40.1",
+          "#!/usr/bin/env python",
+          "- python=3.11.4=h1fd4e5f_0",
+          "- python-flatbuffers=2.0=pyhd3eb1b0_0",
+          "- tensorflow-base=2.12.0=eigen_py311hbf87084_0",
+          "- dnspython==2.3.0",
+          "- gitpython==3.1.32",
+          "- python-dateutil==2.8.2",
+          "- tensorflow==2.12.0",
+          "- tensorflow-datasets==4.9.2",
+          "- tensorflow-estimator==2.12.0",
+          "- tensorflow-hub==0.14.0",
+          "- tensorflow-metadata==1.13.1",
+          "- python=3.9.0=hffdb5ce_5_cpython",
+          "- dnspython==2.4.0",
+          "- tensorflow==2.13.0",
+          "- tensorflow-estimator==2.13.0",
+          "- tensorflow-io-gcs-filesystem==0.32.0"
+        ],
+        "interface_evidence": [
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 47,
+            "text": "get_env_state_for_initial_condition,"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 132,
+            "text": "for initial_state, eval_sequence in eval_sequences:"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 133,
+            "text": "result = evaluate_sequence(env, model, task_oracle, initial_state, eval_sequence, val_annotations, debug, eval_dir, sequence_i, ep_len)"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 153,
+            "text": "def evaluate_sequence(env, model, task_checker, initial_state, eval_sequence, val_annotations, debug, eval_dir, sequence_i, ep_len):"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 154,
+            "text": "robot_obs, scene_obs = get_env_state_for_initial_condition(initial_state)"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 190,
+            "text": "# get action chunk"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 288,
+            "text": "'state_obs': ['robot_obs'],"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 1,
+            "text": "\"\"\"Utils for evaluating policies in LIBERO simulation environments.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 9,
+            "text": "from libero.libero import get_libero_path"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 10,
+            "text": "from libero.libero.envs import OffScreenRenderEnv"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 18,
+            "text": "def get_libero_env(task, model_family, resolution=256):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 19,
+            "text": "\"\"\"Initializes and returns the LIBERO environment, along with the task description.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 21,
+            "text": "task_bddl_file = os.path.join(get_libero_path(\"bddl_files\"), task.problem_folder, task.bddl_file)"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 24,
+            "text": "env.seed(0)  # IMPORTANT: seed seems to affect object positions even when using fixed initial state"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 28,
+            "text": "def get_libero_dummy_action(model_family: str):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 50,
+            "text": "def get_libero_image(obs, resize_size):"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 2,
+            "text": "Regenerates a LIBERO dataset (HDF5 files) by replaying demonstrations in the environments."
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 6,
+            "text": "- We filter out transitions with \"no-op\" (zero) actions that do not change the robot's state."
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 8,
+            "text": "- In the LIBERO HDF5 data -> RLDS data conversion (not shown here), we rotate the images by"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 13,
+            "text": "python experiments/robot/libero/regenerate_libero_dataset.py \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 14,
+            "text": "--libero_task_suite [ libero_spatial | libero_object | libero_goal | libero_10 ] \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 15,
+            "text": "--libero_raw_data_dir <PATH TO RAW HDF5 DATASET DIR> \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 16,
+            "text": "--libero_target_dir <PATH TO TARGET DIR>"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 18,
+            "text": "Example (LIBERO-Spatial):"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 19,
+            "text": "python experiments/robot/libero/regenerate_libero_dataset.py \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 20,
+            "text": "--libero_task_suite libero_spatial \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 21,
+            "text": "--libero_raw_data_dir ./LIBERO/libero/datasets/libero_spatial \\"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 22,
+            "text": "--libero_target_dir ./LIBERO/libero/datasets/libero_spatial_no_noops"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 35,
+            "text": "from libero.libero import benchmark"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 37,
+            "text": "from experiments.robot.libero.libero_utils import ("
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 38,
+            "text": "get_libero_dummy_action,"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 39,
+            "text": "get_libero_env,"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 51,
+            "text": "(1) All action dimensions, except for the last one (gripper action), are near zero."
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 57,
+            "text": "So you also need to consider the current state (by checking the previous timestep's"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 72,
+            "text": "print(f\"Regenerating {args.libero_task_suite} dataset!\")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 75,
+            "text": "if os.path.isdir(args.libero_target_dir):"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 76,
+            "text": "user_input = input(f\"Target directory already exists at path: {args.libero_target_dir}\\nEnter 'y' to overwrite the directory, or anything else to exit: \")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 79,
+            "text": "os.makedirs(args.libero_target_dir, exist_ok=True)"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 81,
+            "text": "# Prepare JSON file to record success/false and initial states per episode"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 83,
+            "text": "metainfo_json_out_path = f\"./experiments/robot/libero/{args.libero_task_suite}_metainfo.json\""
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 90,
+            "text": "task_suite = benchmark_dict[args.libero_task_suite]()"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 101,
+            "text": "env, task_description = get_libero_env(task, \"llava\", resolution=IMAGE_RESOLUTION)"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 104,
+            "text": "orig_data_path = os.path.join(args.libero_raw_data_dir, f\"{task.name}_demo.hdf5\")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 110,
+            "text": "new_data_path = os.path.join(args.libero_target_dir, f\"{task.name}_demo.hdf5\")"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 118,
+            "text": "orig_states = demo_data[\"states\"][()]"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 120,
+            "text": "# Reset environment, set initial state, and wait a few steps for environment to settle"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 122,
+            "text": "env.set_init_state(orig_states[0])"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 124,
+            "text": "obs, reward, done, info = env.step(get_libero_dummy_action(\"llava\"))"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 127,
+            "text": "states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 129,
+            "text": "ee_states = []"
+          }
+        ]
+      },
+      "checkpoints": [
+        {
+          "repo_id": "qwbu/univla-7b-224-sft-libero",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1",
+          "last_modified": "2025-05-20T11:21:45.000Z",
+          "library_name": "transformers",
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:apache-2.0"
+          ],
+          "card_license": "apache-2.0",
+          "sibling_count": 62,
+          "interesting_files": [
+            "univla-libero-10/action_decoder.pt",
+            "univla-libero-10/added_tokens.json",
+            "univla-libero-10/config.json",
+            "univla-libero-10/dataset_statistics.json",
+            "univla-libero-10/generation_config.json",
+            "univla-libero-10/model-00001-of-00004.safetensors",
+            "univla-libero-10/model-00002-of-00004.safetensors",
+            "univla-libero-10/model-00003-of-00004.safetensors",
+            "univla-libero-10/model-00004-of-00004.safetensors",
+            "univla-libero-10/model.safetensors.index.json",
+            "univla-libero-10/preprocessor_config.json",
+            "univla-libero-10/special_tokens_map.json",
+            "univla-libero-10/tokenizer.json",
+            "univla-libero-10/tokenizer.model",
+            "univla-libero-10/tokenizer_config.json",
+            "univla-libero-goal/action_decoder.pt",
+            "univla-libero-goal/added_tokens.json",
+            "univla-libero-goal/config.json",
+            "univla-libero-goal/dataset_statistics.json",
+            "univla-libero-goal/generation_config.json",
+            "univla-libero-goal/model-00001-of-00004.safetensors",
+            "univla-libero-goal/model-00002-of-00004.safetensors",
+            "univla-libero-goal/model-00003-of-00004.safetensors",
+            "univla-libero-goal/model-00004-of-00004.safetensors",
+            "univla-libero-goal/model.safetensors.index.json",
+            "univla-libero-goal/preprocessor_config.json",
+            "univla-libero-goal/special_tokens_map.json",
+            "univla-libero-goal/tokenizer.json",
+            "univla-libero-goal/tokenizer.model",
+            "univla-libero-goal/tokenizer_config.json",
+            "univla-libero-object/action_decoder.pt",
+            "univla-libero-object/added_tokens.json",
+            "univla-libero-object/config.json",
+            "univla-libero-object/dataset_statistics.json",
+            "univla-libero-object/generation_config.json",
+            "univla-libero-object/model-00001-of-00004.safetensors",
+            "univla-libero-object/model-00002-of-00004.safetensors",
+            "univla-libero-object/model-00003-of-00004.safetensors",
+            "univla-libero-object/model-00004-of-00004.safetensors",
+            "univla-libero-object/model.safetensors.index.json",
+            "univla-libero-object/preprocessor_config.json",
+            "univla-libero-object/special_tokens_map.json",
+            "univla-libero-object/tokenizer.json",
+            "univla-libero-object/tokenizer.model",
+            "univla-libero-object/tokenizer_config.json",
+            "univla-libero-spatial/action_decoder.pt",
+            "univla-libero-spatial/added_tokens.json",
+            "univla-libero-spatial/config.json",
+            "univla-libero-spatial/dataset_statistics.json",
+            "univla-libero-spatial/generation_config.json",
+            "univla-libero-spatial/model-00001-of-00004.safetensors",
+            "univla-libero-spatial/model-00002-of-00004.safetensors",
+            "univla-libero-spatial/model-00003-of-00004.safetensors",
+            "univla-libero-spatial/model-00004-of-00004.safetensors",
+            "univla-libero-spatial/model.safetensors.index.json",
+            "univla-libero-spatial/preprocessor_config.json",
+            "univla-libero-spatial/special_tokens_map.json",
+            "univla-libero-spatial/tokenizer.json",
+            "univla-libero-spatial/tokenizer.model",
+            "univla-libero-spatial/tokenizer_config.json"
+          ]
+        }
+      ],
+      "suggested_static_gate": "STATIC_PASS",
+      "blockers": []
+    },
+    {
+      "candidate_family": "LingBot-VA",
+      "family_id": "lingbot_va",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "preregistered_readiness_class": "A",
+      "source": {
+        "reachable": true,
+        "url": "https://github.com/Robbyant/lingbot-va.git",
+        "remote_head": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+        "clone_ok": true,
+        "checked_out_head": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+        "tracked_file_count": 74,
+        "code_license": {
+          "summary": "Apache-2.0",
+          "files": [
+            {
+              "path": "LICENSE.txt",
+              "detected": "Apache-2.0"
+            }
+          ]
+        },
+        "libero_files": [
+          "evaluation/libero/client.py",
+          "evaluation/libero/launch_client.sh",
+          "evaluation/libero/launch_server.sh",
+          "example/libero/observation.images.agentview_rgb.png",
+          "example/libero/observation.images.eye_in_hand_rgb.png",
+          "wan_va/configs/va_libero_cfg.py",
+          "wan_va/configs/va_libero_i2va.py",
+          "wan_va/configs/va_libero_train_cfg.py"
+        ],
+        "relevant_files": [
+          "evaluation/libero/client.py",
+          "evaluation/libero/launch_client.sh",
+          "evaluation/libero/launch_server.sh",
+          "evaluation/robotwin/calc_stat.py",
+          "evaluation/robotwin/eval_polict_client_openpi.py",
+          "evaluation/robotwin/geometry.py",
+          "evaluation/robotwin/launch_client.sh",
+          "evaluation/robotwin/launch_client_multigpus.sh",
+          "evaluation/robotwin/launch_server.sh",
+          "evaluation/robotwin/launch_server_multigpus.sh",
+          "evaluation/robotwin/msgpack_numpy.py",
+          "evaluation/robotwin/test_render.py",
+          "evaluation/robotwin/websocket_client_policy.py",
+          "example/libero/observation.images.agentview_rgb.png",
+          "example/libero/observation.images.eye_in_hand_rgb.png",
+          "pyproject.toml",
+          "requirements.txt",
+          "wan_va/configs/va_libero_cfg.py",
+          "wan_va/configs/va_libero_i2va.py",
+          "wan_va/configs/va_libero_train_cfg.py",
+          "wan_va/utils/Simple_Remote_Infer/LEGAL.md",
+          "wan_va/utils/Simple_Remote_Infer/README.md",
+          "wan_va/utils/Simple_Remote_Infer/deploy/__init__.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/image_tools.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/msgpack_numpy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/websocket_client_policy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/websocket_policy_server.py"
+        ],
+        "runtime_files": [
+          "pyproject.toml",
+          "requirements.txt"
+        ],
+        "runtime_hints": [
+          "requires-python = \">=3.10,<4.0\"",
+          "\"torch>=2.9.0\",",
+          "\"torchvision>=0.24.0\",",
+          "\"diffusers>=0.36.0\",",
+          "\"transformers>=4.55.4\",",
+          "\"flash_attn\",",
+          "torch==2.9.0",
+          "torchvision==0.24.0",
+          "torchaudio==2.9.0",
+          "diffusers==0.36.0",
+          "transformers==4.55.2",
+          "flash_attn",
+          "opencv-python"
+        ],
+        "interface_evidence": [
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 4,
+            "text": "from libero.libero import benchmark"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 6,
+            "text": "from libero.libero.envs import OffScreenRenderEnv"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 64,
+            "text": "def init_single_env(env_in, init_state):"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 66,
+            "text": "env_in.set_init_state(init_state)"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 77,
+            "text": "def run_one(model, libero_benchmark, task_idx, out_dir, episode_idx):"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 79,
+            "text": "benchmark_instance = benchmark_dict[libero_benchmark]()"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 88,
+            "text": "init_states = benchmark_instance.get_task_init_states(task_idx)"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 91,
+            "text": "first_obs = init_single_env(cur_env, init_states[episode_idx % init_states.shape[0]])"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 124,
+            "text": "model.infer(dict(obs=key_frame_list, compute_kv_cache=True, imagine=False, state=action))"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 126,
+            "text": "out_file = Path(out_dir) / libero_benchmark / f\"{task_idx}_{prompt.replace(' ', '_')}\" / f\"{episode_idx}_{done}.mp4\""
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 140,
+            "text": "def run(libero_benchmark, port, out_dir, test_num, task_range=None):"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 146,
+            "text": "benchmark_instance = benchmark_dict[libero_benchmark]()"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 154,
+            "text": "print(f\"#################### Use benchmark: {libero_benchmark}, num_tasks: {num_tasks} #############\")"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 162,
+            "text": "video_save_list = os.listdir(os.path.join(out_dir, libero_benchmark, video_save_root_dict[task_idx]))"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 163,
+            "text": "video_states = [1 for file in video_save_list if file.split('_')[1].split('.')[0] == 'True']"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 164,
+            "text": "succ_num = float(len(video_states))"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 170,
+            "text": "res_i = run_one(model, libero_benchmark, task_idx, out_dir, episode_idx)"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 174,
+            "text": "out_file = Path(out_dir) / f\"{libero_benchmark}_{task_idx}.json\""
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 187,
+            "text": "\"--libero-benchmark\","
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 189,
+            "text": "default=\"libero_10\","
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 190,
+            "text": "choices=[\"libero_10\", \"libero_goal\", \"libero_spatial\", \"libero_object\"],"
+          },
+          {
+            "file": "evaluation/libero/client.py",
+            "line": 215,
+            "text": "default=\"outputs/libero\","
+          },
+          {
+            "file": "evaluation/libero/launch_client.sh",
+            "line": 4,
+            "text": "python evaluation/libero/client.py \\"
+          },
+          {
+            "file": "evaluation/libero/launch_client.sh",
+            "line": 5,
+            "text": "--libero-benchmark libero_10 \\"
+          },
+          {
+            "file": "evaluation/libero/launch_client.sh",
+            "line": 9,
+            "text": "--out-dir outputs/libero"
+          },
+          {
+            "file": "evaluation/libero/launch_server.sh",
+            "line": 9,
+            "text": "--config-name libero \\"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 213,
+            "text": "cam_left = obs[\"observation.images.cam_left_wrist\"]"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 214,
+            "text": "cam_right = obs[\"observation.images.cam_right_wrist\"]"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 383,
+            "text": "print(\"\\033[94mWrist Camera Config:\\033[0m \" + str(args[\"camera\"][\"wrist_camera_type\"]) + f\", \" +"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 384,
+            "text": "str(args[\"camera\"][\"collect_wrist_camera\"]))"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 426,
+            "text": "\"observation.images.cam_left_wrist\": observation[\"observation\"][\"left_camera\"][\"rgb\"],"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 427,
+            "text": "\"observation.images.cam_right_wrist\": observation[\"observation\"][\"right_camera\"][\"rgb\"],"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 428,
+            "text": "\"observation.state\": observation[\"joint_action\"][\"vector\"],"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 608,
+            "text": "model.infer(dict(obs = key_frame_list, compute_kv_cache=True, imagine=False, save_visualization=save_visualization, state=action))"
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 134,
+            "text": "have not been normalized."
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 411,
+            "text": "The algorithm allows for quaternions that have not been normalized."
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 424,
+            "text": "if Nq != 1:  # Normalize if not normalized"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 84,
+            "text": "left_wrist_0_rgb = np.random.randint(0, 256, size=(1, 3, 224, 224), dtype=np.uint8)"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 85,
+            "text": "state = np.random.rand(1,8).astype(np.float32)"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 91,
+            "text": "#         \"left_wrist_0_rgb\": torch.from_numpy(left_wrist_0_rgb).to(device)[None],"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 93,
+            "text": "#     \"state\": torch.from_numpy(state).to(device)[None],"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 100,
+            "text": "\"left_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 101,
+            "text": "\"right_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 103,
+            "text": "\"state\": state,"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 6,
+            "text": "va_libero_cfg = EasyDict(__name__='Config: VA libero')"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 7,
+            "text": "va_libero_cfg.update(va_shared_cfg)"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 10,
+            "text": "va_libero_cfg.wan22_pretrained_model_name_or_path = \"/path/to/pretrained/model\""
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 12,
+            "text": "va_libero_cfg.attn_window = 30"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 13,
+            "text": "va_libero_cfg.frame_chunk_size = 4"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 14,
+            "text": "va_libero_cfg.env_type = 'none'"
+          }
+        ]
+      },
+      "checkpoints": [
+        {
+          "repo_id": "robbyant/lingbot-va-posttrain-libero-long",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "0e89d1e753019988aba484e8da2dc0810e264d9f",
+          "last_modified": "2026-04-24T03:51:39.000Z",
+          "library_name": "transformers",
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:apache-2.0"
+          ],
+          "card_license": "apache-2.0",
+          "sibling_count": 19,
+          "interesting_files": [
+            "text_encoder/config.json",
+            "text_encoder/model-00001-of-00003.safetensors",
+            "text_encoder/model-00002-of-00003.safetensors",
+            "text_encoder/model-00003-of-00003.safetensors",
+            "text_encoder/model.safetensors.index.json",
+            "tokenizer/special_tokens_map.json",
+            "tokenizer/spiece.model",
+            "tokenizer/tokenizer.json",
+            "tokenizer/tokenizer_config.json",
+            "transformer/config.json",
+            "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+            "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+            "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+            "transformer/diffusion_pytorch_model.safetensors.index.json",
+            "vae/config.json",
+            "vae/diffusion_pytorch_model.safetensors"
+          ]
+        }
+      ],
+      "suggested_static_gate": "STATIC_PASS",
+      "blockers": []
+    },
+    {
+      "candidate_family": "NORA",
+      "family_id": "nora",
+      "preregistered_status": "SELECTED_CONDITIONAL_B",
+      "preregistered_readiness_class": "B",
+      "source": {
+        "reachable": true,
+        "url": "https://github.com/declare-lab/nora-1.5.git",
+        "remote_head": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9",
+        "clone_ok": true,
+        "checked_out_head": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9",
+        "tracked_file_count": 35,
+        "code_license": {
+          "summary": "UNRESOLVED",
+          "files": []
+        },
+        "libero_files": [],
+        "relevant_files": [
+          "inference/__init__.py",
+          "inference/modelling_expert.py",
+          "requirements.txt"
+        ],
+        "runtime_files": [
+          "requirements.txt"
+        ],
+        "runtime_hints": [
+          "tensorflow==2.15.0",
+          "tensorflow_datasets==4.9.3",
+          "tensorflow_graphics==2021.12.3",
+          "torch==2.6.0",
+          "transformers==4.54.1",
+          "torchvision==0.21.0"
+        ],
+        "interface_evidence": [
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 141,
+            "text": "hidden_states: torch.Tensor,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 153,
+            "text": "bsz, q_len, _ = hidden_states.size()"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 155,
+            "text": "query_states = self.q_proj(hidden_states)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 156,
+            "text": "key_states = self.k_proj(hidden_states)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 157,
+            "text": "value_states = self.v_proj(hidden_states)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 159,
+            "text": "query_states = query_states.view(bsz, q_len, -1, self.head_dim).transpose(1, 2)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 160,
+            "text": "key_states = key_states.view(bsz, q_len, -1, self.head_dim).transpose(1, 2)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 161,
+            "text": "value_states = value_states.view(bsz, q_len, -1, self.head_dim).transpose(1, 2)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 167,
+            "text": "#query_states, key_states = apply_multimodal_rotary_pos_emb("
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 168,
+            "text": "#    query_states, key_states, cos, sin, self.rope_scaling[\"mrope_section\"]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 171,
+            "text": "query_states = rearrange(query_states, 'b h s d -> b s h d')"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 172,
+            "text": "query_states = apply_rope(query_states,position_ids)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 173,
+            "text": "query_states = rearrange(query_states, 'b s h d -> b h s d')"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 175,
+            "text": "key_states = rearrange(key_states, 'b h s d -> b s h d')"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 176,
+            "text": "key_states = apply_rope(key_states,position_ids)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 177,
+            "text": "key_states = rearrange(key_states, 'b s h d -> b h s d')"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 181,
+            "text": "## Concat VLM KV values with action expert KV states"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 182,
+            "text": "past_key_state = past_key_value[self.layer_idx][0]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 183,
+            "text": "past_value_state = past_key_value[self.layer_idx][1]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 185,
+            "text": "key_states = torch.cat([past_key_state, key_states], dim=2)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 186,
+            "text": "# print(key_states.dtype)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 187,
+            "text": "value_states = torch.cat("
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 188,
+            "text": "[past_value_state, value_states], dim=2"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 190,
+            "text": "key_states = key_states.to(dtype=query_states.dtype)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 191,
+            "text": "value_states = value_states.to(dtype=query_states.dtype)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 196,
+            "text": "# key_states, value_states = past_key_value.update(key_states, value_states, self.layer_idx, cache_kwargs)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 201,
+            "text": "#print(\"New query shape\",query_states.shape)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 211,
+            "text": "query_states,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 212,
+            "text": "key_states,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 213,
+            "text": "value_states,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 243,
+            "text": "output_hidden_states: Optional[bool] = None,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 247,
+            "text": "output_hidden_states = ("
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 248,
+            "text": "output_hidden_states if output_hidden_states is not None else self.config.output_hidden_states"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 271,
+            "text": "hidden_states = inputs_embeds"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 274,
+            "text": "#position_embeddings = self.rotary_emb(hidden_states, position_ids)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 277,
+            "text": "all_hidden_states = () if output_hidden_states else None"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 281,
+            "text": "if output_hidden_states:"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 282,
+            "text": "all_hidden_states += (hidden_states,)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 285,
+            "text": "hidden_states,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 296,
+            "text": "hidden_states = layer_outputs[0]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 301,
+            "text": "hidden_states = self.norm(hidden_states)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 303,
+            "text": "# add hidden states from the last decoder layer"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 304,
+            "text": "if output_hidden_states:"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 305,
+            "text": "all_hidden_states += (hidden_states,)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 309,
+            "text": "v for v in [hidden_states, vlm_key_values, all_hidden_states, all_self_attns] if v is not None"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 312,
+            "text": "last_hidden_state=hidden_states,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 314,
+            "text": "hidden_states=all_hidden_states,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 336,
+            "text": "action_chunk_length=5,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 337,
+            "text": "action_dim=7):"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 369,
+            "text": "self.action_chunk_length = action_chunk_length"
+          }
+        ]
+      },
+      "checkpoints": [
+        {
+          "repo_id": "declare-lab/nora-1.5-libero",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "422ccdc776af66f51ca43b7ee8fb6729c7b6f636",
+          "last_modified": "2025-11-30T09:10:44.000Z",
+          "library_name": null,
+          "pipeline_tag": null,
+          "license_tags": [],
+          "card_license": null,
+          "sibling_count": 4,
+          "interesting_files": [
+            "config.json",
+            "model.safetensors"
+          ]
+        }
+      ],
+      "suggested_static_gate": "STATIC_FAIL",
+      "blockers": [
+        "exact_LIBERO_artifact_license_not_explicit_in_HF_metadata",
+        "no_LIBERO_named_source_file_detected"
+      ]
+    },
+    {
+      "candidate_family": "UniVLA-BAAI",
+      "family_id": "univla_baai",
+      "preregistered_status": "RESERVE_CONDITIONAL_B",
+      "preregistered_readiness_class": "B",
+      "source": {
+        "reachable": true,
+        "url": "https://github.com/baaivision/UniVLA.git",
+        "remote_head": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9",
+        "clone_ok": true,
+        "checked_out_head": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9",
+        "tracked_file_count": 810,
+        "code_license": {
+          "summary": "MULTIPLE",
+          "files": [
+            {
+              "path": "reference/Emu3/LICENSE",
+              "detected": "Apache-2.0"
+            },
+            {
+              "path": "reference/RoboVLMs/SimplerEnv/LICENSE",
+              "detected": "MIT"
+            },
+            {
+              "path": "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/LICENSE",
+              "detected": "Apache-2.0"
+            }
+          ]
+        },
+        "libero_files": [
+          "configs/normalizer_libero/norm_stats.json",
+          "docs/imgs/libero.png",
+          "docs/libero.md",
+          "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+          "reference/RoboVLMs/eval/libero/libero_requirements.txt",
+          "reference/RoboVLMs/eval/libero/libero_utils.py",
+          "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+          "reference/RoboVLMs/scripts/run_eval_libero_univla.sh",
+          "reference/RoboVLMs/scripts/setup_libero.sh",
+          "scripts/simulator/libero/train_libero_video.sh",
+          "tools/pickle_gen/pickle_generation_libero.py",
+          "tools/process/libero_process.py"
+        ],
+        "relevant_files": [
+          "configs/normalizer_libero/norm_stats.json",
+          "docs/imgs/libero.png",
+          "docs/libero.md",
+          "models/inference/inference_action.py",
+          "models/inference/inference_vision.py",
+          "models/policy_head/noise_schedulers.py",
+          "models/tokenizer/action_tokenizer.py",
+          "pretrain/fast/processing_action_tokenizer.py",
+          "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+          "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+          "reference/Emu3/requirements.txt",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/docker/10_nvidia.json",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/docker/Dockerfile",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/docker/nvidia_icd.json",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/docker/nvidia_layers.json",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/pyproject.toml",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/requirements.txt",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/setup.py",
+          "reference/RoboVLMs/SimplerEnv/pyproject.toml",
+          "reference/RoboVLMs/SimplerEnv/requirements_full_install.txt",
+          "reference/RoboVLMs/SimplerEnv/setup.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/evaluation/__init__.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/evaluation/argparse.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/evaluation/maniskill2_evaluator.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/main_inference.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/simple_inference_visual_matching_prepackaged_envs.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/action/__init__.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/action/action_ensemble.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/google_robot_test_dataset_inference_rollout_gt_traj_in_sim.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/octo_inference_real_video.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/rt1_inference_real_video.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/rt1_plot_dataset_inference_trajectory.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/widowx_test_dataset_inference_rollout_gt_traj_in_sim.py",
+          "reference/RoboVLMs/SimplerEnv/tools/calc_metrics_evaluation_videos.py",
+          "reference/RoboVLMs/configs/data/calvin/eval_sequences.json",
+          "reference/RoboVLMs/eval/calvin/env_test.py",
+          "reference/RoboVLMs/eval/calvin/eval_utils.py",
+          "reference/RoboVLMs/eval/calvin/evaluate_ddp-emu.py",
+          "reference/RoboVLMs/eval/calvin/model_wrapper.py",
+          "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+          "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+          "reference/RoboVLMs/eval/libero/libero_requirements.txt",
+          "reference/RoboVLMs/eval/libero/libero_utils.py",
+          "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+          "reference/RoboVLMs/eval/simpler/env_test.py",
+          "reference/RoboVLMs/eval/simpler/env_utlis.py",
+          "reference/RoboVLMs/eval/simpler/get_results.py",
+          "reference/RoboVLMs/eval/simpler/main_inference_emu.py",
+          "reference/RoboVLMs/eval/simpler/maniskill2_evaluator.py",
+          "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+          "reference/RoboVLMs/scripts/run_eval_calvin_univla.sh",
+          "reference/RoboVLMs/scripts/run_eval_libero_univla.sh",
+          "reference/RoboVLMs/scripts/setup_libero.sh",
+          "requirements.txt",
+          "scripts/simulator/libero/train_libero_video.sh",
+          "tools/action_tokenizer/fit_fast.py",
+          "tools/evaluation/calvin_score.py",
+          "tools/pickle_gen/pickle_generation_libero.py",
+          "tools/process/libero_process.py"
+        ],
+        "runtime_files": [
+          "reference/Emu3/requirements.txt",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/docker/Dockerfile",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/pyproject.toml",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/requirements.txt",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/setup.py",
+          "reference/RoboVLMs/SimplerEnv/pyproject.toml",
+          "reference/RoboVLMs/SimplerEnv/requirements_full_install.txt",
+          "reference/RoboVLMs/SimplerEnv/setup.py",
+          "reference/RoboVLMs/eval/libero/libero_requirements.txt",
+          "requirements.txt"
+        ],
+        "runtime_hints": [
+          "torch==2.2.1",
+          "transformers==4.44.0",
+          "flash-attn==2.5.7",
+          "FROM nvidia/cudagl:11.3.1-devel-ubuntu20.04",
+          "ARG PYTHON_VERSION=3.8",
+          "/opt/conda/bin/conda install -y python=\"$PYTHON_VERSION\" && \\",
+          "GitPython",
+          "opencv-python",
+          "python_requires=\">=3.8\",",
+          "# tensorflow[and-cuda]",
+          "tensorflow_datasets==4.9.4",
+          "tensorflow_hub==0.16.0",
+          "dm-reverb[tensorflow]==0.14.0",
+          "IPython==8.22.2",
+          "transformers",
+          "python_requires=\">=3.10\",",
+          "# Core Torch Libraries",
+          "torch==2.4.0+cu124",
+          "torchvision==0.19.0+cu124",
+          "torchaudio==2.4.0+cu124",
+          "# Transformers and Tokenizers"
+        ],
+        "interface_evidence": [
+          {
+            "file": "configs/normalizer_libero/norm_stats.json",
+            "line": 3,
+            "text": "\"libero\": {"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 1,
+            "text": "# LIBERO Benchmark"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 3,
+            "text": "[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) is a benchmark for studying knowledge transfer in multitask and lifelong robot learning problems."
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 5,
+            "text": "![](imgs/libero.png)"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 13,
+            "text": "bash scripts/setup_libero.sh"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 16,
+            "text": "Dataset download from [huggingface](https://huggingface.co/datasets/openvla/modified_libero_rlds)."
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 20,
+            "text": "# 1. process the dataset, we process all the LIBERO suites together"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 21,
+            "text": "python tools/process/libero_process.py"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 27,
+            "text": "python tools/pickle_gen/pickle_generation_libero.py\\"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 30,
+            "text": "--normalizer_path ./configs/normalizer_libero \\"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 31,
+            "text": "--output_filename libero_all_norm.pkl"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 37,
+            "text": "bash scripts/simulator/libero/train_libero_video.sh"
+          },
+          {
+            "file": "docs/libero.md",
+            "line": 45,
+            "text": "bash scripts/run_eval_libero_univla.sh ${CKPT_PATH}"
+          },
+          {
+            "file": "models/inference/inference_action.py",
+            "line": 41,
+            "text": "train_pickle = '/share/project/yuqi.wang/datasets/processed_data/meta/libero_all_norm.pkl'"
+          },
+          {
+            "file": "models/inference/inference_action.py",
+            "line": 45,
+            "text": "EMU_HUB = \"/share/project/yuqi.wang/UniVLA/logs/huggingface_univla_ckpt/UniVLA/UNIVLA_LIBERO_IMG_BS192_8K\""
+          },
+          {
+            "file": "models/inference/inference_action.py",
+            "line": 127,
+            "text": "action_outputs = action_tokenizer.decode(processed_outputs, time_horizon=action_predict_frame, action_dim=7)"
+          },
+          {
+            "file": "models/inference/inference_action.py",
+            "line": 131,
+            "text": "action_gt_decode = action_tokenizer.decode(action_gt_id, time_horizon=action_predict_frame, action_dim=7)"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 23,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 36,
+            "text": "self.action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 38,
+            "text": "self.called_action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 42,
+            "text": "def __call__(self, action_chunk: np.array) -> np.array:"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 43,
+            "text": "assert action_chunk.ndim <= 3, \"Only 3 dimensions supported: [batch, timesteps, action_dim]\""
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 44,
+            "text": "if action_chunk.ndim == 2:"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 45,
+            "text": "action_chunk = action_chunk[None, ...]"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 47,
+            "text": "# Cache the time horizon and action dimension for decoding"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 48,
+            "text": "self.called_time_horizon = action_chunk.shape[-2]"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 49,
+            "text": "self.called_action_dim = action_chunk.shape[-1]"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 51,
+            "text": "dct_coeff = dct(action_chunk, axis=1, norm=\"ortho\")"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 64,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 67,
+            "text": "self.action_dim = action_dim or self.action_dim or self.called_action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 69,
+            "text": "# Cache the time horizon and action dimension for the next call"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 71,
+            "text": "self.called_action_dim = self.action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 74,
+            "text": "self.time_horizon is not None and self.action_dim is not None"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 75,
+            "text": "), \"Tokenizer not initialized, call encode() once or pass in time_horizon and action_dim.\""
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 84,
+            "text": "max_length = self.time_horizon * self.action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 92,
+            "text": "decoded_dct_coeff = decoded_dct_coeff.reshape(-1, self.action_dim)"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 97,
+            "text": "self.action_dim,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 99,
+            "text": "), f\"Decoded DCT coefficients have shape {decoded_dct_coeff.shape}, expected ({self.time_horizon}, {self.action_dim})\""
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 102,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 105,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 108,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 123,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 174,
+            "text": "action_dim=action_dim,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 23,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 36,
+            "text": "self.action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 38,
+            "text": "self.called_action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 42,
+            "text": "def __call__(self, action_chunk: np.array) -> np.array:"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 43,
+            "text": "assert action_chunk.ndim <= 3, \"Only 3 dimensions supported: [batch, timesteps, action_dim]\""
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 44,
+            "text": "if action_chunk.ndim == 2:"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 45,
+            "text": "action_chunk = action_chunk[None, ...]"
+          }
+        ]
+      },
+      "checkpoints": [
+        {
+          "repo_id": "Yuqi1997/UniVLA",
+          "reachable": true,
+          "private": false,
+          "gated": false,
+          "disabled": false,
+          "sha": "df6c94ff872f4fc056693e507c033ca390694118",
+          "last_modified": "2025-06-26T06:52:11.000Z",
+          "library_name": "transformers",
+          "pipeline_tag": "robotics",
+          "license_tags": [
+            "license:apache-2.0"
+          ],
+          "card_license": "apache-2.0",
+          "sibling_count": 67,
+          "interesting_files": [
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/config.json",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/generation_config.json",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/model-00001-of-00004.safetensors",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/model-00002-of-00004.safetensors",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/model-00003-of-00004.safetensors",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/model-00004-of-00004.safetensors",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/model.safetensors.index.json",
+            "UNIVLA_CALVIN_ABCD_VIDEO_BS192_8K/tokenizer_config.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/config.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/emu3.tiktoken",
+            "UNIVLA_LIBERO_IMG_BS192_8K/emu3_vision_tokens.txt",
+            "UNIVLA_LIBERO_IMG_BS192_8K/generation_config.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/model-00001-of-00004.safetensors",
+            "UNIVLA_LIBERO_IMG_BS192_8K/model-00002-of-00004.safetensors",
+            "UNIVLA_LIBERO_IMG_BS192_8K/model-00003-of-00004.safetensors",
+            "UNIVLA_LIBERO_IMG_BS192_8K/model-00004-of-00004.safetensors",
+            "UNIVLA_LIBERO_IMG_BS192_8K/model.safetensors.index.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/special_tokens_map.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/tokenizer_config.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/trainer_state.json",
+            "UNIVLA_LIBERO_IMG_BS192_8K/training_args.bin",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/config.json",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/emu3.tiktoken",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/emu3_vision_tokens.txt",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/generation_config.json",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/model-00001-of-00004.safetensors",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/model-00002-of-00004.safetensors",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/model-00003-of-00004.safetensors",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/model-00004-of-00004.safetensors",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/model.safetensors.index.json",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/special_tokens_map.json",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/tokenizer_config.json",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/trainer_state.json",
+            "UNIVLA_LIBERO_VIDEO_BS192_8K/training_args.bin",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/config.json",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/generation_config.json",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/model-00001-of-00004.safetensors",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/model-00002-of-00004.safetensors",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/model-00003-of-00004.safetensors",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/model-00004-of-00004.safetensors",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/model.safetensors.index.json",
+            "UNIVLA_SIMPLER_BRIDGE_VIDEO_BS128_20K/tokenizer_config.json",
+            "WORLD_MODEL_POSTTRAIN/config.json",
+            "WORLD_MODEL_POSTTRAIN/emu3.tiktoken",
+            "WORLD_MODEL_POSTTRAIN/emu3_vision_tokens.txt",
+            "WORLD_MODEL_POSTTRAIN/generation_config.json",
+            "WORLD_MODEL_POSTTRAIN/model-00001-of-00004.safetensors",
+            "WORLD_MODEL_POSTTRAIN/model-00002-of-00004.safetensors",
+            "WORLD_MODEL_POSTTRAIN/model-00003-of-00004.safetensors",
+            "WORLD_MODEL_POSTTRAIN/model-00004-of-00004.safetensors",
+            "WORLD_MODEL_POSTTRAIN/model.safetensors.index.json",
+            "WORLD_MODEL_POSTTRAIN/special_tokens_map.json",
+            "WORLD_MODEL_POSTTRAIN/tokenizer_config.json",
+            "WORLD_MODEL_POSTTRAIN/trainer_state.json",
+            "WORLD_MODEL_POSTTRAIN/training_args.bin"
+          ]
+        }
+      ],
+      "suggested_static_gate": "NEEDS_GPU_SMOKE",
+      "blockers": []
+    }
+  ]
+}

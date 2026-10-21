@@ -51,3 +51,11 @@ Keep the first error and the output directory. Do not edit reference values or
 hashes just to obtain a pass. `check_public.py` rejects unexpected files except
 recognized runtime directories; the publisher uses an explicit file list, not
 `git add .`. Changes to released inputs require a reviewed new release manifest.
+
+
+## Engineering archive addition
+
+Original recorded engineering files are also published under `engineering/backup/`.
+See `engineering/README.md` and `engineering/SOURCE_INVENTORY.json`.
+This addition does not rerun experiments, change historical evidence or grant
+a new blanket license. Original metadata-dependent analysis limitations remain.

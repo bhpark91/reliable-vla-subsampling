@@ -1,0 +1,82 @@
+{
+  "schema_version": "calibration_expansion_final_status_v1",
+  "generated_at_utc": "2026-08-27T12:33:10.879461+00:00",
+  "expansion_branch_head_before_closure": "5f4c051f81c74789949484b60aa9c229dcda2797",
+  "harness_pin": "2680ab2fafe981c2dba63c6c1a4e7bb4415dbb56",
+  "preregistration": {
+    "commit": "35860e9266339424cc2ae5427f17ed86c0267e9c",
+    "manifest_sha256": "6514d679d1ce0128a98a67e2c0e8fa4e7e0042712717a8c28e863d57e7664f59",
+    "outcome_blinded": true
+  },
+  "milestone_commits": {
+    "static_qualification": "93e70b885aeace328a1551079910e66d4e0bd08f",
+    "source_and_adapter_contract": "ae1b8cd6a537d186c7d3c21c7d6b1eb51fe9cad2",
+    "xiaomi_adapter": "72dce68fac527233675a66d39b23284a9ab20445",
+    "vla_adapter": "207f87079b832f1656c497fc957119324faaec5f",
+    "univla_opendrivelab_adapter": "5f4c051f81c74789949484b60aa9c229dcda2797"
+  },
+  "families": [
+    {
+      "family_id": "vla_adapter",
+      "preregistered_role": "PRIMARY_A",
+      "static_source_gate": "PASS",
+      "adapter_status": "CPU_STATIC_PASS",
+      "next_status": "READY_FOR_MATERIALIZATION_AND_GPU_SMOKE"
+    },
+    {
+      "family_id": "xiaomi_robotics_0",
+      "preregistered_role": "PRIMARY_A",
+      "static_source_gate": "PASS",
+      "adapter_status": "CPU_STATIC_PASS",
+      "next_status": "READY_FOR_MATERIALIZATION_AND_GPU_SMOKE"
+    },
+    {
+      "family_id": "univla_opendrivelab",
+      "preregistered_role": "PRIMARY_A",
+      "static_source_gate": "PASS",
+      "adapter_status": "CPU_STATIC_PASS",
+      "next_status": "READY_FOR_MATERIALIZATION_AND_GPU_SMOKE"
+    },
+    {
+      "family_id": "lingbot_va",
+      "preregistered_role": "PRIMARY_A",
+      "static_source_gate": "PASS",
+      "adapter_status": "PINNED_EXISTING_HARNESS_INTEGRATION",
+      "next_status": "READY_FOR_MATERIALIZATION_AND_GPU_SMOKE"
+    },
+    {
+      "family_id": "nora",
+      "preregistered_role": "CONDITIONAL_B",
+      "static_source_gate": "HOLD",
+      "adapter_status": "NOT_IMPLEMENTED",
+      "next_status": "HOLD_LICENSE_NO_GPU"
+    },
+    {
+      "family_id": "univla_baai",
+      "preregistered_role": "RESERVE_B",
+      "static_source_gate": "RESERVE",
+      "adapter_status": "NOT_IMPLEMENTED",
+      "next_status": "RESERVE_NOT_SCHEDULED"
+    }
+  ],
+  "preexisting_governance": {
+    "rynnvla_002": "EXCLUDED_LEGAL_ACCESS_AUTHORITY",
+    "worldvla": "SAME_LINEAGE_AS_RYNNVLA_AND_NOT_SELECTED",
+    "starvla": "MERGED_INTO_OPENVLA"
+  },
+  "current_conclusion": {
+    "new_primary_distinct_families_engineering_prepared": 4,
+    "conditional_families": 1,
+    "reserve_families": 1,
+    "gpu_smoke_completed": 0,
+    "gpu_smoke_submitted": 0,
+    "final_family_count_not_declared": true,
+    "reason_final_family_count_not_declared": "Existing calibration/holdout lineage accounting and prospective holdout reservations must be reconciled by the research-director session; this family-expansion session does not alter that split."
+  },
+  "scientific_integrity": {
+    "Discovery500_outcomes_used_for_selection": false,
+    "QUAL24_outcomes_used_for_selection": false,
+    "performance_used_as_qualification_gate": false,
+    "GPU_used_by_family_expansion_session": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "calibration-expansion-d500-readiness-v1",
+  "frozen_at_utc": "2026-08-28T10:50:08.485074+00:00",
+  "critical_path_only": true,
+  "systems": [
+    {
+      "display_name": "VLA-Adapter",
+      "system_slug": "vla_adapter",
+      "d500_ready": "YES",
+      "engineering_smoke": "PASS",
+      "engineering_job_state": "succeeded",
+      "protocol_match": "YES",
+      "server_config": "/scratch/calexp/repo/integrations/vla_eval_overlay/configs/model_servers/vla_adapter/long.yaml",
+      "engineering_smoke_run": "/scratch/calexp/gpu-smoke-v2/calexp-smoke-v5-20260828-092053",
+      "engineering_smoke_job": "job-REDACTED000007",
+      "planned_run_tag": "d500-vla_adapter-calexp-v1",
+      "expected_result_path": "/scratch/calexp/results/discovery500/vla_adapter/d500-vla_adapter-calexp-v1/final"
+    },
+    {
+      "display_name": "Xiaomi-Robotics-0",
+      "system_slug": "xiaomi_robotics_0",
+      "d500_ready": "YES",
+      "engineering_smoke": "PASS",
+      "engineering_job_state": "succeeded",
+      "protocol_match": "YES",
+      "server_config": "/scratch/calexp/repo/integrations/vla_eval_overlay/configs/model_servers/xiaomi_robotics_0/libero.yaml",
+      "engineering_smoke_run": "/scratch/calexp/gpu-smoke-v2/calexp-smoke-v5-20260828-092053",
+      "engineering_smoke_job": "job-REDACTED000001",
+      "planned_run_tag": "d500-xiaomi_robotics_0-calexp-v1",
+      "expected_result_path": "/scratch/calexp/results/discovery500/xiaomi_robotics_0/d500-xiaomi_robotics_0-calexp-v1/final"
+    },
+    {
+      "display_name": "OpenDriveLab UniVLA",
+      "system_slug": "univla_opendrivelab",
+      "d500_ready": "YES",
+      "engineering_smoke": "PASS",
+      "engineering_job_state": "succeeded",
+      "protocol_match": "YES",
+      "server_config": "/scratch/calexp/repo/integrations/vla_eval_overlay/configs/model_servers/univla_opendrivelab/long.yaml",
+      "engineering_smoke_run": "/scratch/calexp/gpu-smoke-v2/calexp-smoke-v7-20260828-100159",
+      "engineering_smoke_job": "job-REDACTED000003",
+      "planned_run_tag": "d500-univla_opendrivelab-calexp-v1",
+      "expected_result_path": "/scratch/calexp/results/discovery500/univla_opendrivelab/d500-univla_opendrivelab-calexp-v1/final",
+      "compatibility_fix": "canonical adapter supplies task_suite_name=\"libero\""
+    }
+  ],
+  "protocol": {
+    "protocol_match": "YES",
+    "basis": "critical-3 D500 launch is frozen to the existing Discovery-500 manifest and canonical V3 wrapper; model-interface settings may differ, evaluation protocol does not",
+    "discovery_manifest": "/data/vla-irt-cat-v2/manifests/discovery_500_primary.json",
+    "discovery_manifest_sha256": "87410957f255d73a6595365ca72cf380254b4d2bc0b98923deebe7bfcc8682b1",
+    "canonical_wrapper": "/data/vla-irt-cat-v2/v2_tools/libero_plus_selected_v3.py",
+    "canonical_wrapper_sha256": "0a9e558582b769b81d859f619850d9438de5a35004fe8c11b093560eb4674dae",
+    "seed": 7,
+    "env_seed": 7,
+    "num_steps_wait": 10,
+    "suite_specific_max_steps": "unchanged",
+    "output_storage": "/scratch persistent volume"
+  },
+  "governance": {
+    "task_success_used": false,
+    "discovery500_outcome_used": false,
+    "qual24_outcome_used": false,
+    "lingbot_4suite_compatibility_checked": false,
+    "lingbot_critical_path": false,
+    "main_branch_modified": false,
+    "prereg_modified": false
+  },
+  "chatgpt_summary": [
+    "CALIBRATION_EXPANSION_ENGINEERING_SMOKE_COMPLETE",
+    "CRITICAL_PATH=VLA-Adapter,Xiaomi-Robotics-0,OpenDriveLab-UniVLA",
+    "CRITICAL3_D500_READY=3/3",
+    "LINGBOT_4SUITE_CHECK=DEFERRED_NOT_RUN",
+    "TASK_SUCCESS_USED=false",
+    "DISCOVERY500_OUTCOME_USED=false",
+    "QUAL24_OUTCOME_USED=false",
+    "PROTOCOL_MATCH=YES",
+    "UNIVLA_COMPAT_SHIM=task_suite_name=\"libero\"",
+    "GIT_BRANCH=research/calibration-expansion-v1"
+  ]
+}

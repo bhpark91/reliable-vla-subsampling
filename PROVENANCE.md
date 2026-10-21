@@ -25,3 +25,11 @@ no new simulator runs, model training, control experiments, or manuscript.
 It excludes itself. Hashes check consistency, not legal permissions or
 scientific correctness. The publishing helper outside this repository pins
 the manifest hash and uses only its explicit file inventory.
+
+
+## Engineering archive addition
+
+Original recorded engineering files are also published under `engineering/backup/`.
+See `engineering/README.md` and `engineering/SOURCE_INVENTORY.json`.
+This addition does not rerun experiments, change historical evidence or grant
+a new blanket license. Original metadata-dependent analysis limitations remain.

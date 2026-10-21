@@ -6,3 +6,6 @@ outputs/
 reproducibility/reproduced/
 .env
 .DS_Store
+
+engineering/backup/external/
+engineering/backup/reproducibility/reproduced/

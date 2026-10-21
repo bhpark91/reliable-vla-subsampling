@@ -1,5 +1,28 @@
 # Reliable Subsampling for VLA Evaluation
 
+## Original engineering release
+
+The GPU integration files under `engineering/backup/` are copies of the
+existing research backup, not a new GPU runtime or rewritten evaluation pipeline.
+Model algorithms, dependencies, experimental settings, results, and launch logic
+are retained as recorded. Private deployment IDs, personal path prefixes and
+historical SSH connection defaults are replaced with explicit placeholders.
+See `engineering/PRIVACY_EXPORT.md` for the file-by-file verification boundary.
+The project owner reports that H100 execution validation was completed before
+these artifacts were archived. This export does not repeat those experiments or
+claim a new independent hardware verification. Original A100 entries, historical
+failures, and unresolved fields are preserved rather than relabeled.
+
+The complete metadata-bearing response-analysis package has been retained. Its
+core calibration, sampling, and holdout analyses were rerun by the owner and
+passed the documented numerical checks. The public method-comparison workflow
+is restricted because benchmark metadata and original item mapping were withheld
+pending clarification of redistribution terms, not because the underlying inputs
+were lost. Original GPU execution and response-level numerical analysis are
+separate layers.
+
+See [the engineering inventory and instructions](engineering/README.md).
+
 **Can fewer simulator trials estimate a vision-language-action system's score on a fixed test bank?**
 
 This project compares random sampling, stratified sampling, and Rasch-based
@@ -10,7 +33,7 @@ responses** in total.
 
 **Status:** unpublished research artifact; not an accepted publication.
 **Release scope:** numerical responses, archived aggregate results, and analysis
-source. Benchmark item text, original item identifiers, and item-level
+source, plus the original GPU engineering archive. Benchmark item text, original item identifiers, and item-level
 classification metadata are not included.
 
 ## Main observation

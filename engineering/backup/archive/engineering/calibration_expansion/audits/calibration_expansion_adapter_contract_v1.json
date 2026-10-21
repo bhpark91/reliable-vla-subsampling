@@ -1,0 +1,2583 @@
+{
+  "schema_version": "calibration_expansion_adapter_contract_v1",
+  "generated_at_utc": "2026-08-27T09:22:25.502021+00:00",
+  "preregistration_commit": "35860e9266339424cc2ae5427f17ed86c0267e9c",
+  "static_qualification_commit": "93e70b885aeace328a1551079910e66d4e0bd08f",
+  "no_use_of_current_discovery500_outcomes": true,
+  "no_use_of_qual24_outcomes": true,
+  "gpu_used": false,
+  "checkpoint_weights_downloaded": false,
+  "families": [
+    {
+      "family_id": "vla_adapter",
+      "candidate_family": "VLA-Adapter",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "static_gate": "STATIC_PASS",
+      "adapter_prep_status": "READY_FOR_ADAPTER_IMPLEMENTATION",
+      "source_pin": {
+        "url": "https://github.com/OpenHelix-Team/VLA-Adapter.git",
+        "commit": "23fa0c9c159e2aa04341cdd3e924f44061311060"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Spatial-Pro",
+          "revision": "cb023c6771fc62ea729d218f09ac0583c14f59d4",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Object-Pro",
+          "revision": "afd5c551e4851fb434deaba272c7688e87586cc4",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Goal-Pro",
+          "revision": "2ae84b8275a0c35c1b6751573a71468e1c080825",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Long-Pro",
+          "revision": "9e21d603e53c8602919b9a1d90201b329e673f6b",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        }
+      ],
+      "source_code_license_summary": "MIT",
+      "source_inspection": {
+        "url": "https://github.com/OpenHelix-Team/VLA-Adapter.git",
+        "pinned_commit": "23fa0c9c159e2aa04341cdd3e924f44061311060",
+        "clone_ok": true,
+        "license_files": [
+          "LICENSE"
+        ],
+        "candidate_entrypoint_files": [
+          "experiments/robot/aloha/eval_files/deploy_server.sh",
+          "experiments/robot/aloha/eval_files/run_eval_client.sh",
+          "experiments/robot/aloha/eval_files/run_eval_client_fake.sh",
+          "experiments/robot/libero/libero_utils.py",
+          "experiments/robot/libero/regenerate_libero_dataset.py",
+          "experiments/robot/libero/run_libero_eval.py",
+          "experiments/robot/server_deploy/deploy.py",
+          "prismatic/models/action_heads.py",
+          "prismatic/vla/action_tokenizer.py",
+          "vla-scripts/deploy.py",
+          "vla-scripts/evaluate_calvin.py",
+          "vla-scripts/vla_evaluation.py"
+        ],
+        "interface_evidence": [
+          {
+            "file": "README.md",
+            "line": 262,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 263,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 319,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 320,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 380,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 381,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 439,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 440,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 467,
+            "text": "* `run_libero_eval.py`: LIBERO eval script"
+          },
+          {
+            "file": "README.md",
+            "line": 504,
+            "text": "CUDA_VISIBLE_DEVICES=0 python experiments/robot/libero/run_libero_eval.py \\"
+          },
+          {
+            "file": "README.md",
+            "line": 505,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 506,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 515,
+            "text": "CUDA_VISIBLE_DEVICES=0 python experiments/robot/libero/run_libero_eval.py \\"
+          },
+          {
+            "file": "README.md",
+            "line": 516,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 517,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 526,
+            "text": "CUDA_VISIBLE_DEVICES=0 python experiments/robot/libero/run_libero_eval.py \\"
+          },
+          {
+            "file": "README.md",
+            "line": 527,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 528,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 537,
+            "text": "CUDA_VISIBLE_DEVICES=0 python experiments/robot/libero/run_libero_eval.py \\"
+          },
+          {
+            "file": "README.md",
+            "line": 538,
+            "text": "--use_proprio True \\"
+          },
+          {
+            "file": "README.md",
+            "line": 539,
+            "text": "--num_images_in_input 2 \\"
+          },
+          {
+            "file": "README.md",
+            "line": 553,
+            "text": "If you want to get the inference **throughput**, you can run it in the `run_libero_eval.py` file. You can add  `start = time.time()` and `end = time.time()` before and after `lines 334--345` and calculate the difference between the two. This difference is the time it takes to generate `8 chunks`. This gives you the inference throughput. We measured it multiple times and took the average value of `0.036s`."
+          },
+          {
+            "file": "experiments/robot/aloha/eval_files/run_eval_client.sh",
+            "line": 9,
+            "text": "UNNORM_KEY=\"${UNNORM_KEY:-bowl_stack_and_shelf_aloha_realworld_50}\""
+          },
+          {
+            "file": "experiments/robot/aloha/eval_files/run_eval_client.sh",
+            "line": 14,
+            "text": "--unnorm_key \"${UNNORM_KEY}\" \\"
+          },
+          {
+            "file": "experiments/robot/aloha/eval_files/run_eval_client_fake.sh",
+            "line": 9,
+            "text": "UNNORM_KEY=\"${UNNORM_KEY:-bowl_stack_and_shelf_aloha_realworld_50}\""
+          },
+          {
+            "file": "experiments/robot/aloha/eval_files/run_eval_client_fake.sh",
+            "line": 14,
+            "text": "--unnorm_key \"${UNNORM_KEY}\" \\"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 40,
+            "text": "def get_libero_wrist_image(obs):"
+          },
+          {
+            "file": "experiments/robot/libero/libero_utils.py",
+            "line": 41,
+            "text": "\"\"\"Extracts wrist camera image from observations and preprocesses it.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 132,
+            "text": "robot_states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 149,
+            "text": "robot_states.append(demo_data[\"robot_states\"][0])"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 153,
+            "text": "robot_states.append("
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 197,
+            "text": "ep_data_grp.create_dataset(\"robot_states\", data=np.stack(robot_states, axis=0))"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 2,
+            "text": "run_libero_eval.py"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 30,
+            "text": "get_libero_wrist_image,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 35,
+            "text": "get_action_head,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 38,
+            "text": "get_proprio_projector,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 43,
+            "text": "get_action,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 47,
+            "text": "normalize_gripper_action,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 95,
+            "text": "num_images_in_input: int = 2                     # Number of images in the VLA input (default: 1)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 96,
+            "text": "use_proprio: bool = True                         # Whether to include proprio state in input"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 100,
+            "text": "unnorm_key: Union[str, Path] = \"\"                # Action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 152,
+            "text": "# Load proprio projector if needed"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 153,
+            "text": "proprio_projector = None"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 154,
+            "text": "if cfg.use_proprio:"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 155,
+            "text": "proprio_projector = get_proprio_projector("
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 158,
+            "text": "proprio_dim=8,  # 8-dimensional proprio for LIBERO"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 164,
+            "text": "action_head = get_action_head(cfg, model.llm_dim)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 173,
+            "text": "check_unnorm_key(cfg, model)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 175,
+            "text": "return model, action_head, proprio_projector, noisy_action_projector, processor"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 178,
+            "text": "def check_unnorm_key(cfg: GenerateConfig, model) -> None:"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 179,
+            "text": "\"\"\"Check that the model contains the action un-normalization key.\"\"\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 180,
+            "text": "# Initialize unnorm_key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 181,
+            "text": "unnorm_key = cfg.task_suite_name"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 185,
+            "text": "if unnorm_key not in model.norm_stats and f\"{unnorm_key}_no_noops\" in model.norm_stats:"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 186,
+            "text": "unnorm_key = f\"{unnorm_key}_no_noops\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 188,
+            "text": "assert unnorm_key in model.norm_stats, f\"Action un-norm key {unnorm_key} not found in VLA `norm_stats`!\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 190,
+            "text": "# Set the unnorm_key in cfg"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 191,
+            "text": "cfg.unnorm_key = unnorm_key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 250,
+            "text": "wrist_img = get_libero_wrist_image(obs)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 254,
+            "text": "wrist_img_resized = resize_image_for_policy(wrist_img, resize_size)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 259,
+            "text": "\"wrist_image\": wrist_img_resized,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 271,
+            "text": "# Normalize gripper action [0,1] -> [-1,+1] because the environment expects the latter"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 272,
+            "text": "action = normalize_gripper_action(action, binarize=True)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 291,
+            "text": "proprio_projector=None,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 335,
+            "text": "actions = get_action("
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 342,
+            "text": "proprio_projector=proprio_projector,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 381,
+            "text": "proprio_projector=None,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 432,
+            "text": "proprio_projector,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 489,
+            "text": "model, action_head, proprio_projector, noisy_action_projector, processor = initialize_model(cfg)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 519,
+            "text": "proprio_projector,"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 28,
+            "text": "get_action_head,"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 30,
+            "text": "get_proprio_projector,"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 33,
+            "text": "get_action,"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 67,
+            "text": "num_images_in_input: int = 3                     # Number of images in the VLA input (default: 1)"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 68,
+            "text": "use_proprio: bool = True                         # Whether to include proprio state in input"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 72,
+            "text": "unnorm_key: Union[str, Path] = \"\"                # Action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 109,
+            "text": "NUM_PATCHES = model.vision_backbone.get_num_patches() * model.vision_backbone.get_num_images_in_input()"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 110,
+            "text": "# If we have proprio inputs, a single proprio embedding is appended to the end of the vision patch embeddings"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 111,
+            "text": "if cfg.use_proprio:"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 115,
+            "text": "# Load proprio projector if needed"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 116,
+            "text": "proprio_projector = None"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 117,
+            "text": "if cfg.use_proprio:"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 118,
+            "text": "proprio_projector = get_proprio_projector("
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 121,
+            "text": "proprio_dim=14,  # 14-dimensional proprio for aloha"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 127,
+            "text": "action_head = get_action_head(cfg, model.llm_dim)"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 133,
+            "text": "return model, processor, action_head, proprio_projector"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 158,
+            "text": "self.proprio_projector,"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 187,
+            "text": "# Extract unnorm_key and instruction from the batch"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 188,
+            "text": "unnorm_key = batch.pop(\"unnorm_key\")"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 191,
+            "text": "# Update cfg with the unnorm_key from the client"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 192,
+            "text": "self.cfg.unnorm_key = unnorm_key"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 194,
+            "text": "# Use get_action to get model's prediction"
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 195,
+            "text": "actions = get_action("
+          },
+          {
+            "file": "experiments/robot/server_deploy/deploy.py",
+            "line": 202,
+            "text": "proprio_projector=self.proprio_projector,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 10,
+            "text": "from prismatic.vla.constants import ACTION_DIM, ACTION_TOKEN_BEGIN_IDX, IGNORE_INDEX, NUM_ACTIONS_CHUNK, PROPRIO_DIM, STOP_INDEX, NUM_TOKENS"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 27,
+            "text": "action_dim=7,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 33,
+            "text": "self.action_dim = action_dim"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 37,
+            "text": "input_dim=input_dim*ACTION_DIM,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 39,
+            "text": "output_dim=action_dim,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 43,
+            "text": "def predict_action("
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 46,
+            "text": "proprio=None,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 47,
+            "text": "proprio_projector=None,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 53,
+            "text": "proprio = proprio.reshape(batch_size, -1).to(torch.bfloat16)  # (bsz, proprio_dim)"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 54,
+            "text": "proprio_features = proprio_projector(proprio)  # (bsz, llm_dim)"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 55,
+            "text": "proprio_features = proprio_features.unsqueeze(dim=1)  # (bsz, 1, llm_dim)"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 61,
+            "text": "(batch_size, self.action_dim * NUM_ACTIONS_CHUNK, self.hidden_dim),"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 67,
+            "text": ")  # (batch, chunk_len, action_dim * hidden_dim)"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 77,
+            "text": "p=proprio_features,"
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 175,
+            "text": "- action/proprioception-related hidden states (h_a, p)."
+          },
+          {
+            "file": "prismatic/models/action_heads.py",
+            "line": 190,
+            "text": "(e.g., proprioception), shape (batch_size, 1, hidden_dim)."
+          },
+          {
+            "file": "prismatic/vla/action_tokenizer.py",
+            "line": 178,
+            "text": "ret_action = self.vq_vae.get_action_from_latent(latent)"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 32,
+            "text": "get_action_head,"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 34,
+            "text": "get_proprio_projector,"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 39,
+            "text": "from prismatic.vla.constants import ACTION_DIM, ACTION_TOKEN_BEGIN_IDX, IGNORE_INDEX, NUM_ACTIONS_CHUNK, PROPRIO_DIM, STOP_INDEX"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 57,
+            "text": "# Load proprio projector"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 58,
+            "text": "self.proprio_projector = None"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 59,
+            "text": "if cfg.use_proprio:"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 60,
+            "text": "self.proprio_projector = get_proprio_projector(cfg, self.vla.llm_dim, PROPRIO_DIM)"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 65,
+            "text": "self.action_head = get_action_head(cfg, self.vla.llm_dim)"
+          },
+          {
+            "file": "vla-scripts/deploy.py",
+            "line": 67,
+            "text": "# Check that the model contains the action un-normalization key"
+          }
+        ],
+        "resolved_commit": "23fa0c9c159e2aa04341cdd3e924f44061311060"
+      },
+      "implementation_rule": "Implement only a thin harness adapter; do not copy upstream model code into the VLA-IRT-CAT repository unless license authority is explicit."
+    },
+    {
+      "family_id": "xiaomi_robotics_0",
+      "candidate_family": "Xiaomi-Robotics-0",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "static_gate": "STATIC_PASS",
+      "adapter_prep_status": "READY_FOR_ADAPTER_IMPLEMENTATION",
+      "source_pin": {
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0.git",
+        "commit": "7c316604d43357d10b06d11fae4c39290c447da5"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO",
+          "revision": "fc04bbdcc53e498695cfad95d1199091396ef55b",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "source_code_license_summary": "Apache-2.0",
+      "source_inspection": {
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0.git",
+        "pinned_commit": "7c316604d43357d10b06d11fae4c39290c447da5",
+        "clone_ok": true,
+        "license_files": [
+          "LICENSE"
+        ],
+        "candidate_entrypoint_files": [
+          "deploy/client.py",
+          "deploy/server.py",
+          "eval_calvin/main.py",
+          "eval_calvin/merge_results.py",
+          "eval_libero/README.md",
+          "eval_libero/eval_logs/libero_10/merged_results.json",
+          "eval_libero/eval_logs/libero_goal/merged_results.json",
+          "eval_libero/eval_logs/libero_object/merged_results.json",
+          "eval_libero/eval_logs/libero_spatial/merged_results.json",
+          "eval_libero/main.py",
+          "eval_libero/merge_results.py",
+          "eval_simplerenv/main.py",
+          "scripts/deploy.sh",
+          "scripts/launch_libero.sh",
+          "xr0/mibot/server/deploy.py",
+          "xr0/scripts/deploy.sh"
+        ],
+        "interface_evidence": [
+          {
+            "file": "README.md",
+            "line": 115,
+            "text": "f\"# Left-Wrist View\\n<|vision_start|><|image_pad|><|vision_end|>\\n\""
+          },
+          {
+            "file": "README.md",
+            "line": 121,
+            "text": "# Assuming `image_base`, `image_wrist`, and `proprio_state` are already loaded"
+          },
+          {
+            "file": "README.md",
+            "line": 124,
+            "text": "images=[image_base, image_wrist], # [PIL.Image, PIL.Image]"
+          },
+          {
+            "file": "README.md",
+            "line": 130,
+            "text": "# Add proprioceptive state and action mask"
+          },
+          {
+            "file": "README.md",
+            "line": 133,
+            "text": "inputs[\"state\"] = torch.from_numpy(proprio_state).to(model.device, model.dtype).view(1, 1, -1)"
+          },
+          {
+            "file": "README.md",
+            "line": 134,
+            "text": "inputs[\"action_mask\"] = processor.get_action_mask(robot_type).to(model.device, model.dtype)"
+          },
+          {
+            "file": "README.md",
+            "line": 141,
+            "text": "action_chunk = processor.decode_action(outputs.actions, robot_type=robot_type)"
+          },
+          {
+            "file": "README.md",
+            "line": 142,
+            "text": "print(f\"Generated Action Chunk Shape: {action_chunk.shape}\")"
+          },
+          {
+            "file": "deploy/server.py",
+            "line": 76,
+            "text": "instruction = f\"<|im_start|>user\\nThe following observations are captured from multiple views.\\n# Base View\\n<|vision_start|><|image_pad|><|vision_end|>\\n# Left-Wrist View\\n<|vision_start|><|image_pad|><|vision_end|>\\nGenerate robot actions for the task:\\n{data[\"language\"]} /no_cot<|im_end|>\\n<|im_start|>assistant\\n<cot></cot><|im_end|>\\n\""
+          },
+          {
+            "file": "deploy/server.py",
+            "line": 79,
+            "text": "images=[data[\"base\"], data[\"wrist_left\"]],"
+          },
+          {
+            "file": "deploy/server.py",
+            "line": 87,
+            "text": "data[\"action_mask\"] = self.processor.get_action_mask(robot_type).to(self.model.device, self.model.dtype)"
+          },
+          {
+            "file": "eval_calvin/main.py",
+            "line": 459,
+            "text": "\"wrist_left\": rgb_gripper,"
+          },
+          {
+            "file": "eval_libero/README.md",
+            "line": 52,
+            "text": "Launch the LIBERO evaluation clients. These clients will connect to the distributed servers to perform tasks across the Spatial, Object, Goal, and Long suites."
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 134,
+            "text": "wrist_img = np.ascontiguousarray(obs[\"robot0_eye_in_hand_image\"][::-1, ::-1])"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 136,
+            "text": "wrist_img = convert_to_uint8(wrist_img)"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 141,
+            "text": "left_wrist_obs = Image.fromarray(wrist_img)"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 156,
+            "text": "\"wrist_left\": left_wrist_obs,"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 163,
+            "text": "action_chunk = client(**model_inputs)[0, :, :-1]"
+          },
+          {
+            "file": "eval_libero/main.py",
+            "line": 164,
+            "text": "action_plan.extend(action_chunk[0 : args.replan_steps, 0:7])"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 101,
+            "text": "def preprocess_proprio_fractal(proprio: np.array) -> np.array:"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 103,
+            "text": "gripper_quat_wxyz = proprio[3:7]"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 106,
+            "text": "gripper_width = proprio[7]  # from simpler, 0 for close, 1 for open"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 109,
+            "text": "raw_proprio = np.concatenate("
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 111,
+            "text": "proprio[:3],"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 116,
+            "text": "return raw_proprio"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 130,
+            "text": "def preprocess_proprio_bridge(proprio: np.array) -> np.array:"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 134,
+            "text": "rm_bridge = quat2mat(proprio[3:7])"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 136,
+            "text": "gripper_openness = proprio[7]"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 137,
+            "text": "raw_proprio = np.concatenate("
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 139,
+            "text": "proprio[:3],"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 144,
+            "text": "return raw_proprio"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 295,
+            "text": "state = preprocess_proprio_bridge(obs[\"agent\"][\"eef_pos\"])"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 298,
+            "text": "state = preprocess_proprio_fractal(obs[\"agent\"][\"eef_pos\"])"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 305,
+            "text": "action_chunk = client(**model_inputs)[0]"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 307,
+            "text": "args.replan_steps <= action_chunk.shape[1]"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 308,
+            "text": "), f\"Replan steps must be less than or equal to the number of steps in the action chunk. {args.replan_steps} > {action_chunk.shape[1]}\""
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 310,
+            "text": "action_chunk = action_chunk[: args.replan_steps, :7].cpu().numpy()"
+          },
+          {
+            "file": "eval_simplerenv/main.py",
+            "line": 311,
+            "text": "action_plan.extend(action_chunk)"
+          }
+        ],
+        "resolved_commit": "7c316604d43357d10b06d11fae4c39290c447da5"
+      },
+      "implementation_rule": "Implement only a thin harness adapter; do not copy upstream model code into the VLA-IRT-CAT repository unless license authority is explicit."
+    },
+    {
+      "family_id": "univla_opendrivelab",
+      "candidate_family": "UniVLA-OpenDriveLab",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "static_gate": "STATIC_PASS",
+      "adapter_prep_status": "READY_FOR_ADAPTER_IMPLEMENTATION",
+      "source_pin": {
+        "url": "https://github.com/OpenDriveLab/UniVLA.git",
+        "commit": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "qwbu/univla-7b-224-sft-libero",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "source_code_license_summary": "MULTIPLE",
+      "source_inspection": {
+        "url": "https://github.com/OpenDriveLab/UniVLA.git",
+        "pinned_commit": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352",
+        "clone_ok": true,
+        "license_files": [
+          "LICENSE",
+          "vla-scripts/extern/ego4d_rlds_dataset_builder/LICENSE"
+        ],
+        "candidate_entrypoint_files": [
+          "docs/real-world-deployment.md",
+          "experiments/robot/calvin/run_calvin_eval_ddp.py",
+          "experiments/robot/libero/libero_utils.py",
+          "experiments/robot/libero/regenerate_libero_dataset.py",
+          "experiments/robot/libero/run_libero_eval.py",
+          "experiments/robot/libero/run_libero_eval_blocking.py",
+          "experiments/robot/r2r/run_r2r_eval.py",
+          "experiments/robot/simpler-bridge/real2sim_eval_maniskill3.py",
+          "latent_action_model/config/lam-stage-1.yaml",
+          "latent_action_model/config/lam-stage-2.yaml",
+          "latent_action_model/genie/dataset.py",
+          "latent_action_model/genie/model.py",
+          "latent_action_model/genie/modules/__init__.py",
+          "latent_action_model/genie/modules/blocks.py",
+          "latent_action_model/genie/modules/lam.py",
+          "latent_action_model/main.py",
+          "latent_action_model/train.sh",
+          "prismatic/models/policy/transformer_utils.py",
+          "prismatic/vla/action_tokenizer.py",
+          "vla-scripts/finetune_libero.py",
+          "vla-scripts/real_world_deployment.py"
+        ],
+        "interface_evidence": [
+          {
+            "file": "README.md",
+            "line": 281,
+            "text": "python experiments/robot/libero/run_libero_eval.py \\"
+          },
+          {
+            "file": "docs/real-world-deployment.md",
+            "line": 28,
+            "text": "| qpos     | Proprioceptive data of robot arm (joint angle)        | [episode_len, 7]            |"
+          },
+          {
+            "file": "docs/real-world-deployment.md",
+            "line": 69,
+            "text": "proprio = torch.zeros((1,7))"
+          },
+          {
+            "file": "docs/real-world-deployment.md",
+            "line": 72,
+            "text": "all_actions = policy.step(resized_curr_image, task_instruction, proprio)"
+          },
+          {
+            "file": "experiments/robot/calvin/run_calvin_eval_ddp.py",
+            "line": 244,
+            "text": "unnorm_key: str = \"calvin\""
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 132,
+            "text": "robot_states = []"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 149,
+            "text": "robot_states.append(demo_data[\"robot_states\"][0])"
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 153,
+            "text": "robot_states.append("
+          },
+          {
+            "file": "experiments/robot/libero/regenerate_libero_dataset.py",
+            "line": 197,
+            "text": "ep_data_grp.create_dataset(\"robot_states\", data=np.stack(robot_states, axis=0))"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 34,
+            "text": "normalize_gripper_action,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 92,
+            "text": "# We follow the module ordering of \"Pre-Layer Normalization\" feedforward networks in Transformers as"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 179,
+            "text": "# Set action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 180,
+            "text": "cfg.unnorm_key = cfg.task_suite_name"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 190,
+            "text": "# wrapped_model Check that the model contains the action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 194,
+            "text": "if cfg.unnorm_key not in model.norm_stats and f\"{cfg.unnorm_key}_no_noops\" in model.norm_stats:"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 195,
+            "text": "cfg.unnorm_key = f\"{cfg.unnorm_key}_no_noops\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 196,
+            "text": "assert cfg.unnorm_key in model.norm_stats, f\"Action un-norm key {cfg.unnorm_key} not found in VLA `norm_stats`!\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 294,
+            "text": "# Note: UniVLA does not take proprio state as input"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 326,
+            "text": "action_norm_stats = model.get_action_stats(cfg.unnorm_key)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 332,
+            "text": "# Normalize gripper action [0,1] -> [-1,+1] because the environment expects the latter"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval.py",
+            "line": 333,
+            "text": "action = normalize_gripper_action(action, binarize=True)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 34,
+            "text": "normalize_gripper_action,"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 92,
+            "text": "# We follow the module ordering of \"Pre-Layer Normalization\" feedforward networks in Transformers as"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 145,
+            "text": "# action de-normalization"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 168,
+            "text": "# Set action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 169,
+            "text": "cfg.unnorm_key = cfg.task_suite_name"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 179,
+            "text": "# wrapped_model Check that the model contains the action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 183,
+            "text": "if cfg.unnorm_key not in model.norm_stats and f\"{cfg.unnorm_key}_no_noops\" in model.norm_stats:"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 184,
+            "text": "cfg.unnorm_key = f\"{cfg.unnorm_key}_no_noops\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 185,
+            "text": "assert cfg.unnorm_key in model.norm_stats, f\"Action un-norm key {cfg.unnorm_key} not found in VLA `norm_stats`!\""
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 284,
+            "text": "# Note: UniVLA does not take proprio state as input"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 310,
+            "text": "action_norm_stats = model.get_action_stats(cfg.unnorm_key)"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 320,
+            "text": "# Normalize gripper action [0,1] -> [-1,+1] because the environment expects the latter"
+          },
+          {
+            "file": "experiments/robot/libero/run_libero_eval_blocking.py",
+            "line": 321,
+            "text": "action = normalize_gripper_action(action, binarize=True)"
+          },
+          {
+            "file": "experiments/robot/r2r/run_r2r_eval.py",
+            "line": 185,
+            "text": "# [OpenVLA] Set action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/r2r/run_r2r_eval.py",
+            "line": 186,
+            "text": "cfg.unnorm_key = cfg.task_suite_name"
+          },
+          {
+            "file": "experiments/robot/r2r/run_r2r_eval.py",
+            "line": 198,
+            "text": "# [OpenVLA] Check that the model contains the action un-normalization key"
+          },
+          {
+            "file": "experiments/robot/r2r/run_r2r_eval.py",
+            "line": 202,
+            "text": "if cfg.unnorm_key not in model.norm_stats and f\"{cfg.unnorm_key}_no_noops\" in model.norm_stats:"
+          },
+          {
+            "file": "experiments/robot/r2r/run_r2r_eval.py",
+            "line": 203,
+            "text": "cfg.unnorm_key = f\"{cfg.unnorm_key}_no_noops\""
+          },
+          {
+            "file": "experiments/robot/r2r/run_r2r_eval.py",
+            "line": 205,
+            "text": "# assert cfg.unnorm_key in model.norm_stats, f\"Action un-norm key {cfg.unnorm_key} not found in VLA `norm_stats`!\""
+          },
+          {
+            "file": "latent_action_model/genie/modules/lam.py",
+            "line": 42,
+            "text": "self.dino_transform = transforms.Normalize(mean=IMAGENET_DEFAULT_MEAN, std=IMAGENET_DEFAULT_STD)"
+          },
+          {
+            "file": "latent_action_model/genie/modules/lam.py",
+            "line": 191,
+            "text": "self.dino_transform = transforms.Normalize(mean=IMAGENET_DEFAULT_MEAN, std=IMAGENET_DEFAULT_STD)"
+          },
+          {
+            "file": "vla-scripts/finetune_libero.py",
+            "line": 286,
+            "text": "# [Important] Save Dataset Statistics =>> used to de-normalize actions for inference!"
+          },
+          {
+            "file": "vla-scripts/finetune_libero.py",
+            "line": 327,
+            "text": "# Normalize loss to account for gradient accumulation"
+          },
+          {
+            "file": "vla-scripts/finetune_libero.py",
+            "line": 328,
+            "text": "normalized_loss = loss / cfg.grad_accumulation_steps"
+          },
+          {
+            "file": "vla-scripts/finetune_libero.py",
+            "line": 332,
+            "text": "normalized_loss.backward()"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 18,
+            "text": "ACTION_DIM = 7"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 46,
+            "text": "# Load dataset stats used during finetuning (for action un-normalization)."
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 56,
+            "text": "\"Otherwise, you may run into errors when trying to call `predict_action()` due to an absent `unnorm_key`.\""
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 76,
+            "text": "self.proprio_proj = nn.Sequential("
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 87,
+            "text": "def forward(self, latent_action_tokens, visual_embed, proprio=None):"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 91,
+            "text": "proprio = self.proprio_proj(proprio)"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 93,
+            "text": "action = self.proj(torch.cat([self.attn_pool(latent_action_tokens, init_embed=visual_embed), proprio], dim=-1))"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 120,
+            "text": "def forward(self, latent_actions, visual_embed, proprio=None):"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 123,
+            "text": "pred_action = self.net(latent_actions.to(torch.float), visual_embed.to(torch.float), proprio).reshape(-1, self.window_size, 7)[:, self.window_size - self.temporal_size:]"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 149,
+            "text": "unnorm_key: Optional[str] = None,"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 178,
+            "text": "self.unnorm_key = unnorm_key"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 199,
+            "text": "self, image: np.ndarray, task_description: Optional[str] = None, proprio = None, *args, **kwargs"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 205,
+            "text": "proprio: torch.Tensor; proprioceptive state of the robot"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 223,
+            "text": "# predict action (7-dof; un-normalize for bridgev2)"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 225,
+            "text": "latent_action, visual_embed, generated_ids = self.vla.predict_latent_action(**inputs, unnorm_key=self.unnorm_key, do_sample=True, temperature=0.75, top_p = 0.9)"
+          },
+          {
+            "file": "vla-scripts/real_world_deployment.py",
+            "line": 232,
+            "text": "action = self.action_decoder(latent_action, visual_embed, proprio)"
+          }
+        ],
+        "resolved_commit": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352"
+      },
+      "implementation_rule": "Implement only a thin harness adapter; do not copy upstream model code into the VLA-IRT-CAT repository unless license authority is explicit."
+    },
+    {
+      "family_id": "lingbot_va",
+      "candidate_family": "LingBot-VA",
+      "preregistered_status": "SELECTED_PRIMARY_A",
+      "static_gate": "STATIC_PASS",
+      "adapter_prep_status": "READY_FOR_ADAPTER_IMPLEMENTATION",
+      "source_pin": {
+        "url": "https://github.com/Robbyant/lingbot-va.git",
+        "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "robbyant/lingbot-va-posttrain-libero-long",
+          "revision": "0e89d1e753019988aba484e8da2dc0810e264d9f",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "source_code_license_summary": "Apache-2.0",
+      "source_inspection": {
+        "url": "https://github.com/Robbyant/lingbot-va.git",
+        "pinned_commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+        "clone_ok": true,
+        "license_files": [
+          "LICENSE.txt"
+        ],
+        "candidate_entrypoint_files": [
+          "evaluation/libero/client.py",
+          "evaluation/libero/launch_client.sh",
+          "evaluation/libero/launch_server.sh",
+          "evaluation/robotwin/calc_stat.py",
+          "evaluation/robotwin/eval_polict_client_openpi.py",
+          "evaluation/robotwin/geometry.py",
+          "evaluation/robotwin/launch_client.sh",
+          "evaluation/robotwin/launch_client_multigpus.sh",
+          "evaluation/robotwin/launch_server.sh",
+          "evaluation/robotwin/launch_server_multigpus.sh",
+          "evaluation/robotwin/msgpack_numpy.py",
+          "evaluation/robotwin/test_render.py",
+          "evaluation/robotwin/websocket_client_policy.py",
+          "wan_va/configs/va_libero_cfg.py",
+          "wan_va/configs/va_libero_i2va.py",
+          "wan_va/configs/va_libero_train_cfg.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/__init__.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/image_tools.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/msgpack_numpy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/websocket_client_policy.py",
+          "wan_va/utils/Simple_Remote_Infer/deploy/websocket_policy_server.py"
+        ],
+        "interface_evidence": [
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 213,
+            "text": "cam_left = obs[\"observation.images.cam_left_wrist\"]"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 214,
+            "text": "cam_right = obs[\"observation.images.cam_right_wrist\"]"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 383,
+            "text": "print(\"\\033[94mWrist Camera Config:\\033[0m \" + str(args[\"camera\"][\"wrist_camera_type\"]) + f\", \" +"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 384,
+            "text": "str(args[\"camera\"][\"collect_wrist_camera\"]))"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 426,
+            "text": "\"observation.images.cam_left_wrist\": observation[\"observation\"][\"left_camera\"][\"rgb\"],"
+          },
+          {
+            "file": "evaluation/robotwin/eval_polict_client_openpi.py",
+            "line": 427,
+            "text": "\"observation.images.cam_right_wrist\": observation[\"observation\"][\"right_camera\"][\"rgb\"],"
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 134,
+            "text": "have not been normalized."
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 411,
+            "text": "The algorithm allows for quaternions that have not been normalized."
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 422,
+            "text": "if Nq < _FLOAT_EPS**2:  # Results unreliable after normalization"
+          },
+          {
+            "file": "evaluation/robotwin/geometry.py",
+            "line": 424,
+            "text": "if Nq != 1:  # Normalize if not normalized"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 84,
+            "text": "left_wrist_0_rgb = np.random.randint(0, 256, size=(1, 3, 224, 224), dtype=np.uint8)"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 91,
+            "text": "#         \"left_wrist_0_rgb\": torch.from_numpy(left_wrist_0_rgb).to(device)[None],"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 100,
+            "text": "\"left_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "evaluation/robotwin/websocket_client_policy.py",
+            "line": 101,
+            "text": "\"right_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 18,
+            "text": "va_libero_cfg.action_dim = 30"
+          },
+          {
+            "file": "wan_va/configs/va_libero_cfg.py",
+            "line": 35,
+            "text": "] * va_libero_cfg.action_dim"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 31,
+            "text": "\"left_wrist_0_rgb\","
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 32,
+            "text": "\"right_wrist_0_rgb\","
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 155,
+            "text": "\"\"\"Normalize, resize, and pad images and stack them into a tensor."
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 170,
+            "text": "# resize, pad, and normalize"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 264,
+            "text": "actions = self.model.sample_actions("
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 344,
+            "text": "self.last_action_chunk = None"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 350,
+            "text": "action_dim=14):"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 364,
+            "text": "norm_stats[\"norm_stats\"][\"actions\"][\"mean\"][:action_dim],"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 367,
+            "text": "norm_stats[\"norm_stats\"][\"actions\"][\"std\"][:action_dim],"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 370,
+            "text": "def state_normalizer(self, unnorm_state):"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 371,
+            "text": "state = (unnorm_state - self.state_mean) / (self.state_std + 1e-6)"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 374,
+            "text": "def action_unnormalizer(self, norm_action):"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 428,
+            "text": "self.last_action_chunk = None"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 440,
+            "text": "unnorm_state = observation['state']"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 441,
+            "text": "observation['state'] = self.state_normalizer(observation['state'])"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 444,
+            "text": "normalized_actions = self.vla.select_action(observation).squeeze(0)"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 445,
+            "text": "self.last_action_chunk = normalized_actions.float().cpu().numpy()"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 446,
+            "text": "self.last_state = unnorm_state"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 449,
+            "text": "action = self.last_action_chunk[self.global_step % self.use_length]"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 451,
+            "text": "action = self.action_ensembler.ensemble_action(normalized_actions)"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 453,
+            "text": "action = self.action_unnormalizer("
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 484,
+            "text": "# left_wrist_0_rgb = np.random.randint(0, 256, size=(1, 3, 224, 224), dtype=np.uint8)"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 491,
+            "text": "#         \"left_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/qwenpi_policy.py",
+            "line": 492,
+            "text": "#         \"right_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 31,
+            "text": "\"left_wrist_0_rgb\","
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 32,
+            "text": "\"right_wrist_0_rgb\","
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 155,
+            "text": "\"\"\"Normalize, resize, and pad images and stack them into a tensor."
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 170,
+            "text": "# resize, pad, and normalize"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 264,
+            "text": "actions = self.model.sample_actions("
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 342,
+            "text": "self.last_action_chunk = None"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 348,
+            "text": "action_dim=14):"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 361,
+            "text": "norm_stats[\"norm_stats\"][\"actions\"][\"mean\"][:action_dim],"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 364,
+            "text": "norm_stats[\"norm_stats\"][\"actions\"][\"std\"][:action_dim],"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 367,
+            "text": "def state_normalizer(self, unnorm_state):"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 368,
+            "text": "state = (unnorm_state - self.state_mean) / (self.state_std + 1e-6)"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 371,
+            "text": "def action_unnormalizer(self, norm_action):"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 388,
+            "text": "config.max_action_dim = 14"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 408,
+            "text": "self.last_action_chunk = None"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 439,
+            "text": "# left_wrist_0_rgb = np.random.randint(0, 256, size=(1, 3, 224, 224), dtype=np.uint8)"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 446,
+            "text": "#         \"left_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/replay_policy.py",
+            "line": 447,
+            "text": "#         \"right_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/websocket_client_policy.py",
+            "line": 95,
+            "text": "left_wrist_0_rgb = np.random.randint(0,"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/websocket_client_policy.py",
+            "line": 105,
+            "text": "#         \"left_wrist_0_rgb\": torch.from_numpy(left_wrist_0_rgb).to(device)[None],"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/websocket_client_policy.py",
+            "line": 114,
+            "text": "\"left_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          },
+          {
+            "file": "wan_va/utils/Simple_Remote_Infer/deploy/websocket_client_policy.py",
+            "line": 115,
+            "text": "\"right_wrist_0_rgb\": convert_to_uint8(left_wrist_0_rgb),"
+          }
+        ],
+        "resolved_commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+      },
+      "implementation_rule": "Implement only a thin harness adapter; do not copy upstream model code into the VLA-IRT-CAT repository unless license authority is explicit."
+    },
+    {
+      "family_id": "nora",
+      "candidate_family": "NORA",
+      "preregistered_status": "SELECTED_CONDITIONAL_B",
+      "static_gate": "STATIC_FAIL",
+      "adapter_prep_status": "HOLD_LICENSE_NO_GPU",
+      "source_pin": {
+        "url": "https://github.com/declare-lab/nora-1.5.git",
+        "commit": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "declare-lab/nora-1.5-libero",
+          "revision": "422ccdc776af66f51ca43b7ee8fb6729c7b6f636",
+          "gated": false,
+          "private": false,
+          "card_license": null,
+          "license_tags": []
+        }
+      ],
+      "source_code_license_summary": "UNRESOLVED",
+      "source_inspection": {
+        "url": "https://github.com/declare-lab/nora-1.5.git",
+        "pinned_commit": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9",
+        "clone_ok": true,
+        "license_files": [],
+        "candidate_entrypoint_files": [
+          "inference/__init__.py",
+          "inference/modelling_expert.py"
+        ],
+        "interface_evidence": [
+          {
+            "file": "README.md",
+            "line": 66,
+            "text": "outputs = model.sample_actions(PIL IMAGE,instruction,num_steps=10) ## Outputs 7 Dof action of normalized action"
+          },
+          {
+            "file": "README.md",
+            "line": 70,
+            "text": "1: Compute normalization statistic of your Lerobot dataset. Note that NORA-1.5 is pretrained in delta action space, hence we will need to compute the normalization statistic for delta action."
+          },
+          {
+            "file": "README.md",
+            "line": 76,
+            "text": "If your dataset is in delta action space and you have already computed the normalization statistic, you may skip this step."
+          },
+          {
+            "file": "README.md",
+            "line": 121,
+            "text": "## LIBERO Evaluation"
+          },
+          {
+            "file": "README.md",
+            "line": 122,
+            "text": "We used [OpenVLA's](https://github.com/openvla/openvla) code base to perform LIBERO evaluation. To perform LIBERO evaluation, follow the instruction in OpenVLA and set up the evaluation accordingly."
+          },
+          {
+            "file": "README.md",
+            "line": 124,
+            "text": "Copy the inference folder to openvla/experiments/robot/libero and modify the inference function of run_libero_eval.py in OpenVLA's codebase."
+          },
+          {
+            "file": "README.md",
+            "line": 130,
+            "text": "outputs = model.sample_actions(PIL IMAGE,instruction,num_steps=10) ## Outputs 7 Dof action of normalized action"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 336,
+            "text": "action_chunk_length=5,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 337,
+            "text": "action_dim=7):"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 369,
+            "text": "self.action_chunk_length = action_chunk_length"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 380,
+            "text": "self.action_in_proj = nn.Linear(action_dim,self.lm_expert_config.hidden_size)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 381,
+            "text": "self.action_out_proj = nn.Linear(self.lm_expert_config.hidden_size, action_dim)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 390,
+            "text": "print(f\"*** Loading normalization stats from HF Hub ***\")"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 488,
+            "text": "Shape: (batch_size, action_chunk_length, action_dim)."
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 499,
+            "text": "Shape: (batch_size, action_chunk_length, action_dim)."
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 531,
+            "text": "expert_attention_mask = full_2d_attn_mask[:, -self.action_chunk_length:, :]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 534,
+            "text": "position_ids = torch.arange(self.action_chunk_length, device=device)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 621,
+            "text": "def sample_actions(self, image,instruction: dict,num_steps:int = 10):"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 633,
+            "text": "normalized_action: np.ndarray"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 698,
+            "text": "actions_shape = (bsz, self.action_chunk_length, 7)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 708,
+            "text": "action_pad_mask = torch.ones(bsz, self.action_chunk_length, device=device).bool()"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 711,
+            "text": "action_attn_mask = torch.zeros(bsz, self.action_chunk_length, device=device).bool()"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 737,
+            "text": "normalized_action = x_t.cpu().float().numpy() ## (1,action_chunk_length, action_dim)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 738,
+            "text": "## Return normalized action instead because some people might want to perform unnormalization on their own(eg lerobot unomralizer)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 739,
+            "text": "return normalized_action"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 741,
+            "text": "def unnormalize_action(self, normalized_action: np.ndarray, unnorm_key: str) -> np.ndarray:"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 742,
+            "text": "action_stats = self._get_action_stats(unnorm_key)"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 747,
+            "text": "0.5 * (normalized_action + 1) * (action_high - action_low) + action_low,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 748,
+            "text": "normalized_action,"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 751,
+            "text": "def _get_action_stats(self, unnorm_key: str) -> Dict[str, Any]:"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 752,
+            "text": "if unnorm_key not in self.norm_stats:"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 754,
+            "text": "f\"The `unnorm_key` '{unnorm_key}' is not in the set of available dataset statistics. \""
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 757,
+            "text": "return self.norm_stats[unnorm_key][\"action\"]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 821,
+            "text": "action_pad_mask = torch.ones(bsz,self.action_chunk_length,device=device).bool()"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 822,
+            "text": "action_attn_mask = torch.zeros(bsz,self.action_chunk_length,device=device).bool()"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 828,
+            "text": "expert_attention_mask = attn[:, -self.action_chunk_length:, :]"
+          },
+          {
+            "file": "inference/modelling_expert.py",
+            "line": 831,
+            "text": "position_ids = torch.arange(self.action_chunk_length,device=device)"
+          }
+        ],
+        "resolved_commit": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9",
+        "targeted_resolution": {
+          "libero_evaluation_documented_by_content": true,
+          "previous_no_libero_filename_blocker_is_not_equivalent_to_no_libero_support": true,
+          "root_explicit_license_file_present": false,
+          "remaining_gate": "exact selected artifact/source usage authority must be explicit before activation"
+        }
+      },
+      "implementation_rule": "Implement only a thin harness adapter; do not copy upstream model code into the VLA-IRT-CAT repository unless license authority is explicit."
+    },
+    {
+      "family_id": "univla_baai",
+      "candidate_family": "UniVLA-BAAI",
+      "preregistered_status": "RESERVE_CONDITIONAL_B",
+      "static_gate": "NEEDS_GPU_SMOKE",
+      "adapter_prep_status": "PREPARE_RESERVE_ADAPTER",
+      "source_pin": {
+        "url": "https://github.com/baaivision/UniVLA.git",
+        "commit": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "Yuqi1997/UniVLA",
+          "revision": "df6c94ff872f4fc056693e507c033ca390694118",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "source_code_license_summary": "MULTIPLE",
+      "source_inspection": {
+        "url": "https://github.com/baaivision/UniVLA.git",
+        "pinned_commit": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9",
+        "clone_ok": true,
+        "license_files": [
+          "reference/Emu3/LICENSE",
+          "reference/RoboVLMs/SimplerEnv/LICENSE",
+          "reference/RoboVLMs/SimplerEnv/ManiSkill2_real2sim/LICENSE"
+        ],
+        "candidate_entrypoint_files": [
+          "configs/normalizer_libero/norm_stats.json",
+          "docs/libero.md",
+          "models/inference/inference_action.py",
+          "models/inference/inference_vision.py",
+          "models/policy_head/noise_schedulers.py",
+          "models/tokenizer/action_tokenizer.py",
+          "pretrain/fast/processing_action_tokenizer.py",
+          "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+          "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/evaluation/__init__.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/evaluation/argparse.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/evaluation/maniskill2_evaluator.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/main_inference.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/simple_inference_visual_matching_prepackaged_envs.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/action/__init__.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/action/action_ensemble.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/google_robot_test_dataset_inference_rollout_gt_traj_in_sim.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/octo_inference_real_video.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/rt1_inference_real_video.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/rt1_plot_dataset_inference_trajectory.py",
+          "reference/RoboVLMs/SimplerEnv/simpler_env/utils/debug/widowx_test_dataset_inference_rollout_gt_traj_in_sim.py",
+          "reference/RoboVLMs/SimplerEnv/tools/calc_metrics_evaluation_videos.py",
+          "reference/RoboVLMs/eval/calvin/env_test.py",
+          "reference/RoboVLMs/eval/calvin/eval_utils.py",
+          "reference/RoboVLMs/eval/calvin/evaluate_ddp-emu.py",
+          "reference/RoboVLMs/eval/calvin/model_wrapper.py",
+          "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+          "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+          "reference/RoboVLMs/eval/libero/libero_utils.py",
+          "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+          "reference/RoboVLMs/eval/simpler/env_test.py",
+          "reference/RoboVLMs/eval/simpler/env_utlis.py",
+          "reference/RoboVLMs/eval/simpler/get_results.py",
+          "reference/RoboVLMs/eval/simpler/main_inference_emu.py",
+          "reference/RoboVLMs/eval/simpler/maniskill2_evaluator.py",
+          "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+          "reference/RoboVLMs/scripts/run_eval_calvin_univla.sh",
+          "reference/RoboVLMs/scripts/run_eval_libero_univla.sh",
+          "reference/RoboVLMs/scripts/setup_libero.sh",
+          "scripts/simulator/libero/train_libero_video.sh",
+          "tools/action_tokenizer/fit_fast.py",
+          "tools/evaluation/calvin_score.py",
+          "tools/pickle_gen/pickle_generation_libero.py",
+          "tools/process/libero_process.py"
+        ],
+        "interface_evidence": [
+          {
+            "file": "docs/libero.md",
+            "line": 30,
+            "text": "--normalizer_path ./configs/normalizer_libero \\"
+          },
+          {
+            "file": "models/inference/inference_action.py",
+            "line": 127,
+            "text": "action_outputs = action_tokenizer.decode(processed_outputs, time_horizon=action_predict_frame, action_dim=7)"
+          },
+          {
+            "file": "models/inference/inference_action.py",
+            "line": 131,
+            "text": "action_gt_decode = action_tokenizer.decode(action_gt_id, time_horizon=action_predict_frame, action_dim=7)"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 23,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 36,
+            "text": "self.action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 38,
+            "text": "self.called_action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 42,
+            "text": "def __call__(self, action_chunk: np.array) -> np.array:"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 43,
+            "text": "assert action_chunk.ndim <= 3, \"Only 3 dimensions supported: [batch, timesteps, action_dim]\""
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 44,
+            "text": "if action_chunk.ndim == 2:"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 45,
+            "text": "action_chunk = action_chunk[None, ...]"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 48,
+            "text": "self.called_time_horizon = action_chunk.shape[-2]"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 49,
+            "text": "self.called_action_dim = action_chunk.shape[-1]"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 51,
+            "text": "dct_coeff = dct(action_chunk, axis=1, norm=\"ortho\")"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 64,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 67,
+            "text": "self.action_dim = action_dim or self.action_dim or self.called_action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 71,
+            "text": "self.called_action_dim = self.action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 74,
+            "text": "self.time_horizon is not None and self.action_dim is not None"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 75,
+            "text": "), \"Tokenizer not initialized, call encode() once or pass in time_horizon and action_dim.\""
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 84,
+            "text": "max_length = self.time_horizon * self.action_dim"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 92,
+            "text": "decoded_dct_coeff = decoded_dct_coeff.reshape(-1, self.action_dim)"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 97,
+            "text": "self.action_dim,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 99,
+            "text": "), f\"Decoded DCT coefficients have shape {decoded_dct_coeff.shape}, expected ({self.time_horizon}, {self.action_dim})\""
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 102,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 105,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 108,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 123,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast/processing_action_tokenizer.py",
+            "line": 174,
+            "text": "action_dim=action_dim,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 23,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 36,
+            "text": "self.action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 38,
+            "text": "self.called_action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 42,
+            "text": "def __call__(self, action_chunk: np.array) -> np.array:"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 43,
+            "text": "assert action_chunk.ndim <= 3, \"Only 3 dimensions supported: [batch, timesteps, action_dim]\""
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 44,
+            "text": "if action_chunk.ndim == 2:"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 45,
+            "text": "action_chunk = action_chunk[None, ...]"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 48,
+            "text": "self.called_time_horizon = action_chunk.shape[-2]"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 49,
+            "text": "self.called_action_dim = action_chunk.shape[-1]"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 51,
+            "text": "dct_coeff = dct(action_chunk, axis=1, norm=\"ortho\")"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 64,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 67,
+            "text": "self.action_dim = action_dim or self.action_dim or self.called_action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 71,
+            "text": "self.called_action_dim = self.action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 74,
+            "text": "self.time_horizon is not None and self.action_dim is not None"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 75,
+            "text": "), \"Tokenizer not initialized, call encode() once or pass in time_horizon and action_dim.\""
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 84,
+            "text": "max_length = self.time_horizon * self.action_dim"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 92,
+            "text": "decoded_dct_coeff = decoded_dct_coeff.reshape(-1, self.action_dim)"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 97,
+            "text": "self.action_dim,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 99,
+            "text": "), f\"Decoded DCT coefficients have shape {decoded_dct_coeff.shape}, expected ({self.time_horizon}, {self.action_dim})\""
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 102,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 105,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 108,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 123,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_bridge_t5_s50/processing_action_tokenizer.py",
+            "line": 174,
+            "text": "action_dim=action_dim,"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 23,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 36,
+            "text": "self.action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 38,
+            "text": "self.called_action_dim = action_dim"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 42,
+            "text": "def __call__(self, action_chunk: np.array) -> np.array:"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 43,
+            "text": "assert action_chunk.ndim <= 3, \"Only 3 dimensions supported: [batch, timesteps, action_dim]\""
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 44,
+            "text": "if action_chunk.ndim == 2:"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 45,
+            "text": "action_chunk = action_chunk[None, ...]"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 48,
+            "text": "self.called_time_horizon = action_chunk.shape[-2]"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 49,
+            "text": "self.called_action_dim = action_chunk.shape[-1]"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 51,
+            "text": "dct_coeff = dct(action_chunk, axis=1, norm=\"ortho\")"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 64,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 67,
+            "text": "self.action_dim = action_dim or self.action_dim or self.called_action_dim"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 71,
+            "text": "self.called_action_dim = self.action_dim"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 74,
+            "text": "self.time_horizon is not None and self.action_dim is not None"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 75,
+            "text": "), \"Tokenizer not initialized, call encode() once or pass in time_horizon and action_dim.\""
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 84,
+            "text": "max_length = self.time_horizon * self.action_dim"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 92,
+            "text": "decoded_dct_coeff = decoded_dct_coeff.reshape(-1, self.action_dim)"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 97,
+            "text": "self.action_dim,"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 99,
+            "text": "), f\"Decoded DCT coefficients have shape {decoded_dct_coeff.shape}, expected ({self.time_horizon}, {self.action_dim})\""
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 102,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 105,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 108,
+            "text": "decoded_dct_coeff = np.zeros((self.time_horizon, self.action_dim))"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 123,
+            "text": "action_dim: int or None = None,"
+          },
+          {
+            "file": "pretrain/fast_calvin_norm_a10_s50/processing_action_tokenizer.py",
+            "line": 174,
+            "text": "action_dim=action_dim,"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 67,
+            "text": "self.predict_action_frames = 10"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 68,
+            "text": "self.normalize_action = True"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 77,
+            "text": "self.action_dim = 7"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 161,
+            "text": "if self.normalize_action:"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 190,
+            "text": "def get_action_history(self):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 223,
+            "text": "action_history = self.get_action_history()"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 312,
+            "text": "processed_outputs, time_horizon=self.predict_action_frames, action_dim=self.action_dim"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 349,
+            "text": "frames = self.predict_action_frames,"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 350,
+            "text": "action_dim = self.action_dim,"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 356,
+            "text": "if self.normalize_action:"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 357,
+            "text": "action = self.unnormalize_action(action)"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/calvin/model_wrapper_emu.py",
+            "line": 373,
+            "text": "def unnormalize_action(self, action):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+            "line": 26,
+            "text": "from libero_utils import save_rollout_gif, get_libero_image, get_episode_length, get_libero_wrist_image, quat2axisangle"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+            "line": 164,
+            "text": "# Image.fromarray(observation['wrist_image']).save(f\"wrist_{t}_{action_counter}.png\")"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+            "line": 232,
+            "text": "wrist_img = get_libero_wrist_image(obs)"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/evaluate_libero_emu.py",
+            "line": 237,
+            "text": "\"wrist_image\": wrist_img,"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/libero_utils.py",
+            "line": 79,
+            "text": "def get_libero_wrist_image(obs):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/libero_utils.py",
+            "line": 80,
+            "text": "\"\"\"Extracts wrist camera image from observations and preprocesses it.\"\"\""
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 52,
+            "text": "self.predict_action_frames = 10"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 55,
+            "text": "self.action_dim = 7"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 137,
+            "text": "def get_action_history(self):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 164,
+            "text": "if \"wrist_image\" in image:"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 165,
+            "text": "gripper_view = image['wrist_image']"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 205,
+            "text": "action_history = self.get_action_history()"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 272,
+            "text": "processed_outputs, time_horizon=self.predict_action_frames, action_dim=self.action_dim"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 281,
+            "text": "# unnormalize action"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 282,
+            "text": "action = self.unormalize_action(action)"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 285,
+            "text": "# refer to https://github.com/openvla/openvla/blob/1b024f242eda833dc8e321953f25cfd5f3d2f76d/experiments/robot/libero/run_libero_eval.py#L225"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/libero/model_wrapper_emu.py",
+            "line": 301,
+            "text": "def unormalize_action(self, action):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 78,
+            "text": "self.predict_action_frames = 5"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 81,
+            "text": "self.action_dim = 7"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 176,
+            "text": "def get_action_history(self):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 244,
+            "text": "action_history = self.get_action_history()"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 334,
+            "text": "processed_outputs, time_horizon=self.predict_action_frames, action_dim=self.action_dim"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 343,
+            "text": "# unnormalize action"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 344,
+            "text": "action = self.unormalize_action(action)"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 359,
+            "text": "def unormalize_action(self, action):"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 491,
+            "text": "unnorm_key: Optional[str] = None,"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 502,
+            "text": "unnorm_key = \"bridge_orig\" if unnorm_key is None else unnorm_key"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 504,
+            "text": "unnorm_key = \"fractal20220817_data\" if unnorm_key is None else unnorm_key"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 512,
+            "text": "self.unnorm_key = unnorm_key"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 520,
+            "text": "print(f\"*** policy_setup: {policy_setup}, unnorm_key: {unnorm_key} ***\")"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 648,
+            "text": "ACTION_DIM_LABELS = [\"x\", \"y\", \"z\", \"roll\", \"pitch\", \"yaw\", \"grasp\"]"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 653,
+            "text": "figure_layout = [[\"image\"] * len(ACTION_DIM_LABELS), ACTION_DIM_LABELS]"
+          },
+          {
+            "file": "reference/RoboVLMs/eval/simpler/model_wrapper.py",
+            "line": 667,
+            "text": "for action_dim, action_label in enumerate(ACTION_DIM_LABELS):"
+          }
+        ],
+        "resolved_commit": "a91ee5f269d7ad46d46635ee6481d2eb655b4af9"
+      },
+      "implementation_rule": "Implement only a thin harness adapter; do not copy upstream model code into the VLA-IRT-CAT repository unless license authority is explicit."
+    }
+  ]
+}

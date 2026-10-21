@@ -1,0 +1,305 @@
+{
+  "schema_version": "calibration_expansion_v1",
+  "selection_timestamp": "2026-08-27T08:34:55+09:00",
+  "preregistration_freeze_timestamp": "2026-08-27T09:12:30+00:00",
+  "research_program": "VLA-IRT-CAT v2",
+  "purpose": "Prospectively expand the calibration roster with genuinely distinct, publicly reproducible VLA families.",
+  "outcome_blinding": {
+    "no_use_of_current_discovery500_outcomes": true,
+    "no_use_of_qual24_outcomes": true,
+    "no_use_of_current_internal_success_rates": true,
+    "performance_not_an_inclusion_criterion": true,
+    "performance_not_an_exclusion_criterion": true
+  },
+  "selection_rule": {
+    "allowed_signals": [
+      "public_checkpoint_availability",
+      "downloadable_weights",
+      "public_inference_or_evaluation_code",
+      "LIBERO_or_LIBERO-Plus_compatibility",
+      "reproducibility",
+      "distinct_checkpoint_or_architectural_lineage",
+      "license_and_access_authority",
+      "runtime_adapter_feasibility"
+    ],
+    "prohibited_signals": [
+      "Discovery-500_success_rate",
+      "Discovery-500_failure_rate",
+      "QUAL24_results",
+      "current_internal_rollout_results",
+      "IRT_fit_quality_from_current_outcomes",
+      "CAT_performance_from_current_outcomes"
+    ],
+    "family_definition": "A new family must have a materially distinct foundation checkpoint lineage, pretraining formulation, or action-model architecture. Fine-tunes or derivatives of an already represented family are not counted as new families."
+  },
+  "preexisting_governance_reconciliation": {
+    "performed_before_new_family_qualification": true,
+    "used_performance_outcomes": false,
+    "rynnvla_002": {
+      "decision": "EXCLUDED_PREEXISTING_GOVERNANCE",
+      "reason": "exact_inference_requires_Chameleon_assets_whose_legal_acceptance_and_authority_representation_cannot_be_automated"
+    },
+    "worldvla": {
+      "decision": "SAME_FAMILY_AS_RYNNVLA_002_AND_NOT_SELECTED",
+      "reason": "WorldVLA and RynnVLA-002 are treated as one lineage; the currently reproducible representative is blocked by the preexisting RynnVLA legal/access governance rule."
+    },
+    "starvla": {
+      "decision": "MERGED_INTO_OPENVLA",
+      "merged_into": "openvla",
+      "reason": "official_action_head_adapted_from_OpenVLA_OFT"
+    }
+  },
+  "candidates": [
+    {
+      "candidate_family": "VLA-Adapter",
+      "family_id": "vla_adapter",
+      "status": "SELECTED_PRIMARY_A",
+      "readiness_class": "A",
+      "distinct_family": true,
+      "checkpoint": [
+        "VLA-Adapter/LIBERO-Spatial-Pro",
+        "VLA-Adapter/LIBERO-Object-Pro",
+        "VLA-Adapter/LIBERO-Goal-Pro",
+        "VLA-Adapter/LIBERO-Long-Pro"
+      ],
+      "source_url": {
+        "github": "https://github.com/OpenHelix-Team/VLA-Adapter",
+        "checkpoint_root": "https://huggingface.co/VLA-Adapter"
+      },
+      "license_status": {
+        "code": "MIT",
+        "checkpoint": "MIT"
+      },
+      "inclusion_criterion": [
+        "public LIBERO-specific checkpoints",
+        "downloadable weights",
+        "public LIBERO evaluation path",
+        "materially distinct model/action architecture",
+        "permissive license"
+      ],
+      "exclusion_criterion": [
+        "checkpoint cannot be loaded reproducibly",
+        "valid LIBERO action interface cannot be produced without retraining",
+        "artifact or license materially differs from the preregistered public release"
+      ]
+    },
+    {
+      "candidate_family": "Xiaomi-Robotics-0",
+      "family_id": "xiaomi_robotics_0",
+      "status": "SELECTED_PRIMARY_A",
+      "readiness_class": "A",
+      "distinct_family": true,
+      "checkpoint": [
+        "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO"
+      ],
+      "source_url": {
+        "github": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0",
+        "checkpoint": "https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-0-LIBERO"
+      },
+      "license_status": {
+        "code": "Apache-2.0",
+        "checkpoint": "Apache-2.0"
+      },
+      "inclusion_criterion": [
+        "public LIBERO fine-tuned checkpoint",
+        "downloadable weights",
+        "public inference/evaluation implementation",
+        "distinct model lineage"
+      ],
+      "exclusion_criterion": [
+        "custom Transformers code cannot be revision-pinned reproducibly",
+        "observation/action contract cannot be adapted without retraining",
+        "required release becomes gated or inaccessible"
+      ]
+    },
+    {
+      "candidate_family": "UniVLA-OpenDriveLab",
+      "family_id": "univla_opendrivelab",
+      "status": "SELECTED_PRIMARY_A",
+      "readiness_class": "A",
+      "distinct_family": true,
+      "checkpoint": [
+        "qwbu/univla-7b-224-sft-libero"
+      ],
+      "source_url": {
+        "github": "https://github.com/OpenDriveLab/UniVLA",
+        "checkpoint": "https://huggingface.co/qwbu/univla-7b-224-sft-libero"
+      },
+      "license_status": {
+        "code": "MIT",
+        "checkpoint": "Apache-2.0"
+      },
+      "lineage_note": "Task-centric latent-action UniVLA. This is not the BAAI Emu3-based project with the same UniVLA name.",
+      "inclusion_criterion": [
+        "public LIBERO suite checkpoints",
+        "public action decoder artifacts",
+        "public LIBERO evaluator",
+        "task-centric latent-action lineage distinct from existing families"
+      ],
+      "exclusion_criterion": [
+        "published environment cannot be reproduced through version pinning",
+        "required action decoder artifact is unavailable",
+        "qualification would require retraining"
+      ]
+    },
+    {
+      "candidate_family": "LingBot-VA",
+      "family_id": "lingbot_va",
+      "status": "SELECTED_PRIMARY_A",
+      "readiness_class": "A",
+      "distinct_family": true,
+      "checkpoint": [
+        "robbyant/lingbot-va-posttrain-libero-long"
+      ],
+      "suite_scope": [
+        "LIBERO-Long"
+      ],
+      "source_url": {
+        "github": "https://github.com/Robbyant/lingbot-va",
+        "checkpoint": "https://huggingface.co/robbyant/lingbot-va-posttrain-libero-long"
+      },
+      "license_status": {
+        "code": "Apache-2.0",
+        "checkpoint": "Apache-2.0"
+      },
+      "inclusion_criterion": [
+        "public LIBERO-Long checkpoint",
+        "public inference/evaluation path",
+        "video-action world-model lineage distinct from existing families"
+      ],
+      "exclusion_criterion": [
+        "do not infer unsupported LIBERO suites",
+        "released attention/cache runtime cannot be reproduced deterministically",
+        "qualification would require retraining"
+      ]
+    },
+    {
+      "candidate_family": "NORA",
+      "family_id": "nora",
+      "status": "SELECTED_CONDITIONAL_B",
+      "readiness_class": "B",
+      "distinct_family": true,
+      "checkpoint": [
+        "declare-lab/nora-1.5-libero"
+      ],
+      "source_url": {
+        "github": "https://github.com/declare-lab/nora-1.5",
+        "checkpoint": "https://huggingface.co/declare-lab/nora-1.5-libero"
+      },
+      "license_status": {
+        "status": "Upstream NORA metadata indicates permissive licensing; exact selected LIBERO artifact license must be recorded before activation."
+      },
+      "activation_criterion": [
+        "public checkpoint loads without retraining",
+        "deterministic harness adapter emits valid normalized 7-DoF LIBERO actions",
+        "exact artifact license/access authority is frozen before GPU qualification"
+      ],
+      "exclusion_criterion": [
+        "requires weight modification or retraining",
+        "selected artifact usage rights cannot be established",
+        "public inference contract cannot be reproduced"
+      ]
+    },
+    {
+      "candidate_family": "UniVLA-BAAI",
+      "family_id": "univla_baai",
+      "status": "RESERVE_CONDITIONAL_B",
+      "readiness_class": "B",
+      "distinct_family": true,
+      "checkpoint": [
+        "Yuqi1997/UniVLA/UNIVLA_LIBERO_IMG_BS192_8K",
+        "Yuqi1997/UniVLA/UNIVLA_LIBERO_VIDEO_BS192_8K"
+      ],
+      "source_url": {
+        "github": "https://github.com/baaivision/UniVLA",
+        "checkpoint": "https://huggingface.co/Yuqi1997/UniVLA"
+      },
+      "lineage_note": "Emu3-based Unified Vision-Language-Action Model. Distinct from OpenDriveLab UniVLA.",
+      "license_status": {
+        "checkpoint": "Apache-2.0",
+        "code": "must_be_explicitly_established_before_activation"
+      },
+      "activation_criterion": [
+        "official/reference LIBERO evaluation path can be commit-pinned",
+        "observation/action mapping is reproducible without retraining",
+        "source-code usage authority is explicitly established"
+      ],
+      "exclusion_criterion": [
+        "evaluation path remains materially incomplete",
+        "code usage authority remains unresolved",
+        "qualification would require model retraining"
+      ]
+    }
+  ],
+  "screened_but_not_selected": [
+    {
+      "candidate_family": "WorldVLA-RynnVLA",
+      "status": "EXCLUDED_PREEXISTING_GOVERNANCE",
+      "reason": "exact_inference_requires_Chameleon_assets_whose_legal_acceptance_and_authority_representation_cannot_be_automated"
+    },
+    {
+      "candidate_family": "StarVLA",
+      "status": "EXCLUDED_EXISTING_FAMILY_DERIVATIVE",
+      "merged_into": "OpenVLA",
+      "reason": "official_action_head_adapted_from_OpenVLA_OFT"
+    },
+    {
+      "candidate_family": "APT",
+      "status": "HOLD_LICENSE_UNVERIFIED",
+      "reason": "Promising LIBERO/LIBERO-Plus implementation exists but source-code license was not sufficiently established at selection time."
+    },
+    {
+      "candidate_family": "SmolVLA",
+      "status": "QUARANTINE_REPRODUCIBILITY",
+      "reason": "LIBERO checkpoint exists, but upstream reproduction stability does not yet satisfy the strict calibration criterion."
+    },
+    {
+      "candidate_family": "FastWAM",
+      "status": "QUARANTINE_REPRODUCIBILITY",
+      "reason": "Converted public checkpoint exists, but upstream-to-evaluation reproduction stability remains insufficient."
+    },
+    {
+      "candidate_family": "ResVLA",
+      "status": "EXCLUDED_EXISTING_FAMILY_DERIVATIVE",
+      "reason": "Official implementation is built on StarVLA, which is already merged into the OpenVLA lineage under preexisting governance."
+    },
+    {
+      "candidate_family": "HiF-VLA",
+      "status": "EXCLUDED_EXISTING_FAMILY_DERIVATIVE",
+      "reason": "OpenVLA-derived foundation checkpoint lineage."
+    },
+    {
+      "candidate_family": "UD-VLA",
+      "status": "EXCLUDED_EXISTING_FAMILY_DERIVATIVE",
+      "reason": "Explicit derivative/fork of an already represented UniVLA lineage."
+    }
+  ],
+  "expansion_accounting": {
+    "primary_new_distinct_families": 4,
+    "conditional_new_distinct_families": 1,
+    "reserve_new_distinct_families": 1,
+    "maximum_preregistered_new_distinct_families": 6,
+    "final_calibration_family_total": "not_recomputed_here_because_existing_calibration_vs_holdout_assignment_is_governed_separately"
+  },
+  "qualification_rule": {
+    "qualification_is_engineering_gate_not_performance_gate": true,
+    "allowed_rejection_reasons": [
+      "checkpoint_unavailable",
+      "license_or_access_authority_failure",
+      "unrecoverable_dependency_incompatibility",
+      "model_cannot_load",
+      "public_evaluator_cannot_execute",
+      "observation_action_interface_incompatible_without_retraining",
+      "proprietary_service_or_hardware_required",
+      "corrupt_or_nonreproducible_upstream_artifact",
+      "not_a_genuinely_distinct_lineage"
+    ],
+    "prohibited_rejection_reasons": [
+      "low_LIBERO_success_rate",
+      "poor_Discovery500_performance",
+      "poor_QUAL24_performance",
+      "poor_IRT_fit_from_current_outcomes"
+    ]
+  },
+  "no_use_of_current_discovery500_outcomes": true
+}

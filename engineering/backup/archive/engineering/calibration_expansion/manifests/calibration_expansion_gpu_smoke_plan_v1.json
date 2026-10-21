@@ -1,0 +1,293 @@
+{
+  "schema_version": "calibration_expansion_gpu_smoke_plan_v1",
+  "generated_at_utc": "2026-08-27T12:33:10.879461+00:00",
+  "authorization_state": "PLAN_ONLY_NOT_AUTHORIZED_FOR_EXECUTION",
+  "gpu_jobs_submitted": false,
+  "no_use_of_current_discovery500_outcomes": true,
+  "no_use_of_qual24_outcomes": true,
+  "primary_families": [
+    {
+      "family_id": "vla_adapter",
+      "current_adapter_status": "CUSTOM_OVERLAY_CPU_STATIC_PASS",
+      "source_pin": {
+        "url": "https://github.com/OpenHelix-Team/VLA-Adapter.git",
+        "commit": "23fa0c9c159e2aa04341cdd3e924f44061311060"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Spatial-Pro",
+          "revision": "cb023c6771fc62ea729d218f09ac0583c14f59d4",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Object-Pro",
+          "revision": "afd5c551e4851fb434deaba272c7688e87586cc4",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Goal-Pro",
+          "revision": "2ae84b8275a0c35c1b6751573a71468e1c080825",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        },
+        {
+          "repo_id": "VLA-Adapter/LIBERO-Long-Pro",
+          "revision": "9e21d603e53c8602919b9a1d90201b329e673f6b",
+          "gated": false,
+          "private": false,
+          "card_license": "mit",
+          "license_tags": [
+            "license:mit"
+          ]
+        }
+      ],
+      "suite_scope": [
+        "libero_spatial",
+        "libero_object",
+        "libero_goal",
+        "libero_10"
+      ],
+      "smoke_suite": "libero_10",
+      "model_server_config": "integrations/vla_eval_overlay/configs/model_servers/vla_adapter/long.yaml",
+      "execution_status": "NOT_SUBMITTED",
+      "resource_plan": {
+        "cluster": "cluster-betelgeuse",
+        "preferred": "resourcespec-a100x1",
+        "fallback": "resourcespec-eaac8rxxpz6j",
+        "gpu_count": 1,
+        "note": "Preferred A100 80GB for uniform qualification. L40S fallback only after model-specific VRAM compatibility is confirmed."
+      },
+      "materialization_required_before_smoke": true,
+      "smoke_protocol": {
+        "benchmark": "LIBERO",
+        "suite": "libero_10",
+        "task_selection_rule": "Use the first canonical task in the pinned harness suite order; do not choose task based on model performance.",
+        "seed": 7,
+        "performance_threshold": null,
+        "engineering_pass_requirements": [
+          "pinned source/checkpoint materializes successfully",
+          "model server starts",
+          "health endpoint becomes ready",
+          "simulator initializes and resets",
+          "required observations are accepted",
+          "model produces finite correctly-shaped action(s)",
+          "at least one simulator control step executes",
+          "no NaN or Inf in produced actions"
+        ],
+        "explicit_noncriteria": [
+          "task success",
+          "success rate",
+          "Discovery-500 performance",
+          "QUAL24 performance",
+          "IRT fit quality"
+        ]
+      }
+    },
+    {
+      "family_id": "xiaomi_robotics_0",
+      "current_adapter_status": "CUSTOM_OVERLAY_CPU_STATIC_PASS",
+      "source_pin": {
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0.git",
+        "commit": "7c316604d43357d10b06d11fae4c39290c447da5"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "XiaomiRobotics/Xiaomi-Robotics-0-LIBERO",
+          "revision": "fc04bbdcc53e498695cfad95d1199091396ef55b",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "suite_scope": [
+        "libero_spatial",
+        "libero_object",
+        "libero_goal",
+        "libero_10"
+      ],
+      "smoke_suite": "libero_10",
+      "model_server_config": "integrations/vla_eval_overlay/configs/model_servers/xiaomi_robotics_0/libero.yaml",
+      "execution_status": "NOT_SUBMITTED",
+      "resource_plan": {
+        "cluster": "cluster-betelgeuse",
+        "preferred": "resourcespec-a100x1",
+        "fallback": "resourcespec-eaac8rxxpz6j",
+        "gpu_count": 1,
+        "note": "Preferred A100 80GB for uniform qualification. L40S fallback only after model-specific VRAM compatibility is confirmed."
+      },
+      "materialization_required_before_smoke": true,
+      "smoke_protocol": {
+        "benchmark": "LIBERO",
+        "suite": "libero_10",
+        "task_selection_rule": "Use the first canonical task in the pinned harness suite order; do not choose task based on model performance.",
+        "seed": 7,
+        "performance_threshold": null,
+        "engineering_pass_requirements": [
+          "pinned source/checkpoint materializes successfully",
+          "model server starts",
+          "health endpoint becomes ready",
+          "simulator initializes and resets",
+          "required observations are accepted",
+          "model produces finite correctly-shaped action(s)",
+          "at least one simulator control step executes",
+          "no NaN or Inf in produced actions"
+        ],
+        "explicit_noncriteria": [
+          "task success",
+          "success rate",
+          "Discovery-500 performance",
+          "QUAL24 performance",
+          "IRT fit quality"
+        ]
+      }
+    },
+    {
+      "family_id": "univla_opendrivelab",
+      "current_adapter_status": "CUSTOM_OVERLAY_CPU_STATIC_PASS",
+      "source_pin": {
+        "url": "https://github.com/OpenDriveLab/UniVLA.git",
+        "commit": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "qwbu/univla-7b-224-sft-libero",
+          "revision": "0d1979ebd1b7ad00d6a8a02a98213a0835dc82a1",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "suite_scope": [
+        "libero_spatial",
+        "libero_object",
+        "libero_goal",
+        "libero_10"
+      ],
+      "smoke_suite": "libero_10",
+      "model_server_config": "integrations/vla_eval_overlay/configs/model_servers/univla_opendrivelab/long.yaml",
+      "execution_status": "NOT_SUBMITTED",
+      "resource_plan": {
+        "cluster": "cluster-betelgeuse",
+        "preferred": "resourcespec-a100x1",
+        "fallback": "resourcespec-eaac8rxxpz6j",
+        "gpu_count": 1,
+        "note": "Preferred A100 80GB for uniform qualification. L40S fallback only after model-specific VRAM compatibility is confirmed."
+      },
+      "materialization_required_before_smoke": true,
+      "smoke_protocol": {
+        "benchmark": "LIBERO",
+        "suite": "libero_10",
+        "task_selection_rule": "Use the first canonical task in the pinned harness suite order; do not choose task based on model performance.",
+        "seed": 7,
+        "performance_threshold": null,
+        "engineering_pass_requirements": [
+          "pinned source/checkpoint materializes successfully",
+          "model server starts",
+          "health endpoint becomes ready",
+          "simulator initializes and resets",
+          "required observations are accepted",
+          "model produces finite correctly-shaped action(s)",
+          "at least one simulator control step executes",
+          "no NaN or Inf in produced actions"
+        ],
+        "explicit_noncriteria": [
+          "task success",
+          "success rate",
+          "Discovery-500 performance",
+          "QUAL24 performance",
+          "IRT fit quality"
+        ]
+      }
+    },
+    {
+      "family_id": "lingbot_va",
+      "current_adapter_status": "EXISTING_PINNED_HARNESS_INTEGRATION",
+      "source_pin": {
+        "url": "https://github.com/Robbyant/lingbot-va.git",
+        "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+      },
+      "checkpoint_pins": [
+        {
+          "repo_id": "robbyant/lingbot-va-posttrain-libero-long",
+          "revision": "0e89d1e753019988aba484e8da2dc0810e264d9f",
+          "gated": false,
+          "private": false,
+          "card_license": "apache-2.0",
+          "license_tags": [
+            "license:apache-2.0"
+          ]
+        }
+      ],
+      "suite_scope": [
+        "libero_10"
+      ],
+      "smoke_suite": "libero_10",
+      "model_server_config": "configs/model_servers/lerobot/lingbot_va_libero.yaml",
+      "execution_status": "NOT_SUBMITTED",
+      "resource_plan": {
+        "cluster": "cluster-betelgeuse",
+        "preferred": "resourcespec-a100x1",
+        "fallback": "resourcespec-eaac8rxxpz6j",
+        "gpu_count": 1,
+        "note": "Preferred A100 80GB for uniform qualification. L40S fallback only after model-specific VRAM compatibility is confirmed."
+      },
+      "materialization_required_before_smoke": true,
+      "smoke_protocol": {
+        "benchmark": "LIBERO",
+        "suite": "libero_10",
+        "task_selection_rule": "Use the first canonical task in the pinned harness suite order; do not choose task based on model performance.",
+        "seed": 7,
+        "performance_threshold": null,
+        "engineering_pass_requirements": [
+          "pinned source/checkpoint materializes successfully",
+          "model server starts",
+          "health endpoint becomes ready",
+          "simulator initializes and resets",
+          "required observations are accepted",
+          "model produces finite correctly-shaped action(s)",
+          "at least one simulator control step executes",
+          "no NaN or Inf in produced actions"
+        ],
+        "explicit_noncriteria": [
+          "task success",
+          "success rate",
+          "Discovery-500 performance",
+          "QUAL24 performance",
+          "IRT fit quality"
+        ]
+      }
+    }
+  ],
+  "not_scheduled": [
+    {
+      "family_id": "nora",
+      "status": "HOLD_LICENSE_NO_GPU",
+      "reason": "LIBERO evaluation path exists, but exact source/artifact license and usage authority remain unresolved."
+    },
+    {
+      "family_id": "univla_baai",
+      "status": "RESERVE_NOT_SCHEDULED",
+      "reason": "Reserve family only; source/evaluation integration is not promoted while four preregistered primary families remain viable."
+    }
+  ]
+}
